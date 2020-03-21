@@ -17,6 +17,10 @@
         <service id="ems_maker.command.analyser" class="EMS\MakerBundle\Command\AnalyserCommand">
             <tag name="console.command"/>
         </service>
+        <service id="ems_maker.command.filter" class="EMS\MakerBundle\Command\FilterCommand">
+            <tag name="console.command"/>
+            <argument type="service" id="doctrine"/>
+        </service>
         <service id="ems_maker.command.contenttype" class="EMS\MakerBundle\Command\ContentTypeCommand">
             <tag name="console.command"/>
             <argument type="service" id="ems.service.environment"/>
