@@ -120,13 +120,13 @@ final class FilterCommand extends Command
 
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        /** @var array $types */
-        $types = $input->getArgument(self::ARGUMENT_FILTERS);
+        /** @var array $filters */
+        $filters = $input->getArgument(self::ARGUMENT_FILTERS);
 
         $orderKey = 1;
-        foreach ($types as $type) {
+        foreach ($filters as $filterKey) {
             try {
-                $data = $this->filters[$type];
+                $data = $this->filters[$filterKey];
 
                 $filter = $this->filterRepository->findByName($data['name']);
 
