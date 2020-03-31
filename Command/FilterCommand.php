@@ -89,7 +89,6 @@ final class FilterCommand extends Command
         if ($input->getOption(self::OPTION_ALL)) {
             $this->optionAll($input);
         }
-
     }
 
     private function chooseFilters(InputInterface $input, OutputInterface $output): void
