@@ -4,6 +4,7 @@ namespace EMS\MakerBundle\Command;
 
 use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\ORM\EntityManager;
+use Doctrine\Persistence\ObjectManager;
 use EMS\CoreBundle\Entity\Filter;
 use EMS\CoreBundle\Repository\FilterRepository;
 use Symfony\Component\Console\Command\Command;
@@ -27,7 +28,7 @@ final class FilterCommand extends Command
     /** @var SymfonyStyle */
     private $io;
 
-    /** @var EntityManager */
+    /** @var ObjectManager */
     private $em;
 
     /** @var array */
@@ -82,7 +83,7 @@ final class FilterCommand extends Command
         /** @var array $types */
         $filters = $input->getArgument(self::ARGUMENT_FILTERS);
 
-        if (!$input->getOption(self::OPTION_ALL) && count($filters) == 0) {
+        if (!$input->getOption(self::OPTION_ALL) && is_countable($filters) && count($filters) == 0) {
             $this->chooseFilters($input, $output);
         }
 
