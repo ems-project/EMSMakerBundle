@@ -73,7 +73,7 @@ abstract class AbstractCommand extends Command
 
     /**
      * @param array<mixed> $config
-     * @return array{admin: array, sites: array, users: array}
+     * @return array{admin: array, sites: array, users: array, environments: array}
      */
     private function resolveConfig(array $config): array
     {
@@ -82,12 +82,14 @@ abstract class AbstractCommand extends Command
             'admin',
             'sites'
         ])->setDefaults([
-            'users' => []
+            'users' => [],
+            'environments' => [],
         ])->setAllowedTypes('admin', 'array')
             ->setAllowedTypes('sites', 'array')
-            ->setAllowedTypes('users', 'array');
+            ->setAllowedTypes('users', 'array')
+            ->setAllowedTypes('environments', 'array');
 
-        /** @var array{admin: array, sites: array, users: array} $resolved */
+        /** @var array{admin: array, sites: array, users: array, environments: array} $resolved */
         $resolved = $resolver->resolve($config);
 
         return $resolved;

@@ -11,11 +11,13 @@ class DemoCommand extends AbstractCommand
     protected static $defaultName = 'ems:maker:demo';
 
     private UserCommand $userCommand;
+    private EnvironmentCommand $environmentCommand;
 
-    public function __construct(UserCommand $userCommand)
+    public function __construct(UserCommand $userCommand, EnvironmentCommand $environmentCommand)
     {
         parent::__construct();
         $this->userCommand = $userCommand;
+        $this->environmentCommand = $environmentCommand;
     }
 
 
@@ -31,6 +33,8 @@ class DemoCommand extends AbstractCommand
     {
         $this->userCommand->initialize($input, $output);
         $this->userCommand->makeUsers($this->config['users']);
+        $this->environmentCommand->initialize($input, $output);
+        $this->environmentCommand->makeEnvironments($this->config['environments']);
 
         return 0;
     }

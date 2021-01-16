@@ -36,5 +36,12 @@
       "ROLE_USER",
       "ROLE_WEBMASTER"
     ]
+  }],
+  "environments": [{
+    "name": "preview"
+  },{
+    "name": "live",
+    "color": "aqua",
+    "managed": true
   }]
 }
