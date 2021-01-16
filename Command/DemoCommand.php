@@ -32,9 +32,9 @@ class DemoCommand extends AbstractCommand
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->userCommand->initialize($input, $output);
-        $this->userCommand->makeUsers($this->config['users']);
+        $this->userCommand->makeUsers($this->config[AbstractCommand::USERS]);
         $this->environmentCommand->initialize($input, $output);
-        $this->environmentCommand->makeEnvironments($this->config['environments']);
+        $this->environmentCommand->makeEnvironments($this->config[AbstractCommand::ENVIRONMENTS]);
 
         return 0;
     }

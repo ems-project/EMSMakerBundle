@@ -13,6 +13,12 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class UserCommand extends AbstractCommand
 {
+    private const USERNAME = 'username';
+    private const DISPLAY_NAME = 'display_name';
+    private const PASSWORD = 'password';
+    private const EMAIL = 'email';
+    private const ROLES = 'roles';
+    private const WYSIWYG_PROFILE = 'wysiwyg_profile';
     /** @var string  */
     protected static $defaultName = 'ems:maker:user';
     private UserService $userService;
@@ -27,7 +33,7 @@ class UserCommand extends AbstractCommand
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $this->makeUsers($this->config['users']);
+        $this->makeUsers($this->config[AbstractCommand::USERS]);
 
         return 0;
     }
@@ -51,20 +57,20 @@ class UserCommand extends AbstractCommand
         $this->io->progressStart(\count($users));
         foreach ($users as $user) {
             $resolved = $this->resolveUser($user);
-            $user = $this->userService->getUser($resolved['username'], false);
+            $user = $this->userService->getUser($resolved[self::USERNAME], false);
 
             if ($user === null) {
                 $user = new User();
-            } elseif (!$this->forceUpdate('user', $resolved['username'])) {
-                $this->io->note(\sprintf('User %s ignored', $resolved['username']));
+            } elseif (!$this->forceUpdate('user', $resolved[self::USERNAME])) {
+                $this->io->note(\sprintf('User %s ignored', $resolved[self::USERNAME]));
                 $this->io->progressAdvance();
                 continue;
             }
-            $user->setUsername($resolved['username']);
-            $user->setDisplayName($resolved['display_name'] ?? $resolved['username']);
-            $user->setPlainPassword($resolved['password']);
-            $user->setEmail($resolved['email']);
-            $user->setRoles($resolved['roles']);
+            $user->setUsername($resolved[self::USERNAME]);
+            $user->setDisplayName($resolved[self::DISPLAY_NAME] ?? $resolved[self::USERNAME]);
+            $user->setPlainPassword($resolved[self::PASSWORD]);
+            $user->setEmail($resolved[self::EMAIL]);
+            $user->setRoles($resolved[self::ROLES]);
             $user->setEnabled(true);
             $user->setWysiwygProfile($profile);
             $this->userService->updateUser($user);
@@ -78,20 +84,20 @@ class UserCommand extends AbstractCommand
     {
         $resolver = new OptionsResolver();
         $resolver->setRequired([
-            'username',
-            'password',
-            'email',
-            'roles'
+            self::USERNAME,
+            self::PASSWORD,
+            self::EMAIL,
+            self::ROLES,
         ])->setDefaults([
-            'display_name' => null,
-            'wysiwyg_profile' => 'standard'
+            self::DISPLAY_NAME => null,
+            self::WYSIWYG_PROFILE => 'standard',
         ])
-            ->setAllowedTypes('username', 'string')
-            ->setAllowedTypes('display_name', ['string', 'null'])
-            ->setAllowedTypes('password', 'string')
-            ->setAllowedTypes('email', 'string')
-            ->setAllowedTypes('roles', 'array')
-            ->setAllowedTypes('wysiwyg_profile', 'string');
+            ->setAllowedTypes(self::USERNAME, 'string')
+            ->setAllowedTypes(self::DISPLAY_NAME, ['string', 'null'])
+            ->setAllowedTypes(self::PASSWORD, 'string')
+            ->setAllowedTypes(self::EMAIL, 'string')
+            ->setAllowedTypes(self::ROLES, 'array')
+            ->setAllowedTypes(self::WYSIWYG_PROFILE, 'string');
 
         return $resolver->resolve($user);
     }

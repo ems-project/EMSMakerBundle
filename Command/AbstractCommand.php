@@ -17,6 +17,10 @@ abstract class AbstractCommand extends Command
 {
     private const OPTION_FORCE = 'force';
     private const ARGUMENT_CONFIG_FILE = 'config_file';
+    public const ADMIN = 'admin';
+    public const SITES = 'sites';
+    public const USERS = 'users';
+    public const ENVIRONMENTS = 'environments';
     protected array $config;
     protected SymfonyStyle $io;
     protected bool $force;
@@ -79,15 +83,15 @@ abstract class AbstractCommand extends Command
     {
         $resolver = new OptionsResolver();
         $resolver->setRequired([
-            'admin',
-            'sites'
+            self::ADMIN,
+            self::SITES
         ])->setDefaults([
-            'users' => [],
-            'environments' => [],
-        ])->setAllowedTypes('admin', 'array')
-            ->setAllowedTypes('sites', 'array')
-            ->setAllowedTypes('users', 'array')
-            ->setAllowedTypes('environments', 'array');
+            self::USERS => [],
+            self::ENVIRONMENTS => [],
+        ])->setAllowedTypes(self::ADMIN, 'array')
+            ->setAllowedTypes(self::SITES, 'array')
+            ->setAllowedTypes(self::USERS, 'array')
+            ->setAllowedTypes(self::ENVIRONMENTS, 'array');
 
         /** @var array{admin: array, sites: array, users: array, environments: array} $resolved */
         $resolved = $resolver->resolve($config);

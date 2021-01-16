@@ -26,7 +26,7 @@ class EnvironmentCommand extends AbstractCommand
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $this->makeEnvironments($this->config['environments']);
+        $this->makeEnvironments($this->config[AbstractCommand::ENVIRONMENTS]);
 
         return 0;
     }
