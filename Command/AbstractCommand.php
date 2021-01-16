@@ -21,6 +21,7 @@ abstract class AbstractCommand extends Command
     public const SITES = 'sites';
     public const USERS = 'users';
     public const ENVIRONMENTS = 'environments';
+    public const DOCUMENTATIONS = 'documentations';
     protected array $config;
     protected SymfonyStyle $io;
     protected bool $force;
@@ -53,7 +54,6 @@ abstract class AbstractCommand extends Command
     protected function initialize(InputInterface $input, OutputInterface $output): void
     {
         $this->io = new SymfonyStyle($input, $output);
-        $this->io->title('Initialize maker command');
 
         $this->force = $input->getOption(self::OPTION_FORCE) === true;
 
@@ -77,7 +77,7 @@ abstract class AbstractCommand extends Command
 
     /**
      * @param array<mixed> $config
-     * @return array{admin: array, sites: array, users: array, environments: array}
+     * @return array{admin: array, sites: array, users: array, environments: array, documentations: array|null}
      */
     private function resolveConfig(array $config): array
     {
@@ -88,12 +88,14 @@ abstract class AbstractCommand extends Command
         ])->setDefaults([
             self::USERS => [],
             self::ENVIRONMENTS => [],
-        ])->setAllowedTypes(self::ADMIN, 'array')
-            ->setAllowedTypes(self::SITES, 'array')
-            ->setAllowedTypes(self::USERS, 'array')
-            ->setAllowedTypes(self::ENVIRONMENTS, 'array');
+            self::DOCUMENTATIONS => null,
+        ])->setAllowedTypes(self::ADMIN, 'array');
+        $resolver->setAllowedTypes(self::SITES, ['array']);
+        $resolver->setAllowedTypes(self::USERS, ['array']);
+        $resolver->setAllowedTypes(self::ENVIRONMENTS, ['array']);
+        $resolver->setAllowedTypes(self::DOCUMENTATIONS, ['array','null']);
 
-        /** @var array{admin: array, sites: array, users: array, environments: array} $resolved */
+        /** @var array{admin: array, sites: array, users: array, environments: array, documentations: array|null} $resolved */
         $resolved = $resolver->resolve($config);
 
         return $resolved;

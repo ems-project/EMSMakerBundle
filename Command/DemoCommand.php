@@ -12,12 +12,14 @@ class DemoCommand extends AbstractCommand
 
     private UserCommand $userCommand;
     private EnvironmentCommand $environmentCommand;
+    private DocumentationCommand $documentationCommand;
 
-    public function __construct(UserCommand $userCommand, EnvironmentCommand $environmentCommand)
+    public function __construct(UserCommand $userCommand, EnvironmentCommand $environmentCommand, DocumentationCommand $documentationCommand)
     {
         parent::__construct();
         $this->userCommand = $userCommand;
         $this->environmentCommand = $environmentCommand;
+        $this->documentationCommand = $documentationCommand;
     }
 
 
@@ -35,6 +37,8 @@ class DemoCommand extends AbstractCommand
         $this->userCommand->makeUsers($this->config[AbstractCommand::USERS]);
         $this->environmentCommand->initialize($input, $output);
         $this->environmentCommand->makeEnvironments($this->config[AbstractCommand::ENVIRONMENTS]);
+        $this->documentationCommand->initialize($input, $output);
+        $this->documentationCommand->makeDocumentations($this->config[AbstractCommand::DOCUMENTATIONS]);
 
         return 0;
     }

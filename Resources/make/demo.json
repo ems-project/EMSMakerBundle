@@ -2,6 +2,9 @@
   "admin": {
     "url": "http://admin-test.localhost"
   },
+  "documentations": {
+    "environment": "preview"
+  },
   "sites": {
     "demo": {
       "canonicals": {
