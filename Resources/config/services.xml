@@ -38,7 +38,12 @@
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.user" class="EMS\MakerBundle\Command\UserCommand">
+            <argument type="service" id="ems.service.user"/>
+            <argument type="service" id="ems.service.wysiwyg_profile"/>
             <tag name="console.command"/>
         </service>
+<!--        <service id="ems_maker.command.make" class="EMS\MakerBundle\Command\MakeCommand">-->
+<!--            <tag name="console.command"/>-->
+<!--        </service>-->
     </services>
 </container>
