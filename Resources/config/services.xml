@@ -31,6 +31,8 @@
         </service>
         <service id="ems_maker.command.environment" class="EMS\MakerBundle\Command\EnvironmentCommand">
             <argument type="service" id="ems.service.environment"/>
+            <argument type="service" id="ems.service.mapping"/>
+            <argument type="service" id="ems.service.alias"/>
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.revision" class="EMS\MakerBundle\Command\RevisionCommand">

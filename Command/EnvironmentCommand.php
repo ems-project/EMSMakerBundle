@@ -3,7 +3,9 @@
 namespace EMS\MakerBundle\Command;
 
 use EMS\CoreBundle\Entity\Environment;
+use EMS\CoreBundle\Service\AliasService;
 use EMS\CoreBundle\Service\EnvironmentService;
+use EMS\CoreBundle\Service\Mapping;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -16,11 +18,15 @@ class EnvironmentCommand extends AbstractCommand
     private const MANAGED = 'managed';
     protected static $defaultName = 'ems:maker:environment';
     private EnvironmentService $environmentService;
+    private Mapping $mapping;
+    private AliasService $aliasService;
 
-    public function __construct(EnvironmentService $environmentService)
+    public function __construct(EnvironmentService $environmentService, Mapping $mapping, AliasService $aliasService)
     {
         parent::__construct();
         $this->environmentService = $environmentService;
+        $this->mapping = $mapping;
+        $this->aliasService = $aliasService;
     }
 
 
@@ -40,6 +46,7 @@ class EnvironmentCommand extends AbstractCommand
         }
         $this->io->title('Make environments');
         $this->io->progressStart(\count($environments));
+        $this->aliasService->build();
         foreach ($environments as $environment) {
             $resolved = $this->resolveEnvironment($environment);
 
@@ -59,6 +66,10 @@ class EnvironmentCommand extends AbstractCommand
                 $entity->setAlias($resolved[self::ALIAS]);
             }
             $this->environmentService->updateEnvironment($entity);
+
+            $indexName = $entity->getNewIndexName();
+            $this->mapping->createIndex($indexName, $this->environmentService->getIndexAnalysisConfiguration());
+            $this->aliasService->atomicSwitch($entity, $indexName);
 
             $this->io->progressAdvance();
         }
