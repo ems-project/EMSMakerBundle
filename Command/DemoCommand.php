@@ -2,6 +2,7 @@
 
 namespace EMS\MakerBundle\Command;
 
+use EMS\MakerBundle\Service\FileService;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -21,7 +22,7 @@ class DemoCommand extends AbstractCommand
     protected function configure(string $defaultConfig = null)
     {
         if (null === $defaultConfig) {
-            $defaultConfig = 'vendor/elasticms/maker-bundle/Resources/make/demo.json';
+            $defaultConfig = FileService::JSON_FILES . 'demo.json';
         }
         parent::configure($defaultConfig);
     }
