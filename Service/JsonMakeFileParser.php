@@ -7,7 +7,7 @@ class JsonMakeFileParser
     /**
      * EMSCoreBundle already has the functionality to create everything we want to create via the MakerBundle Commands
      * We should refactor EMSCore to isolate services that allows us to:
-     * * create analysers
+     * * create analyzers
      * * create contenttypes
      * * create environments
      * * create revisions

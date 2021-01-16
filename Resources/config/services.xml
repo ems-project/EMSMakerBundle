@@ -14,7 +14,7 @@
         </service>
 
         <!-- commands -->
-        <service id="ems_maker.command.analyser" class="EMS\MakerBundle\Command\AnalyserCommand">
+        <service id="ems_maker.command.analyzer" class="EMS\MakerBundle\Command\AnalyzerCommand">
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.contenttype" class="EMS\MakerBundle\Command\ContentTypeCommand">

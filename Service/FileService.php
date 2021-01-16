@@ -9,12 +9,12 @@ class FileService
 {
     
     const JSON_FILES = __DIR__ . '/../Resources/make/';
-    const TYPE_ANALYSER = 'analyser';
+    const TYPE_ANALYZER = 'analyzer';
     const TYPE_CONTENTTYPE = 'contenttype';
     const TYPE_ENVIRONMENT = 'environment';
     const TYPE_REVISION = 'revision';
     const TYPE_USER = 'user';
-    const TYPES = [self::TYPE_ANALYSER, self::TYPE_CONTENTTYPE, self::TYPE_ENVIRONMENT, self::TYPE_REVISION, self::TYPE_USER];
+    const TYPES = [self::TYPE_ANALYZER, self::TYPE_CONTENTTYPE, self::TYPE_ENVIRONMENT, self::TYPE_REVISION, self::TYPE_USER];
 
     public function getFileNames(string $type): array
     {
