@@ -2,25 +2,35 @@
 
 namespace EMS\MakerBundle\Command;
 
-use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 
-class DemoCommand extends Command
+class DemoCommand extends AbstractCommand
 {
-    protected static $defaultName = 'ems:make:demo';
+    protected static $defaultName = 'ems:maker:demo';
 
-    /**
-     * chained call of commands to create a fully functional demo website
-     *
-     * Launch in this order:
-     * * analyser --all
-     * * environment --all
-     * * contenttype --all
-     * * revision --all
-     * * user --all
-     *
-     * By default, don't pass language config (each command has defaults), but make it possible to have a list of languages to support as argument
-     * When languages are defined; pass them to
-     * * analyser
-     * * contenttype
-     */
+    private UserCommand $userCommand;
+
+    public function __construct(UserCommand $userCommand)
+    {
+        parent::__construct();
+        $this->userCommand = $userCommand;
+    }
+
+
+    protected function configure(string $defaultConfig = null)
+    {
+        if (null === $defaultConfig) {
+            $defaultConfig = 'vendor/elasticms/maker-bundle/Resources/make/demo.json';
+        }
+        parent::configure($defaultConfig);
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+        $this->userCommand->initialize($input, $output);
+        $this->userCommand->makeUsers($this->config['users']);
+
+        return 0;
+    }
 }

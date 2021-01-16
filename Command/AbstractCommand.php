@@ -21,14 +21,24 @@ abstract class AbstractCommand extends Command
     protected SymfonyStyle $io;
     protected bool $force;
 
-    protected function configure()
+    protected function configure(string $defaultConfig = null)
     {
         parent::configure();
-        $this->addArgument(
-            self::ARGUMENT_CONFIG_FILE,
-            InputArgument::REQUIRED,
-            'Path to the config file (in JSON format)'
-        )->addOption(
+        if (null === $defaultConfig) {
+            $this->addArgument(
+                self::ARGUMENT_CONFIG_FILE,
+                InputArgument::REQUIRED,
+                'Path to the config file (in JSON format)'
+            );
+        } else {
+            $this->addArgument(
+                self::ARGUMENT_CONFIG_FILE,
+                InputArgument::OPTIONAL,
+                'Path to the config file (in JSON format)',
+                $defaultConfig
+            );
+        }
+        $this->addOption(
             self::OPTION_FORCE,
             null,
             InputOption::VALUE_NONE,

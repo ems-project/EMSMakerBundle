@@ -24,6 +24,7 @@
             <argument type="service" id="ems_maker.service.file"/>
         </service>
         <service id="ems_maker.command.demo" class="EMS\MakerBundle\Command\DemoCommand">
+            <argument type="service" id="ems_maker.command.user"/>
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.environment" class="EMS\MakerBundle\Command\EnvironmentCommand">
