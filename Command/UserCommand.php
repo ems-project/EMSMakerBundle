@@ -36,6 +36,8 @@ class UserCommand extends AbstractCommand
     {
         if (\count($users) === 0) {
             $this->io->note('No user to import');
+
+            return;
         }
 
         $profile = null;
