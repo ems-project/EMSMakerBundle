@@ -77,7 +77,10 @@ abstract class AbstractCommand extends Command
             ->setAllowedTypes('sites', 'array')
             ->setAllowedTypes('users', 'array');
 
-        return $resolver->resolve($config);
+        /** @var array{admin: array, sites: array, users: array} $resolved */
+        $resolved = $resolver->resolve($config);
+
+        return $resolved;
     }
 
     protected function forceUpdate(string $objectType, $identifier): bool
