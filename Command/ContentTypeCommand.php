@@ -2,7 +2,6 @@
 
 namespace EMS\MakerBundle\Command;
 
-use EMS\CoreBundle\Entity\ContentType;
 use EMS\CoreBundle\Entity\Environment;
 use EMS\CoreBundle\Service\EnvironmentService;
 use EMS\CoreBundle\Service\ContentTypeService;
@@ -15,21 +14,29 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ContentTypeCommand extends Command
 {
     protected static $defaultName = 'ems:maker:contenttype';
+
+    private const NAME = 'name';
+    private const FILENAME = 'filename';
+    private const DELETE_VIEWS = 'delete_views';
+    private const DELETE_ACTIONS = 'delete_actions';
+    private const ENVIRONMENT = 'environment';
+    private const DEFAULT_ENVIRONMENT_NAME = 'preview';
+    private const ARGUMENT_CONTENTTYPES = 'contenttypes';
+    private const OPTION_ALL = 'all';
+    private const OPTION_FORCE = 'force';
+    private const OPTION_ENV = 'environment';
 
     private EnvironmentService $environmentService;
     private ContentTypeService $contentTypeService;
     private FileService $fileService;
     private SymfonyStyle $io;
     private Environment $environment;
-
-    private const ARGUMENT_CONTENTTYPES = 'contenttypes';
-    private const OPTION_ALL = 'all';
-    private const OPTION_FORCE = 'force';
-    private const OPTION_ENV = 'environment';
+    private string $defaultEnvironmentName;
     private bool $force = false;
 
     public function __construct(EnvironmentService $environmentService, ContentTypeService $contentTypeService, FileService $fileService)
@@ -51,11 +58,11 @@ class ContentTypeCommand extends Command
                 sprintf('Optional array of contenttypes to create. Allowed values: [%s]', $fileNames)
             )
             ->addOption(
-                'environment',
+                self::OPTION_ENV,
                 null,
                 InputOption::VALUE_REQUIRED,
                 'Default environment for the contenttypes',
-                'preview'
+                self::DEFAULT_ENVIRONMENT_NAME
             )
             ->addOption(
                 self::OPTION_ALL,
@@ -77,7 +84,24 @@ class ContentTypeCommand extends Command
         $types = $input->getArgument(self::ARGUMENT_CONTENTTYPES);
 
         foreach ($types as $type) {
-            $this->updateContentType($type, $this->environment, true, true);
+            $this->updateContentType($type, $this->environment, null, true, true);
+        }
+    }
+
+    /**
+     * @param array<mixed> $contentTypes
+     */
+    public function makeContentTypes(array $contentTypes): void
+    {
+        $this->io->title(\sprintf('Make %d contenttypes', \count($contentTypes)));
+        foreach ($contentTypes as $contentType) {
+            $resolved = $this->resolveContentType($contentType);
+            $environment = $this->environmentService->getByName($resolved[self::ENVIRONMENT]);
+            if (!$environment instanceof Environment) {
+                $this->io->warning(\sprintf('Environment %s for importing the content type %s not found. Ignored.', $resolved[self::ENVIRONMENT], $resolved[self::FILENAME]));
+                continue;
+            }
+            $this->updateContentType($resolved[self::FILENAME], $environment, $resolved[self::NAME], $resolved[self::DELETE_ACTIONS], $resolved[self::DELETE_VIEWS]);
         }
     }
 
@@ -86,6 +110,11 @@ class ContentTypeCommand extends Command
     {
         $this->io = new SymfonyStyle($input, $output);
         $this->force = $input->getOption(self::OPTION_FORCE) === true;
+        if ($input->hasOption(self::OPTION_ENV)) {
+            $this->defaultEnvironmentName = \strval($input->getOption(self::OPTION_ENV));
+        } else {
+            $this->defaultEnvironmentName = self::DEFAULT_ENVIRONMENT_NAME;
+        }
     }
 
     protected function interact(InputInterface $input, OutputInterface $output)
@@ -152,11 +181,14 @@ class ContentTypeCommand extends Command
         $this->io->note(sprintf('Continuing with environment %s', $env));
     }
 
-    private function updateContentType(string $type, Environment $environment, bool $deleteExistingActions, bool $deleteExistingViews): void
+    private function updateContentType(string $filename, Environment $environment, ?string $name, bool $deleteExistingActions, bool $deleteExistingViews): void
     {
         try {
-            $json = $this->fileService->getFileContentsByFileName($type, FileService::TYPE_CONTENTTYPE);
+            $json = $this->fileService->getFileContentsByFileName($filename, FileService::TYPE_CONTENTTYPE);
             $contentType = $this->contentTypeService->contentTypeFromJson($json, $environment);
+            if (null !== $name) {
+                $contentType->setName($name);
+            }
 
             $previousContentType = $this->contentTypeService->getByName($contentType->getName());
             if (false === $previousContentType) {
@@ -185,5 +217,32 @@ class ContentTypeCommand extends Command
         );
 
         return $this->io->askQuestion($question) === true;
+    }
+
+    /**
+     * @param array<mixed> $contentType
+     * @return array{name: string|null, environment: string, filename: string, delete_actions: bool, delete_views: bool}
+     */
+    private function resolveContentType(array $contentType): array
+    {
+        $resolver = new OptionsResolver();
+        $resolver->setRequired([
+            self::FILENAME,
+        ])->setDefaults([
+            self::NAME => null,
+            self::DELETE_VIEWS => true,
+            self::DELETE_ACTIONS => true,
+            self::ENVIRONMENT => $this->defaultEnvironmentName,
+        ]);
+        $resolver->setAllowedTypes(self::NAME, ['string', 'null']);
+        $resolver->setAllowedTypes(self::FILENAME, ['string']);
+        $resolver->setAllowedTypes(self::ENVIRONMENT, ['string']);
+        $resolver->setAllowedTypes(self::DELETE_VIEWS, ['bool']);
+        $resolver->setAllowedTypes(self::DELETE_ACTIONS, ['bool']);
+
+        /** @var array{name: string|null, environment: string, filename: string, delete_actions: bool, delete_views: bool} $resolved */
+        $resolved = $resolver->resolve($contentType);
+
+        return $resolved;
     }
 }

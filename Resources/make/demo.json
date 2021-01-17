@@ -3,8 +3,11 @@
     "url": "http://admin-test.localhost"
   },
   "documentations": {
-    "environment": "preview"
+    "environment": "documentation"
   },
+  "contenttypes": [{
+    "filename": "route"
+  }],
   "sites": {
     "demo": {
       "canonicals": {
@@ -45,6 +48,10 @@
   },{
     "name": "live",
     "color": "aqua",
+    "managed": true
+  },{
+    "name": "documentation",
+    "color": "yellow",
     "managed": true
   }]
 }
