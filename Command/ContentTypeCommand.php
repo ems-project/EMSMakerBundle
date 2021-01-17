@@ -13,26 +13,24 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ChoiceQuestion;
+use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 class ContentTypeCommand extends Command
 {
-    protected static $defaultName = 'ems:make:contenttype';
+    protected static $defaultName = 'ems:maker:contenttype';
 
-    /** @var EnvironmentService */
-    protected $environmentService;
-    /** @var ContentTypeService */
-    protected $contentTypeService;
-    /** @var FileService */
-    protected $fileService;
-    /** @var SymfonyStyle */
-    private $io;
-    /** @var Environment */
-    private $environment;
+    private EnvironmentService $environmentService;
+    private ContentTypeService $contentTypeService;
+    private FileService $fileService;
+    private SymfonyStyle $io;
+    private Environment $environment;
 
-    const ARGUMENT_CONTENTTYPES = 'contenttypes';
-    const OPTION_ALL = 'all';
-    const OPTION_ENV = 'environment';
+    private const ARGUMENT_CONTENTTYPES = 'contenttypes';
+    private const OPTION_ALL = 'all';
+    private const OPTION_FORCE = 'force';
+    private const OPTION_ENV = 'environment';
+    private bool $force = false;
 
     public function __construct(EnvironmentService $environmentService, ContentTypeService $contentTypeService, FileService $fileService)
     {
@@ -65,6 +63,12 @@ class ContentTypeCommand extends Command
                 InputOption::VALUE_NONE,
                 sprintf('Make all contenttypes: [%s]', $fileNames)
             );
+        $this->addOption(
+            self::OPTION_FORCE,
+            null,
+            InputOption::VALUE_NONE,
+            'If set, items all ready defined will be overridden without question'
+        );
     }
 
     public function execute(InputInterface $input, OutputInterface $output)
@@ -73,22 +77,15 @@ class ContentTypeCommand extends Command
         $types = $input->getArgument(self::ARGUMENT_CONTENTTYPES);
 
         foreach ($types as $type) {
-            try {
-                /** @var string $json */
-                $json = $this->fileService->getFileContentsByFileName($type, FileService::TYPE_CONTENTTYPE);
-                /** @var ContentType $contentType */
-                $contentType = $this->contentTypeService->contentTypeFromJson($json, $this->environment);
-                $contentType = $this->contentTypeService->importContentType($contentType);
-                $this->io->success(sprintf('Contenttype %s has been created', $contentType->getName()));
-            } catch (\Exception $e) {
-                $this->io->error($e->getMessage());
-            }
+            $this->updateContentType($type, $this->environment, true, true);
         }
     }
+
 
     protected function initialize(InputInterface $input, OutputInterface $output)
     {
         $this->io = new SymfonyStyle($input, $output);
+        $this->force = $input->getOption(self::OPTION_FORCE) === true;
     }
 
     protected function interact(InputInterface $input, OutputInterface $output)
@@ -153,5 +150,40 @@ class ContentTypeCommand extends Command
 
         $this->environment = $environment;
         $this->io->note(sprintf('Continuing with environment %s', $env));
+    }
+
+    private function updateContentType(string $type, Environment $environment, bool $deleteExistingActions, bool $deleteExistingViews): void
+    {
+        try {
+            $json = $this->fileService->getFileContentsByFileName($type, FileService::TYPE_CONTENTTYPE);
+            $contentType = $this->contentTypeService->contentTypeFromJson($json, $environment);
+
+            $previousContentType = $this->contentTypeService->getByName($contentType->getName());
+            if (false === $previousContentType) {
+                $contentType = $this->contentTypeService->importContentType($contentType);
+                $this->io->success(sprintf('Contenttype %s has been created', $contentType->getName()));
+                return;
+            } elseif (!$this->forceUpdate($contentType->getName())) {
+                $this->io->note(sprintf('Contenttype %s has been ignored', $contentType->getName()));
+                return;
+            }
+            $this->contentTypeService->updateFromJson($previousContentType, $json, $deleteExistingActions, $deleteExistingViews);
+            $this->io->success(sprintf('Contenttype %s has been updated', $contentType->getName()));
+        } catch (\Exception $e) {
+            $this->io->error($e->getMessage());
+        }
+    }
+
+    protected function forceUpdate(string $identifier): bool
+    {
+        if ($this->force) {
+            return true;
+        }
+        $question = new ConfirmationQuestion(
+            \sprintf('Continue with updating the existing the content type %s?', $identifier),
+            false
+        );
+
+        return $this->io->askQuestion($question) === true;
     }
 }
