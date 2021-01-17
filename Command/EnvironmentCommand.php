@@ -2,6 +2,7 @@
 
 namespace EMS\MakerBundle\Command;
 
+use EMS\CoreBundle\Entity\ContentType;
 use EMS\CoreBundle\Entity\Environment;
 use EMS\CoreBundle\Service\AliasService;
 use EMS\CoreBundle\Service\EnvironmentService;
@@ -16,6 +17,8 @@ class EnvironmentCommand extends AbstractCommand
     private const COLOR = 'color';
     private const ALIAS = 'alias';
     private const MANAGED = 'managed';
+    const MAPPING = 'mapping';
+    const TYPE = 'type';
     protected static $defaultName = 'ems:maker:environment';
     private EnvironmentService $environmentService;
     private Mapping $mapping;
@@ -69,6 +72,13 @@ class EnvironmentCommand extends AbstractCommand
 
             $indexName = $entity->getNewIndexName();
             $this->mapping->createIndex($indexName, $this->environmentService->getIndexAnalysisConfiguration());
+            $contentType = new ContentType();
+            $contentType->setName($resolved[self::TYPE]);
+            $mapping = $this->mapping->generateMapping($contentType);
+            if (null !== $resolved[self::MAPPING]) {
+                $mapping['properties'] = array_merge($resolved[self::MAPPING], $mapping['properties']);
+            }
+            $this->mapping->updateMapping($indexName, $mapping, $resolved[self::TYPE]);
             $this->aliasService->atomicSwitch($entity, $indexName);
 
             $this->io->progressAdvance();
@@ -78,7 +88,7 @@ class EnvironmentCommand extends AbstractCommand
 
     /**
      * @param array<mixed> $environment
-     * @return array{name: string, color: string, managed: bool, alias: null|string}
+     * @return array{name: string, type: string, color: string, managed: bool, alias: null|string, mapping: array|null}
      */
     private function resolveEnvironment(array $environment): array
     {
@@ -89,13 +99,17 @@ class EnvironmentCommand extends AbstractCommand
             self::COLOR => 'red',
             self::MANAGED => true,
             self::ALIAS => null,
+            self::MAPPING => null,
+            self::TYPE => 'doc',
         ]);
         $resolver->setAllowedTypes(self::NAME, 'string');
         $resolver->setAllowedTypes(self::MANAGED, 'bool');
         $resolver->setAllowedTypes(self::COLOR, 'string');
         $resolver->setAllowedTypes(self::ALIAS, ['string', 'null']);
+        $resolver->setAllowedTypes(self::TYPE, ['string']);
+        $resolver->setAllowedTypes(self::MAPPING, ['array', 'null']);
 
-        /** @var array{name: string, color: string, managed: bool, alias: null|string} $resolved */
+        /** @var array{name: string, type: string, color: string, managed: bool, alias: null|string, mapping: array|null} $resolved */
         $resolved = $resolver->resolve($environment);
 
         return $resolved;

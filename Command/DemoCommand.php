@@ -43,10 +43,10 @@ class DemoCommand extends AbstractCommand
         $this->userCommand->makeUsers($this->config[AbstractCommand::USERS]);
         $this->environmentCommand->initialize($input, $output);
         $this->environmentCommand->makeEnvironments($this->config[AbstractCommand::ENVIRONMENTS]);
-        $this->documentationCommand->initialize($input, $output);
-        $this->documentationCommand->makeDocumentations($this->config[AbstractCommand::DOCUMENTATIONS]);
         $this->contentTypeCommand->initialize($input, $output);
         $this->contentTypeCommand->makeContentTypes($this->config[AbstractCommand::CONTENTTYPES]);
+        $this->documentationCommand->initialize($input, $output);
+        $this->documentationCommand->indexDocumentations($this->config[AbstractCommand::DOCUMENTATIONS]);
 
         return 0;
     }
