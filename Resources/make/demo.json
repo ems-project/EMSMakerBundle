@@ -3,7 +3,8 @@
     "url": "http://admin-test.localhost"
   },
   "documentations": {
-    "environment": "documentation"
+    "environment": "documentation",
+    "contenttype": "documentation"
   },
   "contenttypes": [{
     "filename": "route"
@@ -52,6 +53,25 @@
   },{
     "name": "documentation",
     "color": "yellow",
-    "managed": true
+    "managed": false,
+    "mapping": {
+      "path_en": {
+        "type": "keyword"
+      },
+      "keywords": {
+        "type": "keyword"
+      },
+      "title_en": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "body_en": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "version": {
+        "type": "keyword"
+      }
+    }
   }]
 }

@@ -11,6 +11,7 @@
         </service>
         
         <service id="ems_maker.service.file" class="EMS\MakerBundle\Service\FileService">
+            <argument>%kernel.project_dir%</argument>
         </service>
 
         <!-- commands -->
@@ -46,7 +47,8 @@
         </service>
         <service id="ems_maker.command.documentation" class="EMS\MakerBundle\Command\DocumentationCommand">
             <argument type="service" id="ems.service.environment"/>
-            <argument type="service" id="ems.service.contenttype"/>
+            <argument type="service" id="ems_maker.service.file"/>
+            <argument type="service" id="ems.service.index"/>
             <tag name="console.command"/>
         </service>
     </services>
