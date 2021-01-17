@@ -8,6 +8,12 @@
   },
   "contenttypes": [{
     "filename": "route"
+  },{
+    "filename": "label"
+  },{
+    "filename": "template"
+  },{
+    "filename": "documentation"
   }],
   "sites": {
     "demo": {
