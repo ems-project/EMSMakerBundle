@@ -199,8 +199,15 @@ class ContentTypeCommand extends Command
                 $this->io->note(sprintf('Contenttype %s has been ignored', $contentType->getName()));
                 return;
             }
-            $this->contentTypeService->updateFromJson($previousContentType, $json, $deleteExistingActions, $deleteExistingViews);
+            $contentType = $this->contentTypeService->updateFromJson($previousContentType, $json, $deleteExistingActions, $deleteExistingViews);
             $this->io->success(sprintf('Contenttype %s has been updated', $contentType->getName()));
+
+            if ($contentType->getEnvironment()->getManaged()) {
+                $this->contentTypeService->updateMapping($contentType);
+            }
+            $contentType->setActive(true);
+            $contentType->setDirty(false);
+            $this->contentTypeService->update($contentType, false);
         } catch (\Exception $e) {
             $this->io->error($e->getMessage());
         }

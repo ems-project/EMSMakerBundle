@@ -13,7 +13,8 @@
   },{
     "filename": "template"
   },{
-    "filename": "documentation"
+    "filename": "documentation",
+    "environment": "documentation"
   }],
   "sites": {
     "demo": {
