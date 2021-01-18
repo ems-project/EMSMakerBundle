@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-04-19T00:06:19+0200",
+    "_finalized_by": "theus",
+    "body": "{% extends '@EMSCH\/template\/base.html.twig' %}\r\n{% trans_default_domain trans_default_domain %}\r\n\r\n{% set titleValue = block(\"resultTitle\", \"@EMSCH\/template\/include\/search.twig\") %}\r\n\r\n{% block title %}\r\n    {{ titleValue }}\r\n{% endblock %}\r\n\r\n{% block request %}\r\n{% spaceless %}\r\n{%- set lastPage = (results.hits.total \/ search.size)|round(0, 'ceil') -1  -%}\r\n{%- set p = app.request.get('p', 0) -%}\r\n{{ {\r\n    'query': query,\r\n    'title': titleValue,\r\n    'title_header': block('title_tag'),\r\n    'page': search.page,\r\n    'load_more_path': p < lastPage ? path(\"emsch_search_#{targetGroup}_json.#{locale}\", app.request.query|merge({p: p + 1 })) : false,\r\n    'size': search.size,\r\n    'html_sorts': block(\"searchSorts\", \"@EMSCH\/template\/include\/search.twig\"),\r\n    'html_filters': block(\"searchFilters\", \"@EMSCH\/template\/include\/search.twig\"),\r\n    'html_form': block(\"searchForm\", \"@EMSCH\/template\/include\/search.twig\"),\r\n    'html_pagination': block(\"searchPagination\", \"@EMSCH\/template\/include\/search.twig\"),\r\n    'html_results': block(\"searchResults\", \"@EMSCH\/template\/include\/search.twig\")\r\n}|json_encode|raw }}\r\n{% endspaceless %}\r\n{% endblock request %}",
+    "name": "search\/results.json.twig",
+    "_sha1": "2739e8dc084db5ee6c87e4b4148d3bc8df4e0ae1",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

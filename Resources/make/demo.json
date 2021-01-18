@@ -26,6 +26,29 @@
     "french_for_highlighting",
     "german_for_highlighting"
   ],
+  "revisions": [{
+    "folder": "page"
+  },{
+    "folder": "faq"
+  },{
+    "folder": "label"
+  },{
+    "folder": "link"
+  },{
+    "folder": "menu"
+  },{
+    "folder": "news"
+  },{
+    "folder": "publication"
+  },{
+    "folder": "route"
+  },{
+    "folder": "target"
+  },{
+    "folder": "taxonomy"
+  },{
+    "folder": "template"
+  }],
   "contenttypes": [{
     "filename": "page"
   },{

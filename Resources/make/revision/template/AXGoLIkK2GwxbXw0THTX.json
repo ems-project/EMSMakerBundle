@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-05-27T15:38:23+0200",
+    "_finalized_by": "davmat",
+    "body": "{% extends '@EMSCH\/template\/page\/page.html.twig' %}\r\n{% trans_default_domain trans_default_domain %}\r\n\r\n{#{% block childrenTitle %}<h2>{{ 'target.children'|trans }}<\/h2>{% endblock %}#}\r\n\r\n{% block pageBlocks %}\r\n    {% set blocks = source|locale_attr('blocks_')|default([]) %}\r\n    {% if blocks|length > 0 %}\r\n        <div id=\"application\" class=\"mb-4\">\r\n            {% for blockIndex, pageBlock in blocks %}{{ block('pageBlock') }}{% endfor %}\r\n        <\/div>\r\n    {% endif %}\r\n{% endblock %}\r\n\r\n{% block pageBlock %}\r\n    {% set blockTitle = pageBlock|locale_attr('title_') %}\r\n    <div class=\"card\">\r\n        <div class=\"card-header\" id=\"{{ blockTitle }}\">\r\n          <h5 class=\"mb-0\">\r\n            <a href=\"#{{ blockTitle }}\" class=\"btn btn-link\" data-toggle=\"collapse\" data-target=\"#collapse{{ blockIndex }}\" aria-expanded=\"true\" aria-controls=\"collapse{{ blockIndex }}\" role=\"button\">{{ blockTitle }}<\/a>\r\n          <\/h5>\r\n        <\/div>\r\n        <div id=\"collapse{{ blockIndex }}\" class=\"collapse\" aria-labelledby=\"{{ blockTitle }}\" data-parent=\"#application\">\r\n            <div class=\"card-body\">{{ pageBlock|locale_attr('body_')|default('')|replace(wyiwygReplaces)|emsch_routing|ems_anti_spam }}<\/div>\r\n        <\/div>\r\n    <\/div>\r\n{% endblock %}",
+    "name": "page\/application.html.twig",
+    "_sha1": "dbb3fc7406d77b787c0f05ee4d3761810ebd9b46",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

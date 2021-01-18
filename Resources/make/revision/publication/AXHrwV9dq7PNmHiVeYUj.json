@@ -1,0 +1,40 @@
+{
+    "_contenttype": "publication",
+    "_finalization_datetime": "2020-05-06T22:50:50+0200",
+    "_finalized_by": "theus",
+    "document_date": "2020\/05\/06",
+    "file_en": {
+        "_author": null,
+        "_content": null,
+        "_date": "2020-04-09T11:42:02Z",
+        "_language": null,
+        "_title": null,
+        "filename": "Verbetersleutel werkschrift taal na Pasen.pdf",
+        "filesize": 2404477,
+        "mimetype": "application\/pdf",
+        "sha1": "24098ff6dc0cfdbc169b2cdaf5d46d8d2d2c1e9c"
+    },
+    "label": "test pdf",
+    "meta_en": "Test of PDF",
+    "publication_date": "2020\/05\/06",
+    "publication_datetime": "2020\/05\/06 10:00:00",
+    "search_dates": [
+        "2020\/05\/06",
+        "2020\/05\/06"
+    ],
+    "search_type": "recommendation",
+    "search_year": "2020",
+    "show_de": false,
+    "show_en": true,
+    "show_fr": false,
+    "show_nl": false,
+    "slug_en": "test-pdf",
+    "summary_en": "<p>Test PDF<\/p>",
+    "target_group": [
+        "site",
+        "doc"
+    ],
+    "title_en": "Test PDF",
+    "_sha1": "87231370fc208d794932548d13c3f9604f3d1dd8",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

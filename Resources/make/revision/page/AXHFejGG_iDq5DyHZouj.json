@@ -1,0 +1,54 @@
+{
+    "_contenttype": "page",
+    "_finalization_datetime": "2020-05-02T16:17:24+0200",
+    "_finalized_by": "theus",
+    "body_de": "<p>Diese Website wurde mit der Elasticms-Technologie und ihrem Skelett-Begleiter eingerichtet.<\/p>",
+    "body_en": "<p>This website has setup with the elasticms technology and it&#39;s skeleton companion.<\/p>",
+    "body_fr": "<p>Pr&eacute;sentation d&#39;elasticms en tant que CMS mais pas que!<\/p>",
+    "body_nl": "<p>Deze website is opgezet met de Elasticms-technologie en is de skeletgenoot.<\/p>",
+    "label": "Homepage",
+    "menu_de": [
+        "AXHKYcbQ_iDq5DyHZ7sP"
+    ],
+    "menu_en": [
+        "AXHFZX45_iDq5DyHZmYs"
+    ],
+    "menu_fr": [
+        "AXHFZgtq_iDq5DyHZmip"
+    ],
+    "menu_nl": [
+        "AXHKYWf0_iDq5DyHZ7sD"
+    ],
+    "meta_de": "Willkommen auf der Website der elasticms-Demo",
+    "meta_en": "Features? Performances? All you need to know about elasticms as CMS and much more",
+    "meta_fr": "Tout\u00a0ce qu'il faut savoir sur elasticms",
+    "meta_nl": "Kenmerken? Optredens? Alles wat je moet weten over Elasticms als CMS en nog veel meer.",
+    "search_dates": [
+        "2020\/04\/29"
+    ],
+    "search_type": "page",
+    "search_year": "2020",
+    "show_de": true,
+    "show_en": true,
+    "show_fr": true,
+    "show_nl": true,
+    "slug_de": "willkommen-auf-der-website-der-elasticms-demo",
+    "slug_en": "welcome-on-the-elasticms-demo-website",
+    "slug_fr": "bienvenue-sur-le-site-demo-d-elasticms",
+    "slug_nl": "welkom-op-de-demo-website-van-elasticms",
+    "summary_de": "<p>Eigenschaften? Auff&uuml;hrungen? Alles, was Sie &uuml;ber Elastizit&auml;ten als CMS und vieles mehr wissen m&uuml;ssen.<\/p>",
+    "summary_en": "<p>Features? Performances? All you need to know about elasticms as CMS and much more.<\/p>",
+    "summary_fr": "<p>Tout&nbsp;ce qu&#39;il faut savoir sur elasticms<\/p>",
+    "summary_nl": "<p>Kenmerken? Optredens? Alles wat je moet weten over Elasticms als CMS en nog veel meer.<\/p>",
+    "target_group": [
+        "site",
+        "doc"
+    ],
+    "template": "template\/page\/homepage.html.twig",
+    "title_de": "Willkommen auf der Website der elasticms-Demo",
+    "title_en": "Welcome on the elasticms demo website",
+    "title_fr": "Bienvenue sur le site demo d'elasticms",
+    "title_nl": "Welkom op de demo-website van elasticms",
+    "_sha1": "41b1e470cdcd870578a9e33cf13d067889966ae2",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

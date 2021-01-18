@@ -1,0 +1,28 @@
+{
+    "_contenttype": "news",
+    "_finalization_datetime": "2020-05-01T09:03:22+0200",
+    "_finalized_by": "theus",
+    "body_en": "<p>The target have now more close to a sub-site thing than before with those variables which can be set per target:<\/p>\r\n\r\n<ul>\r\n\t<li>locales: Languages and they order<\/li>\r\n\t<li>hostPattern: how to generate host in lnaguage switch menu<\/li>\r\n\t<li>canonicals: live base url per locale, i.e. doc.elasticms.be vs. www.elasticms.eu<\/li>\r\n\t<li>isLive:<\/li>\r\n\t<li>searchTemplate: &#39;top&#39;, &#39;left&#39; or not defined per target<\/li>\r\n\t<li>simpleTaxonomies: Taxonomies to list<\/li>\r\n\t<li>groupedTaxonomies:<\/li>\r\n\t<li>wyiwygReplaces: array of replaces in wysiwyg fields<\/li>\r\n\t<li>cdnSiteId:&nbsp;<\/li>\r\n\t<li>matomoSiteIds : One id per env i.e. { live:23 }<\/li>\r\n\t<li>footerMenu: OUUID of the footer menu<\/li>\r\n<\/ul>",
+    "label": "[doc] News approach with a configuration set par target",
+    "search_category": [
+        "taxonomy:skeleton"
+    ],
+    "search_dates": [
+        "2020\/04\/30"
+    ],
+    "search_type": "news",
+    "search_year": "2020",
+    "show_de": false,
+    "show_en": true,
+    "show_fr": false,
+    "show_homepage": false,
+    "show_nl": false,
+    "slug_en": "news-approach-with-a-configuration-set-par-target",
+    "summary_en": "<p>Even in a multi-target website it&#39;s possible to have differents configs in terms of locales, search, footer, ....<\/p>",
+    "target_group": [
+        "doc"
+    ],
+    "title_en": "News approach with a configuration set par target",
+    "_sha1": "7560ff67ad504809c16db9f90d2ea06e668a28e8",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

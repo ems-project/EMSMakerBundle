@@ -1,0 +1,10 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:02+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": \"favicon.ico\",\r\n    \"controller\": \"Symfony\\\\Bundle\\\\FrameworkBundle\\\\Controller\\\\RedirectController::urlRedirectAction\",\r\n    \"defaults\": {\r\n        \"path\": \"\/bundles\/emsch_assets\/img\/favicon.ico\",\r\n        \"permanent\": \"true\",\r\n        \"keepQueryParams\": \"true\"\r\n    }\r\n}",
+    "name": "favicon.ico",
+    "order": 2,
+    "_sha1": "95e460d46a06c3f428a3a10d2edc3ee98b5b1561",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

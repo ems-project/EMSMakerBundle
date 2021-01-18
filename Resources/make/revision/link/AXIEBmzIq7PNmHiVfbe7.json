@@ -1,0 +1,20 @@
+{
+    "_contenttype": "link",
+    "_finalization_datetime": "2020-05-11T15:57:09+0200",
+    "_finalized_by": "ded",
+    "label": "test",
+    "search_dates": [
+        "2020\/05\/11"
+    ],
+    "search_type": "link",
+    "search_year": "2020",
+    "show_de": false,
+    "show_en": false,
+    "show_fr": true,
+    "show_nl": false,
+    "summary_fr": "<p>test<\/p>",
+    "title_fr": "test",
+    "url_fr": "http:\/\/www.google.be",
+    "_sha1": "81697d262de74b4886344ba391e7cc53541f5482",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

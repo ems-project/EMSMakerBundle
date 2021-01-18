@@ -1,0 +1,35 @@
+{
+    "_contenttype": "page",
+    "_finalization_datetime": "2020-05-02T16:26:45+0200",
+    "_finalized_by": "theus",
+    "body_fr": "<p>Elasticms est avant tout une architecture logiciel, orient&eacute; web, autour d&#39;elasticsearch.<\/p>",
+    "label": "Pr\u00e9sentation",
+    "menu_de": [
+        "ab6940a2-ecab-4a3e-9691-8b2d310eab09"
+    ],
+    "menu_en": [
+        "2d23cf97-1c1a-40cb-ad07-88961ea5e1a6"
+    ],
+    "menu_fr": [
+        "c9ab2579-3716-4222-bcd5-e415a1a4095e"
+    ],
+    "menu_nl": [
+        "f4fccad2-955d-4c1a-9b85-2143b7834779"
+    ],
+    "meta_fr": "Elasticms est avant tout une architecture logiciel, orient\u00e9 web, autour d'elasticsearch.",
+    "search_dates": [
+        "2020\/05\/02"
+    ],
+    "search_type": "page",
+    "search_year": "2020",
+    "show_de": false,
+    "show_en": false,
+    "show_fr": true,
+    "show_nl": false,
+    "slug_fr": "presentation",
+    "summary_fr": "<p>Qu&#39;est ce qu&#39;elasticms?<\/p>",
+    "template": "template\/page\/page.html.twig",
+    "title_fr": "Pr\u00e9sentation",
+    "_sha1": "67b25b6a180a88ffa703717b891d5752624c2e24",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

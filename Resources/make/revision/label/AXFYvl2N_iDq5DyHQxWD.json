@@ -1,0 +1,12 @@
+{
+    "_contenttype": "label",
+    "_finalization_datetime": "2020-04-08T10:31:07+0200",
+    "_finalized_by": "davmat",
+    "key": "search.results",
+    "label_de": "{0} Keine Resultate gefunden|{1} 1 Resultat gefunden|]1,Inf[%count% Resultate gefunden",
+    "label_en": "{0} No results found|{1} 1 result found|]1,Inf[%count% results found",
+    "label_fr": "{0} Aucun r\u00e9sultat trouv\u00e9|{1} 1 r\u00e9sultat trouv\u00e9|]1,Inf[%count% r\u00e9sultats trouv\u00e9s",
+    "label_nl": "{0} Geen resultaten gevonden|{1} 1 resultaat gevonden|]1,Inf[%count% resultaten gevonden",
+    "_sha1": "6d2af5d42556c89e9fcb7800db71c53b32a342f4",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

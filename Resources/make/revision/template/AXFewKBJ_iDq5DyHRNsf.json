@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-05-13T13:59:59+0200",
+    "_finalized_by": "theus",
+    "body": "<link media=\"screen\" href=\"https:\/\/wcmtech-cdn-preview.prd.ext.socialsecurity.be\/{{ app.request.locale }}\/AXFeSTO72GwxbXw0Kcwf\/style.css\" rel=\"stylesheet\">\r\n{#<link media=\"screen\" href=\"https:\/\/cdn.ehealthplatform.info\/{{ app.request.locale }}\/AXFeSTO72GwxbXw0Kcwf\/style.css\" rel=\"stylesheet\">#}",
+    "name": "assets\/styles.html.twig",
+    "_sha1": "3b9597b2c02dceedc8e6f62e7b2433328f67b5b4",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

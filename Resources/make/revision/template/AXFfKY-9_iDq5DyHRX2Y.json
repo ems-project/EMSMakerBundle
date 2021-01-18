@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-04-18T07:23:24+0200",
+    "_finalized_by": "theus",
+    "body": "{% extends '@EMSCH\/template\/base.html.twig' %}\r\n{% trans_default_domain trans_default_domain %}\r\n\r\n{% block body %}\r\n    <main role=\"main\" class=\"container mt-2\" id=\"main-content\">\r\n        <div class=\"row py-4\">\r\n           <div class=\"col\">\r\n               <h1 class=\"pb-3 mb-4 font-italic border-bottom\">{{ 'missing.title'|trans }}<\/h1>\r\n               <div class=\"alert alert-primary\" role=\"alert\">\r\n                  {{ 'missing.description'|trans({'%type%': source._contenttype|trans, '%language%': language}) }}\r\n                <\/div>\r\n           <\/div> \r\n        <\/div>\r\n         <div class=\"row py-2 d-flex justify-content-center\">\r\n            {% for language, l in locales|filter(v => ( attribute(source, 'show_'~v)|default(false) == true ) ) %}\r\n                <div class=\"col-md-3 text-center\">\r\n                    <div class=\"card shadow-sm bg-dark text-light\">\r\n                        <div class=\"card-body\">\r\n                            <p class=\"card-text\">{{ attribute(source, 'title_'~l)  }}<\/p>\r\n                            <a lang=\"{{ l }}\" href=\"{{ \"ems:\/\/#{source._contenttype}:#{document._id}\"|emsch_routing(l) }}\" class=\"btn btn-info\">{{ language }}<\/a>\r\n                        <\/div>\r\n                    <\/div>\r\n                <\/div>\r\n            {% endfor %}\r\n        <\/div>\r\n    <\/main>\r\n{% endblock %}",
+    "name": "page\/missing_translation.html.twig",
+    "_sha1": "328e3959ebe280cddbab80bbe8f39b0d875c3d13",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

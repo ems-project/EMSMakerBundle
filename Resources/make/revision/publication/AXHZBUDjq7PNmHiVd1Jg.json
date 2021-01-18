@@ -1,0 +1,40 @@
+{
+    "_contenttype": "publication",
+    "_finalization_datetime": "2020-05-03T07:32:12+0200",
+    "_finalized_by": "theus",
+    "document_date": "2020\/04\/01",
+    "file_en": {
+        "_author": "Keytrade Bank - J.J.",
+        "_content": "R\u00e9f\u00e9rence client:  \r\nLimite d\u2019utilisation: \r\nDate: \r\nTransactions du   au \r\nKeytrade Bank, Belgian branch of Ark\u00e9a Direct Bank SA (France) - Voorstlaan 100 Boulevard du Souverain - 1170 Brussels - RPR\/RPM Brussels - BE 0879 257 191\r\nInsurance Intermediary authorized to carry on activities in Belgium (ORIAS 07 008 441) - T +32 2 679 90 00 - F + 32 2 679 90 01\r\ninfo@keytradebank.com - keytradebank.be\r\nRelev\u00e9 de votre carte de cr\u00e9dit Keytrade Bank Page 1\/2\r\nDate \r\ntransaction\r\nDate \r\ncomptabilisation Description Montant\r\n355881808\r\n1,250.00 EUR\r\n01\/04\/2020\r\n01\/03\/2020 31\/03\/2020\r\nMathieu De Keyzer\r\nRue Delwart 95\r\n1070 ANDERLECHT\r\n01\/03 Solde pr\u00e9c\u00e9dent du 01\/03\/2020 -202.28 EUR\r\n31\/03 31\/03 31\/03\/20 - DOMICILIATION VISA CARD 1242.66 EUR\r\nNum. carte 4796-55XX-XXXX-6950 (Visa) MATHIEU DE KEYZER -1,242.66 EUR\r\nNouveau solde\r\nPaiement effectu\u00e9 par Keytrade Bank\r\n-1,242.66 EUR\r\n1 2\r\nR\u00e9f\u00e9rence client:  \r\nLimite d\u2019utilisation: \r\nDate: \r\nTransactions du   au \r\nKeytrade Bank, Belgian branch of Ark\u00e9a Direct Bank SA (France) - Voorstlaan 100 Boulevard du Souverain - 1170 Brussels - RPR\/RPM Brussels - BE 0879 257 191\r\nInsurance Intermediary authorized to carry on activities in Belgium (ORIAS 07 008 441) - T +32 2 679 90 00 - F + 32 2 679 90 01\r\ninfo@keytradebank.com - keytradebank.be\r\nRelev\u00e9 de votre carte de cr\u00e9dit Keytrade Bank Page 1\/2\r\nDate \r\ntransaction\r\nDate \r\ncomptabilisation Description Montant\r\n355881808\r\n1,250.00 EUR\r\n01\/04\/2020\r\n01\/03\/2020 31\/03\/2020\r\nMathieu De Keyzer\r\nRue Delwart 95\r\n1070 ANDERLECHT\r\nNum. carte 4796-55XX-XXXX-6950 (Visa) MATHIEU DE KEYZER\r\n05\/03 06\/03 05\/03\/20 ET *CARHIRE 0 -362.02 EUR\r\n05\/03 07\/03 05\/03\/20 Restaurant TERBORGHT H -69.50 EUR\r\n18\/03 19\/03 18\/03\/20 IKEA E COMMERCE Z -791.80 EUR\r\n22\/03 23\/03 22\/03\/20 OVH 4823958 5 -19.34 EUR\r\nSolde pour cette carte -1,242.66 EUR\r\n2 2",
+        "_date": null,
+        "_language": "fr",
+        "_title": "E-Statement",
+        "filename": "Statement-651180390401.pdf",
+        "filesize": 68733,
+        "mimetype": "application\/pdf",
+        "sha1": "c6e1d3d0f75a50d907e10a0f5f8799760722c294"
+    },
+    "label": "[site, doc] test route to asset",
+    "meta_en": "This is a test",
+    "publication_date": "2020\/04\/01",
+    "publication_datetime": "2020\/04\/01 10:00:00",
+    "search_dates": [
+        "2020\/04\/01",
+        "2020\/04\/01"
+    ],
+    "search_type": "advice",
+    "search_year": "2020",
+    "show_de": false,
+    "show_en": true,
+    "show_fr": false,
+    "show_nl": false,
+    "slug_en": "test-route-to-asset",
+    "summary_en": "<p>This a test<\/p>",
+    "target_group": [
+        "site",
+        "doc"
+    ],
+    "title_en": "test route to asset",
+    "_sha1": "1b85be52c34f7e3b194f196c2876aeb51170ceba",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

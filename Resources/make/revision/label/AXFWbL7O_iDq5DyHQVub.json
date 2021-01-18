@@ -1,0 +1,12 @@
+{
+    "_contenttype": "label",
+    "_finalization_datetime": "2020-04-07T22:54:59+0200",
+    "_finalized_by": "theus",
+    "key": "error.404.description",
+    "label_de": "Wir konnten die gesuchte Seite nicht finden. In der Zwischenzeit k\u00f6nnen Sie versuchen, das Suchformular zu verwenden.",
+    "label_en": "We could not find the page you were looking for. Meanwhile, you may try using the search form.",
+    "label_fr": "Nous n'avons pas trouv\u00e9 la page que vous cherchiez. En attendant, vous pouvez essayer d'utiliser le formulaire de recherche.",
+    "label_nl": "We kunnen de pagina die u zoekt niet vinden. Ondertussen kunt u proberen het zoekformulier te gebruiken.",
+    "_sha1": "0103eea60e339637a75e0462a2d06f52406f8187",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

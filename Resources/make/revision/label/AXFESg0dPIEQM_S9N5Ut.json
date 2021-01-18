@@ -1,0 +1,12 @@
+{
+    "_contenttype": "label",
+    "_finalization_datetime": "2020-04-04T08:23:55+0000",
+    "_finalized_by": "demo",
+    "key": "site.copyright",
+    "label_de": "\u00a9 %company% %year%",
+    "label_en": "\u00a9 %company% %year%",
+    "label_fr": "\u00a9 %company% %year%",
+    "label_nl": "\u00a9 %company% %year%",
+    "_sha1": "f1e8a1ddc52ea889eabd3df90122e06283fde7b3",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

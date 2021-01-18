@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-05-01T15:58:39+0200",
+    "_finalized_by": "theus",
+    "body": "{% extends '@EMSCH\/template\/variables.twig' %}\r\n{% trans_default_domain trans_default_domain %}\r\n\r\n{% block request %}\r\n{%- if 'live' == environment and app.environment == 'prod' and (app.request.host) in canonicals %}\r\nUser-agent: *\r\nDisallow: \/bundles\/\r\n{% else %}\r\nUser-agent: *\r\nDisallow: \/\r\n{% endif %}\r\nDisallow: \/bundles\/\r\nSitemap: https:\/\/{{ attribute(targetConfigs|first.canonicals, targetConfigs|first.locales|first) }}{{ path('sitemap.xml') }}\r\n{% endblock %}",
+    "name": "seo\/robots.txt",
+    "_sha1": "844f8007c5e0c48f84c446bb62d54fb5efcdc525",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

@@ -1,0 +1,22 @@
+{
+    "_contenttype": "target",
+    "_finalization_datetime": "2020-04-30T12:41:46+0200",
+    "_finalized_by": "theus",
+    "label": "Site in en (Website)",
+    "locales": "en",
+    "menu": "[{\"id\":\"2d23cf97-1c1a-40cb-ad07-88961ea5e1a6\",\"contentType\":\"page\",\"label\":\"Introduction\",\"type\":\"node\"},{\"id\":\"c7d90c7a-090a-42b9-8cb1-d990372b5d2e\",\"contentType\":\"page\",\"label\":\"References\",\"type\":\"node\"}]",
+    "menu_ids": [
+        "AXHFZX45_iDq5DyHZmYs",
+        "2d23cf97-1c1a-40cb-ad07-88961ea5e1a6",
+        "c7d90c7a-090a-42b9-8cb1-d990372b5d2e"
+    ],
+    "slugs": [
+        "",
+        "introduction",
+        "references"
+    ],
+    "target_group": "site",
+    "title": "Website",
+    "_sha1": "9fda20ce95caf8d52da22ee39a32ca3047a6a419",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

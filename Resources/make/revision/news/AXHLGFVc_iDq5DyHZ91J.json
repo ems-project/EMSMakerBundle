@@ -1,0 +1,58 @@
+{
+    "_contenttype": "news",
+    "_finalization_datetime": "2020-05-01T10:54:08+0200",
+    "_finalized_by": "theus",
+    "body_de": "<p>Das Ziel ist hervorzuheben:<\/p>\r\n\r\n<ul>\r\n\t<li>seine Funktionen<\/li>\r\n\t<li>seine Leistungen<\/li>\r\n\t<li>und zentralisieren Sie &quot;wiederverwendbare&quot; Konfigurationsbeispiele f&uuml;r Entwickler und Webintegratoren<\/li>\r\n<\/ul>",
+    "body_en": "<p>The objective is to highlight:<\/p>\r\n\r\n<ul>\r\n\t<li>its functionalities<\/li>\r\n\t<li>its performances<\/li>\r\n\t<li>and centralize &quot;reusable&quot; configuration examples for developers and web integrators<\/li>\r\n<\/ul>",
+    "body_fr": "<p>L&#39;objectif est de mettre en lumi&egrave;re :<\/p>\r\n\r\n<ul>\r\n\t<li>des fonctionnalit&eacute;s de l&#39;outil<\/li>\r\n\t<li>de ces performances<\/li>\r\n\t<li>de centraliser des exemples de configuration &quot;r&eacute;utilisables&quot; pour les d&eacute;velloppeurs et les int&eacute;grateurs web<\/li>\r\n<\/ul>",
+    "body_nl": "<p>Het doel is om te benadrukken:<\/p>\r\n\r\n<ul>\r\n\t<li>zijn functionaliteiten<\/li>\r\n\t<li>zijn uitvoeringen<\/li>\r\n\t<li>en centraliseer &quot;herbruikbare&quot; configuratievoorbeelden voor ontwikkelaars en webintegrators<\/li>\r\n<\/ul>",
+    "label": "[site, doc] Release of a new version of the demo website",
+    "meta_de": "Einrichtung einer neuen Version der Demonstrations-website",
+    "meta_en": "Setup of a new version of the demonstration website",
+    "meta_fr": "Mise en place d'une nouvelle version du site de d\u00e9monstration",
+    "meta_nl": "Opzetten van een nieuwe versie van de demonstratie website",
+    "picture_alt_de": "Logo",
+    "picture_alt_en": "Logo",
+    "picture_alt_fr": "Logo",
+    "picture_alt_nl": "Logo",
+    "picture_asset": {
+        "filename": "logo.png",
+        "filesize": 17748,
+        "mimetype": "image\/png",
+        "sha1": "82fad4f8a86e03d3f1ea39cb53317369f4565c73"
+    },
+    "picture_background": "#00068c",
+    "picture_gravity": "center",
+    "picture_resize": "fill",
+    "search_category": [
+        "taxonomy:skeleton"
+    ],
+    "search_dates": [
+        "2020\/04\/30"
+    ],
+    "search_type": "news",
+    "search_year": "2020",
+    "show_de": true,
+    "show_en": true,
+    "show_fr": true,
+    "show_homepage": true,
+    "show_nl": true,
+    "slug_de": "veroffentlichung-einer-neuen-version-der-demo-website",
+    "slug_en": "release-of-a-new-version-of-the-demo-website",
+    "slug_fr": "un-tout-nouveau-site-de-demonstration",
+    "slug_nl": "release-van-een-nieuwe-versie-van-de-demo-website",
+    "summary_de": "<p>Einrichtung einer neuen Version der Demonstrations-website.<\/p>",
+    "summary_en": "<p>Setup of a new version of the demonstration website.<\/p>",
+    "summary_fr": "<p>Mise en place d&#39;une nouvelle version du site de d&eacute;monstration<\/p>",
+    "summary_nl": "<p>Opzetten van een nieuwe versie van de demonstratie website.<\/p>",
+    "target_group": [
+        "site",
+        "doc"
+    ],
+    "title_de": "Ver\u00f6ffentlichung einer neuen Version der Demo-Website",
+    "title_en": "Release of a new version of the demo website",
+    "title_fr": "Un tout nouveau site de d\u00e9monstration",
+    "title_nl": "Release van een nieuwe versie van de demo-website",
+    "_sha1": "0e06d8b2455805826a17ee0837e93d63082485d5",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}
