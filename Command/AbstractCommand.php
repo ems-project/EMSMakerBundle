@@ -24,6 +24,7 @@ abstract class AbstractCommand extends Command
     public const DOCUMENTATIONS = 'documentations';
     public const CONTENTTYPES = 'contenttypes';
     public const ANALYZERS = 'analyzers';
+    public const REVISIONS = 'revisions';
     public const FILTERS = 'filters';
     protected array $config;
     protected SymfonyStyle $io;
@@ -94,11 +95,13 @@ abstract class AbstractCommand extends Command
             self::CONTENTTYPES => [],
             self::ANALYZERS => [],
             self::FILTERS => [],
+            self::REVISIONS => [],
             self::DOCUMENTATIONS => null,
         ])->setAllowedTypes(self::ADMIN, 'array');
         $resolver->setAllowedTypes(self::SITES, ['array']);
         $resolver->setAllowedTypes(self::USERS, ['array']);
         $resolver->setAllowedTypes(self::ANALYZERS, ['array']);
+        $resolver->setAllowedTypes(self::REVISIONS, ['array']);
         $resolver->setAllowedTypes(self::FILTERS, ['array']);
         $resolver->setAllowedTypes(self::ENVIRONMENTS, ['array']);
         $resolver->setAllowedTypes(self::CONTENTTYPES, ['array']);

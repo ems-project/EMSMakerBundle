@@ -47,6 +47,9 @@
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.revision" class="EMS\MakerBundle\Command\RevisionCommand">
+            <argument type="service" id="ems.service.contenttype"/>
+            <argument type="service" id="ems.service.document"/>
+            <argument type="service" id="ems_maker.service.file"/>
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.user" class="EMS\MakerBundle\Command\UserCommand">

@@ -57,6 +57,14 @@ class FileService
         throw new FileNotFoundException(null, 0, null, $path . '/' . $name . '.json');
     }
 
+    public function getFilesInFolder(string $name, string $type): Finder
+    {
+        $path = \implode(DIRECTORY_SEPARATOR, [self::JSON_FILES . $type, $name]);
+        $finder = new Finder();
+
+        return $finder->files()->in($path)->name('*.json');
+    }
+
     public function getDocumentationsCount(): int
     {
         $counter = 0;
