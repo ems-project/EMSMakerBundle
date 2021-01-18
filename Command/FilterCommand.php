@@ -55,5 +55,4 @@ class FilterCommand extends AbstractCommand
             $this->io->progressAdvance();
         }
     }
-
 }

@@ -202,7 +202,12 @@ class ContentTypeCommand extends Command
             $contentType = $this->contentTypeService->updateFromJson($previousContentType, $json, $deleteExistingActions, $deleteExistingViews);
             $this->io->success(sprintf('Contenttype %s has been updated', $contentType->getName()));
 
-            if ($contentType->getEnvironment()->getManaged()) {
+            $environment = $contentType->getEnvironment();
+            if (null === $environment) {
+                throw new \RuntimeException('Unexpected null environment');
+            }
+
+            if ($environment->getManaged()) {
                 $this->contentTypeService->updateMapping($contentType);
             }
             $contentType->setActive(true);

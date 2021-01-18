@@ -55,5 +55,4 @@ class AnalyzerCommand extends AbstractCommand
             $this->io->progressAdvance();
         }
     }
-
 }
