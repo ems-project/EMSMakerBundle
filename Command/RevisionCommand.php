@@ -75,7 +75,7 @@ class RevisionCommand extends AbstractCommand
      * @param array<mixed> $config
      * @return array{folder: string}
      */
-    private function resolveRevision(array $config)
+    private function resolveRevision(array $config): array
     {
         $resolver = new OptionsResolver();
         $resolver->setRequired([
