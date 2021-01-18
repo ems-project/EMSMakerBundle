@@ -30,7 +30,7 @@ class DocumentationCommand extends AbstractCommand
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $this->indexDocumentations($this->config['documentation']);
+        $this->indexDocumentations($this->config[AbstractCommand::DOCUMENTATIONS]);
 
         return 0;
     }
