@@ -11,6 +11,7 @@ class FileService
     
     const JSON_FILES = __DIR__ . '/../Resources/make/';
     const TYPE_ANALYZER = 'analyzer';
+    const TYPE_FILTER = 'filter';
     const TYPE_CONTENTTYPE = 'contenttype';
     const TYPE_ENVIRONMENT = 'environment';
     const TYPE_REVISION = 'revision';
