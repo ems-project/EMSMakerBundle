@@ -6,6 +6,26 @@
     "environment": "documentation",
     "contenttype": "documentation"
   },
+  "filters": [
+    "dutch_stemmer",
+    "dutch_stop",
+    "empty_elision",
+    "english_stemmer",
+    "english_stop",
+    "french_elision",
+    "french_stemmer",
+    "french_stop",
+    "german_stemmer",
+    "german_stop"
+  ],
+  "analyzers": [
+    "alpha_order",
+    "html_strip",
+    "dutch_for_highlighting",
+    "english_for_highlighting",
+    "french_for_highlighting",
+    "french_for_highlighting"
+  ],
   "contenttypes": [{
     "filename": "page"
   },{
