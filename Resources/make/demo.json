@@ -7,6 +7,22 @@
     "contenttype": "documentation"
   },
   "contenttypes": [{
+    "filename": "page"
+  },{
+    "filename": "news"
+  },{
+    "filename": "publication"
+  },{
+    "filename": "faq"
+  },{
+    "filename": "link"
+  },{
+    "filename": "menu"
+  },{
+    "filename": "target"
+  },{
+    "filename": "taxonomy"
+  },{
     "filename": "route"
   },{
     "filename": "label"

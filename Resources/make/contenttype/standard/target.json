@@ -1,0 +1,572 @@
+{
+    "class": "EMS\\CoreBundle\\Entity\\ContentType",
+    "arguments": [],
+    "properties": {
+        "created": {
+            "date": "2020-03-15 13:50:01.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+            "date": "2020-05-11 15:44:06.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "name": "target",
+        "pluralName": "Targets",
+        "singularName": "Target",
+        "icon": "glyphicon glyphicon-screenshot",
+        "description": null,
+        "indexTwig": null,
+        "extra": null,
+        "lockBy": null,
+        "lockUntil": null,
+        "circlesField": "",
+        "businessIdField": "",
+        "deleted": false,
+        "havePipelines": false,
+        "askForOuuid": false,
+        "dirty": false,
+        "color": "green",
+        "fieldType": {
+            "class": "EMS\\CoreBundle\\Entity\\FieldType",
+            "arguments": [],
+            "properties": {
+                "__initializer__": null,
+                "__cloner__": null,
+                "__isInitialized__": true,
+                "created": {
+                    "date": "2020-03-15 13:50:01.000000",
+                    "timezone_type": 3,
+                    "timezone": "Europe\/Brussels"
+                },
+                "modified": {
+                    "date": "2020-04-10 14:48:03.000000",
+                    "timezone_type": 3,
+                    "timezone": "Europe\/Brussels"
+                },
+                "type": "EMS\\CoreBundle\\Form\\DataField\\ContainerFieldType",
+                "name": "source",
+                "contentType": null,
+                "deleted": false,
+                "description": null,
+                "options": {
+                    "displayOptions": {
+                        "label": null,
+                        "class": null,
+                        "lastOfRow": false,
+                        "helptext": null,
+                        "icon": null
+                    },
+                    "restrictionOptions": {
+                        "minimum_role": null
+                    },
+                    "extraOptions": {
+                        "extra": null,
+                        "postProcessing": null
+                    }
+                },
+                "orderKey": 0,
+                "parent": null,
+                "children": [
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-11 07:51:21.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-04-12 16:47:36.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\ComputedFieldType",
+                            "name": "label",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Label",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": "This field is auto-generated.",
+                                    "valueTemplate": "{%- spaceless %}\r\n    {%- if _source.locales|default(false) and _source.target_group|default(false) -%}\r\n        {{-  _source.target_group|humanize }} in {{ _source.locales }} ({{ _source.title }})\r\n    {%- endif %}\r\n{%- endspaceless %}",
+                                    "json": false,
+                                    "displayTemplate": "{{ data }}"
+                                },
+                                "mappingOptions": {
+                                    "mappingOptions": "{\r\n\"type\": \"text\"\r\n}",
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": [],
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": []
+                            },
+                            "orderKey": 0,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-12 16:43:25.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-04-30 12:44:57.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\TextStringFieldType",
+                            "name": "title",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Title",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": "Used in the target group combo-box and as the 'Home' label in the breadcrumb and in the target group switch menu",
+                                    "prefixIcon": null,
+                                    "prefixText": null,
+                                    "suffixIcon": null,
+                                    "suffixText": null,
+                                    "placeholder": null,
+                                    "icon": null
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": null,
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": false,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 1,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-03-15 13:53:19.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-04-12 16:44:52.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\ChoiceFieldType",
+                            "name": "locales",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Languages",
+                                    "class": "hidden col-md-4",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "multiple": false,
+                                    "expanded": false,
+                                    "select2": false,
+                                    "choices": "en\r\nfr\r\nnl\r\nde",
+                                    "labels": "English\r\nFrench\r\nDutch\r\nGerman",
+                                    "linked_collection": null,
+                                    "collection_label_field": null
+                                },
+                                "mappingOptions": {
+                                    "index": "not_analyzed",
+                                    "analyzer": "keyword",
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": false,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 2,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-04 20:16:22.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-04-29 11:06:40.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\ChoiceFieldType",
+                            "name": "target_group",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Target group",
+                                    "class": "hidden col-md-4",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "multiple": false,
+                                    "expanded": false,
+                                    "select2": true,
+                                    "choices": "site\r\ndoc",
+                                    "labels": "Website\r\nDocumentation",
+                                    "linked_collection": null,
+                                    "collection_label_field": null
+                                },
+                                "mappingOptions": {
+                                    "index": "not_analyzed",
+                                    "analyzer": "keyword",
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": true,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 3,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-03-15 13:52:04.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-04-12 16:44:52.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\JsonMenuEditorFieldType",
+                            "name": "menu",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Menu",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "icon": null,
+                                    "maxDepth": null,
+                                    "nodeTypes": "page",
+                                    "itemTypes": "link"
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": null
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": false,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 4,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-09 18:02:29.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-04-29 09:22:49.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\ComputedFieldType",
+                            "name": "slugs",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Slugs",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": "This field is auto-generated.",
+                                    "valueTemplate": "{% set slugs = _source.menu|default('{}')|ems_json_menu_decode.slugs %}\r\n{% set urls = {} %}\r\n{% if _id|default(false) %}\r\n    {% set urls = [''] %}\r\n{% endif %}\r\n{% for slug in slugs %}\r\n  {% set slitted = slug|split('\/') %}\r\n  {% set encoded = {} %}\r\n  {% for item in slitted %}\r\n    {% set encoded = encoded|merge([(item|replace({'\\'': ' ', '\u00e9': 'e', '\u00fc': 'u'})|url_generator )]) %}\r\n  {% endfor %}\r\n  {% set urls = urls|merge([(encoded|join('\/'))]) %}\r\n{% endfor %}\r\n\r\n{{  urls|json_encode|raw }}",
+                                    "json": true,
+                                    "displayTemplate": "<ul>\r\n   {% for item in data %}\r\n         <li>{{ item }}<\/li>\r\n   {% endfor %}\r\n<\/ul>"
+                                },
+                                "mappingOptions": {
+                                    "mappingOptions": "{\r\n\"type\": \"keyword\"\r\n}",
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": [],
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": []
+                            },
+                            "orderKey": 5,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-09 18:18:26.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-04-23 20:22:04.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\ComputedFieldType",
+                            "name": "menu_ids",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Menu IDs",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": "This field is auto-generated.",
+                                    "valueTemplate": "{% set uuids= _source.menu|default('{}')|ems_json_menu_decode.getUids() %}\r\n{% if _id|default(false) %}\r\n    {% set uuids = [_id]|merge(uuids) %}\r\n{% endif %}\r\n{{  uuids|json_encode|raw }}",
+                                    "json": true,
+                                    "displayTemplate": "<ul>\r\n   {% for item in data %}\r\n         <li>{{ item }}<\/li>\r\n   {% endfor %}\r\n<\/ul>"
+                                },
+                                "mappingOptions": {
+                                    "mappingOptions": "{\r\n\"type\": \"keyword\"\r\n}",
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": [],
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": []
+                            },
+                            "orderKey": 6,
+                            "parent": null,
+                            "children": []
+                        }
+                    }
+                ]
+            }
+        },
+        "labelField": "label",
+        "colorField": "",
+        "userField": null,
+        "dateField": null,
+        "startDateField": null,
+        "endDateField": null,
+        "locationField": null,
+        "refererFieldName": null,
+        "categoryField": "",
+        "ouuidField": null,
+        "imageField": "",
+        "videoField": null,
+        "emailField": "",
+        "assetField": "",
+        "orderField": null,
+        "sortBy": "",
+        "sortOrder": null,
+        "createRole": "ROLE_ADMIN",
+        "editRole": "ROLE_PUBLISHER",
+        "viewRole": "ROLE_WEBMASTER",
+        "publishRole": "ROLE_PUBLISHER",
+        "trashRole": "ROLE_ADMIN",
+        "orderKey": 6,
+        "rootContentType": true,
+        "editTwigWithWysiwyg": true,
+        "webContent": false,
+        "autoPublish": false,
+        "active": true,
+        "templates": [
+            {
+                "class": "EMS\\CoreBundle\\Entity\\Template",
+                "arguments": [],
+                "properties": {
+                    "created": {
+                        "date": "2020-03-21 07:53:14.000000",
+                        "timezone_type": 3,
+                        "timezone": "Europe\/Brussels"
+                    },
+                    "modified": {
+                        "date": "2020-04-10 14:48:03.000000",
+                        "timezone_type": 3,
+                        "timezone": "Europe\/Brussels"
+                    },
+                    "name": "JSON raw",
+                    "icon": "fa fa-file-text-o",
+                    "body": "{% spaceless %}\r\n    <pre class=\"ems-code-editor\" data-language=\"ace\/mode\/json\" data-them=\"ace\/theme\/chrome\">\r\n        {{- source|json_encode(constant('JSON_PRETTY_PRINT')) -}}\r\n    <\/pre>\r\n{% endspaceless %}",
+                    "header": null,
+                    "editWithWysiwyg": false,
+                    "renderOption": "embed",
+                    "orderKey": 0,
+                    "accumulateInOneFile": false,
+                    "preview": false,
+                    "mimeType": null,
+                    "filename": null,
+                    "extension": null,
+                    "active": true,
+                    "role": "ROLE_WEBMASTER",
+                    "roleTo": "not-defined",
+                    "roleCc": "not-defined",
+                    "circlesTo": [],
+                    "responseTemplate": null,
+                    "emailContentType": null,
+                    "allowOrigin": null,
+                    "disposition": null,
+                    "orientation": null,
+                    "size": null,
+                    "public": false
+                }
+            },
+            {
+                "class": "EMS\\CoreBundle\\Entity\\Template",
+                "arguments": [],
+                "properties": {
+                    "created": {
+                        "date": "2020-04-05 08:20:19.000000",
+                        "timezone_type": 3,
+                        "timezone": "Europe\/Brussels"
+                    },
+                    "modified": {
+                        "date": "2020-04-10 14:48:03.000000",
+                        "timezone_type": 3,
+                        "timezone": "Europe\/Brussels"
+                    },
+                    "name": "Check assignations",
+                    "icon": "fa fa-check",
+                    "body": "{% spaceless %}\r\n\r\n\r\n    {{ source|json_encode }}\r\n\r\n\r\n{% endspaceless %}",
+                    "header": null,
+                    "editWithWysiwyg": false,
+                    "renderOption": "embed",
+                    "orderKey": 0,
+                    "accumulateInOneFile": false,
+                    "preview": false,
+                    "mimeType": null,
+                    "filename": null,
+                    "extension": null,
+                    "active": true,
+                    "role": "not-defined",
+                    "roleTo": "not-defined",
+                    "roleCc": "not-defined",
+                    "circlesTo": [],
+                    "responseTemplate": null,
+                    "emailContentType": null,
+                    "allowOrigin": null,
+                    "disposition": null,
+                    "orientation": null,
+                    "size": null,
+                    "public": false
+                }
+            }
+        ],
+        "views": [
+            {
+                "class": "EMS\\CoreBundle\\Entity\\View",
+                "arguments": [],
+                "properties": {
+                    "name": "Overview",
+                    "type": "ems.view.report",
+                    "icon": "fa fa-table",
+                    "options": {
+                        "body": "{}",
+                        "size": 100,
+                        "template": "{% set config = 'config'|i18n('en')|json_decode %}\r\n\r\n<div class=\"table-responsive\">\r\n    <table class=\"table\">\r\n        <caption>List of targets<\/caption>\r\n        <thead>\r\n            <tr>\r\n                <th><\/th>\r\n                {% for label, locale in config.languages %}\r\n                    <th scope=\"label\">{{ label }}<\/th>\r\n                {% endfor %}\r\n            <\/tr>\r\n        <\/thead>\r\n        <tbody>\r\n        {% for label, target_group in config.target_groups %}\r\n            <tr>\r\n                <th> {{ label }}<\/th>\r\n                {% for label, locale in config.languages %}\r\n                    {% set document = false %}\r\n                    {% for hit in result.hits.hits %}\r\n                        {% if hit._source.locales|default(false) == locale and hit._source.target_group|default(false) == target_group %}\r\n                            {% set document = hit %}\r\n                        {% endif %}\r\n                    {% endfor %}\r\n                    <td>\r\n                        {% if document %}\r\n                            <div class=\"btn-group-vertical\">\r\n                                <a href=\"{{ path('data.revision_in_environment', {\r\n                                        'environment': environment.name,\r\n                                        'type': document._source._contenttype,\r\n                                        'ouuid': document._id\r\n                                    }) }}\" class=\"btn btn-primary\">\r\n                                    <i class=\"fa fa-list-ol\"><\/i>\r\n                                    Revision\r\n                                <\/a>\r\n                                <a href=\"{{ path('revision.new-draft', {\r\n                                        'type': contentType.name,\r\n                                        'ouuid': document._id\r\n                                    }) }}\" class=\"btn btn-danger\">\r\n                                    <i class=\"fa fa-edit\"><\/i>\r\n                                    Edit\r\n                                <\/a>\r\n                            <\/div>\r\n                        {% else %}\r\n                            {% include '@EMSCore\/elements\/post-button.html.twig' with {\r\n        \t\t\t\t\t\t'url': path('emsco_data_add_from_jsoncontent', {'contentType': contentType.id}),\r\n        \t\t\t\t\t\t'label': 'Create', \r\n        \t\t\t\t\t\t'icon': 'plus',\r\n        \t\t\t\t\t\t'btnClass': 'btn btn-danger',\r\n        \t\t\t\t\t\t'value': {  locales: locale, target_group: target_group  }|json_encode,\r\n        \t\t\t\t\t\t'name': 'JSON_BODY' } %}\r\n                        {% endif %}\r\n                    <\/td>\r\n                {% endfor %}\r\n            <\/tr>\r\n        {% endfor %}\r\n        <\/tbody>\r\n    <\/table>\r\n<\/div>",
+                        "header": null,
+                        "javascript": null
+                    },
+                    "orderKey": 0,
+                    "public": false
+                }
+            }
+        ],
+        "defaultValue": "{\r\n    \"template\": \"template\/page\/sitemap.html.twig\"\r\n}",
+        "translationField": "",
+        "localeField": "locales",
+        "searchLinkDisplayRole": "ROLE_ADMIN",
+        "createLinkDisplayRole": "ROLE_ADMIN",
+        "versionTags": [],
+        "versionDateFromField": null,
+        "versionDateToField": null
+    }
+}
