@@ -1,0 +1,24 @@
+{
+    "class": "EMS\\CoreBundle\\Entity\\Filter",
+    "arguments": [],
+    "properties": {
+        "name": "dutch_stemmer",
+        "dirty": true,
+        "label": "dutch_stemmer",
+        "options": {
+            "type": "stemmer",
+            "name": "dutch"
+        },
+        "created": {
+            "date": "2020-03-24 09:41:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+            "date": "2020-03-24 09:41:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "orderKey": 1
+    }
+}

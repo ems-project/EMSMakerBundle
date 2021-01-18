@@ -1,0 +1,26 @@
+{
+    "class": "EMS\\CoreBundle\\Entity\\Filter",
+    "arguments": [],
+    "properties": {
+        "name": "english_stop",
+        "dirty": true,
+        "label": "english_stop",
+        "options": {
+            "remove_trailing": true,
+            "stopwords": "_english_",
+            "type": "stop",
+            "ignore_case": false
+        },
+        "created": {
+            "date": "2020-03-24 09:41:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+            "date": "2020-03-24 09:41:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "orderKey": 5
+    }
+}
