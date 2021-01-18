@@ -43,28 +43,29 @@
   },{
     "filename": "taxonomy"
   },{
-    "filename": "route"
+    "filename": "route",
+    "environment": "template"
   },{
-    "filename": "label"
+    "filename": "label",
+    "environment": "template"
   },{
-    "filename": "template"
+    "filename": "template",
+    "environment": "template"
   },{
     "filename": "documentation",
     "environment": "documentation"
   }],
   "sites": {
-    "demo": {
+    "elasticms": {
       "canonicals": {
-        "fr": "http://test.localhost/fr",
-        "en": "http://test.localhost",
-        "nl": "http://test.localhost/nl"
+        "en": "http://demo.localhost",
+        "fr": "http://demo.localhost/fr",
+        "nl": "http://demo.localhost/nl"
       }
     },
-    "doc": {
+    "documentation": {
       "canonicals": {
-        "fr": "https://test.localhost/fr/doc",
-        "en": "https://test.localhost/doc",
-        "nl": "https://test.localhost/nl/doc"
+        "en": "https://demo.localhost/doc"
       }
     }
   },
@@ -89,6 +90,9 @@
   }],
   "environments": [{
     "name": "preview"
+  },{
+    "name": "template",
+    "color": "orange"
   },{
     "name": "live",
     "color": "aqua",
