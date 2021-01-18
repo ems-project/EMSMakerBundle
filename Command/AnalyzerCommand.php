@@ -32,7 +32,7 @@ class AnalyzerCommand extends AbstractCommand
     /**
      * @param string[] $analyzers
      */
-    private function makeAnalyzers(array $analyzers): void
+    public function makeAnalyzers(array $analyzers): void
     {
         if (\count($analyzers) === 0) {
             return;

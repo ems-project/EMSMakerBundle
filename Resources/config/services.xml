@@ -28,6 +28,7 @@
         </service>
         <service id="ems_maker.command.demo" class="EMS\MakerBundle\Command\DemoCommand">
             <argument type="service" id="ems_maker.command.user"/>
+            <argument type="service" id="ems_maker.command.analyzer"/>
             <argument type="service" id="ems_maker.command.environment"/>
             <argument type="service" id="ems_maker.command.documentation"/>
             <argument type="service" id="ems_maker.command.contenttype"/>

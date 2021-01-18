@@ -14,9 +14,11 @@ class DemoCommand extends AbstractCommand
     private EnvironmentCommand $environmentCommand;
     private DocumentationCommand $documentationCommand;
     private ContentTypeCommand $contentTypeCommand;
+    private AnalyzerCommand $analyzerCommand;
 
     public function __construct(
         UserCommand $userCommand,
+        AnalyzerCommand $analyzerCommand,
         EnvironmentCommand $environmentCommand,
         DocumentationCommand $documentationCommand,
         ContentTypeCommand $contentTypeCommand
@@ -24,6 +26,7 @@ class DemoCommand extends AbstractCommand
         parent::__construct();
         $this->userCommand = $userCommand;
         $this->environmentCommand = $environmentCommand;
+        $this->analyzerCommand = $analyzerCommand;
         $this->documentationCommand = $documentationCommand;
         $this->contentTypeCommand = $contentTypeCommand;
     }
@@ -41,6 +44,8 @@ class DemoCommand extends AbstractCommand
     {
         $this->userCommand->initialize($input, $output);
         $this->userCommand->makeUsers($this->config[AbstractCommand::USERS]);
+        $this->analyzerCommand->initialize($input, $output);
+        $this->analyzerCommand->makeAnalyzers($this->config[AbstractCommand::ANALYZERS]);
         $this->environmentCommand->initialize($input, $output);
         $this->environmentCommand->makeEnvironments($this->config[AbstractCommand::ENVIRONMENTS]);
         $this->contentTypeCommand->initialize($input, $output);
