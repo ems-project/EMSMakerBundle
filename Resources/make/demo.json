@@ -1,0 +1,84 @@
+{
+  "admin": {
+    "url": "http://admin-test.localhost"
+  },
+  "documentations": {
+    "environment": "documentation",
+    "contenttype": "documentation"
+  },
+  "contenttypes": [{
+    "filename": "route"
+  },{
+    "filename": "label"
+  },{
+    "filename": "template"
+  },{
+    "filename": "documentation",
+    "environment": "documentation"
+  }],
+  "sites": {
+    "demo": {
+      "canonicals": {
+        "fr": "http://test.localhost/fr",
+        "en": "http://test.localhost",
+        "nl": "http://test.localhost/nl"
+      }
+    },
+    "doc": {
+      "canonicals": {
+        "fr": "https://test.localhost/fr/doc",
+        "en": "https://test.localhost/doc",
+        "nl": "https://test.localhost/nl/doc"
+      }
+    }
+  },
+  "users": [{
+    "username": "admin",
+    "display_name": "Administrator",
+    "password": "changeme",
+    "email": "admin@example.com",
+    "wysiwyg_profile": "full",
+    "roles": [
+      "ROLE_USER",
+      "ROLE_SUPER_ADMIN"
+    ]
+  },{
+    "username": "webmaster",
+    "password": "changeme",
+    "email": "webmaster@example.com",
+    "roles": [
+      "ROLE_USER",
+      "ROLE_WEBMASTER"
+    ]
+  }],
+  "environments": [{
+    "name": "preview"
+  },{
+    "name": "live",
+    "color": "aqua",
+    "managed": true
+  },{
+    "name": "documentation",
+    "color": "yellow",
+    "managed": false,
+    "mapping": {
+      "path_en": {
+        "type": "keyword"
+      },
+      "keywords": {
+        "type": "keyword"
+      },
+      "title_en": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "body_en": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "version": {
+        "type": "keyword"
+      }
+    }
+  }]
+}

@@ -11,10 +11,11 @@
         </service>
         
         <service id="ems_maker.service.file" class="EMS\MakerBundle\Service\FileService">
+            <argument>%kernel.project_dir%</argument>
         </service>
 
         <!-- commands -->
-        <service id="ems_maker.command.analyser" class="EMS\MakerBundle\Command\AnalyserCommand">
+        <service id="ems_maker.command.analyzer" class="EMS\MakerBundle\Command\AnalyzerCommand">
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.contenttype" class="EMS\MakerBundle\Command\ContentTypeCommand">
@@ -24,15 +25,30 @@
             <argument type="service" id="ems_maker.service.file"/>
         </service>
         <service id="ems_maker.command.demo" class="EMS\MakerBundle\Command\DemoCommand">
+            <argument type="service" id="ems_maker.command.user"/>
+            <argument type="service" id="ems_maker.command.environment"/>
+            <argument type="service" id="ems_maker.command.documentation"/>
+            <argument type="service" id="ems_maker.command.contenttype"/>
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.environment" class="EMS\MakerBundle\Command\EnvironmentCommand">
+            <argument type="service" id="ems.service.environment"/>
+            <argument type="service" id="ems.service.mapping"/>
+            <argument type="service" id="ems.service.alias"/>
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.revision" class="EMS\MakerBundle\Command\RevisionCommand">
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.user" class="EMS\MakerBundle\Command\UserCommand">
+            <argument type="service" id="ems.service.user"/>
+            <argument type="service" id="ems.service.wysiwyg_profile"/>
+            <tag name="console.command"/>
+        </service>
+        <service id="ems_maker.command.documentation" class="EMS\MakerBundle\Command\DocumentationCommand">
+            <argument type="service" id="ems.service.environment"/>
+            <argument type="service" id="ems_maker.service.file"/>
+            <argument type="service" id="ems.service.index"/>
             <tag name="console.command"/>
         </service>
     </services>

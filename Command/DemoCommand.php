@@ -2,25 +2,52 @@
 
 namespace EMS\MakerBundle\Command;
 
-use Symfony\Component\Console\Command\Command;
+use EMS\MakerBundle\Service\FileService;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 
-class DemoCommand extends Command
+class DemoCommand extends AbstractCommand
 {
-    protected static $defaultName = 'ems:make:demo';
+    protected static $defaultName = 'ems:maker:demo';
 
-    /**
-     * chained call of commands to create a fully functional demo website
-     *
-     * Launch in this order:
-     * * analyser --all
-     * * environment --all
-     * * contenttype --all
-     * * revision --all
-     * * user --all
-     *
-     * By default, don't pass language config (each command has defaults), but make it possible to have a list of languages to support as argument
-     * When languages are defined; pass them to
-     * * analyser
-     * * contenttype
-     */
+    private UserCommand $userCommand;
+    private EnvironmentCommand $environmentCommand;
+    private DocumentationCommand $documentationCommand;
+    private ContentTypeCommand $contentTypeCommand;
+
+    public function __construct(
+        UserCommand $userCommand,
+        EnvironmentCommand $environmentCommand,
+        DocumentationCommand $documentationCommand,
+        ContentTypeCommand $contentTypeCommand
+    ) {
+        parent::__construct();
+        $this->userCommand = $userCommand;
+        $this->environmentCommand = $environmentCommand;
+        $this->documentationCommand = $documentationCommand;
+        $this->contentTypeCommand = $contentTypeCommand;
+    }
+
+
+    protected function configure(string $defaultConfig = null): void
+    {
+        if (null === $defaultConfig) {
+            $defaultConfig = FileService::JSON_FILES . 'demo.json';
+        }
+        parent::configure($defaultConfig);
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+        $this->userCommand->initialize($input, $output);
+        $this->userCommand->makeUsers($this->config[AbstractCommand::USERS]);
+        $this->environmentCommand->initialize($input, $output);
+        $this->environmentCommand->makeEnvironments($this->config[AbstractCommand::ENVIRONMENTS]);
+        $this->contentTypeCommand->initialize($input, $output);
+        $this->contentTypeCommand->makeContentTypes($this->config[AbstractCommand::CONTENTTYPES]);
+        $this->documentationCommand->initialize($input, $output);
+        $this->documentationCommand->indexDocumentations($this->config[AbstractCommand::DOCUMENTATIONS]);
+
+        return 0;
+    }
 }

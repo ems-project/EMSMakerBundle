@@ -1,1 +1,216 @@
-{"class":"EMS\\CoreBundle\\Entity\\ContentType","arguments":[],"properties":{"created":{"date":"2019-04-05 13:39:26.000000","timezone_type":3,"timezone":"Europe\/Brussels"},"modified":{"date":"2019-07-29 13:04:42.000000","timezone_type":3,"timezone":"Europe\/Brussels"},"name":"template","pluralName":"Templates","singularName":"Template","icon":"fa fa-html5","description":null,"indexTwig":null,"extra":null,"lockBy":null,"lockUntil":null,"circlesField":"","deleted":false,"havePipelines":false,"askForOuuid":false,"dirty":false,"color":"orange","fieldType":{"class":"EMS\\CoreBundle\\Entity\\FieldType","arguments":[],"properties":{"__initializer__":null,"__cloner__":null,"__isInitialized__":true,"created":{"date":"2019-04-05 13:39:29.000000","timezone_type":3,"timezone":"Europe\/Brussels"},"modified":{"date":"2019-04-05 13:39:29.000000","timezone_type":3,"timezone":"Europe\/Brussels"},"type":"EMS\\CoreBundle\\Form\\DataField\\ContainerFieldType","name":"source","contentType":null,"deleted":false,"description":null,"options":{"displayOptions":{"label":null,"class":null,"lastOfRow":false,"icon":null,"helptext":null},"restrictionOptions":{"minimum_role":null},"extraOptions":{"extra":null,"postProcessing":null}},"orderKey":0,"parent":null,"children":[{"class":"EMS\\CoreBundle\\Entity\\FieldType","arguments":[],"properties":{"created":{"date":"2019-04-05 13:39:29.000000","timezone_type":3,"timezone":"Europe\/Brussels"},"modified":{"date":"2019-04-05 13:39:29.000000","timezone_type":3,"timezone":"Europe\/Brussels"},"type":"EMS\\CoreBundle\\Form\\DataField\\TextStringFieldType","name":"key","contentType":null,"deleted":false,"description":null,"options":{"displayOptions":{"label":"Key","class":"col-md-12","lastOfRow":false,"icon":null,"prefixIcon":null,"prefixText":null,"suffixIcon":null,"suffixText":null,"helptext":null,"placeholder":null},"mappingOptions":{"index":null,"analyzer":"keyword","copy_to":null},"restrictionOptions":{"mandatory":true,"mandatory_if":null,"minimum_role":null},"extraOptions":{"extra":null,"postProcessing":null},"migrationOptions":{"protected":false}},"orderKey":0,"parent":null,"children":[]}},{"class":"EMS\\CoreBundle\\Entity\\FieldType","arguments":[],"properties":{"created":{"date":"2019-04-05 13:39:29.000000","timezone_type":3,"timezone":"Europe\/Brussels"},"modified":{"date":"2019-04-05 13:39:29.000000","timezone_type":3,"timezone":"Europe\/Brussels"},"type":"EMS\\CoreBundle\\Form\\DataField\\CodeFieldType","name":"body","contentType":null,"deleted":false,"description":null,"options":{"displayOptions":{"label":"Body","class":"col-md-12","lastOfRow":false,"icon":"fa fa-html5","maxLines":null,"height":500,"language":"ace\/mode\/twig","theme":"ace\/theme\/monokai","helptext":null},"mappingOptions":{"index":null,"analyzer":null},"restrictionOptions":{"mandatory":true,"mandatory_if":null,"minimum_role":null},"extraOptions":{"extra":null,"postProcessing":null},"migrationOptions":{"protected":false}},"orderKey":1,"parent":null,"children":[]}}]}},"labelField":"key","colorField":"","parentField":null,"userField":null,"dateField":null,"startDateField":null,"endDateField":null,"locationField":null,"refererFieldName":null,"categoryField":"","ouuidField":null,"imageField":"","videoField":null,"emailField":"","assetField":"","orderField":"key","sortBy":"","sortOrder":null,"createRole":"ROLE_ADMIN","editRole":"ROLE_ADMIN","viewRole":"ROLE_ADMIN","publishRole":"ROLE_ADMIN","trashRole":"ROLE_ADMIN","orderKey":9,"rootContentType":false,"editTwigWithWysiwyg":true,"webContent":false,"autoPublish":true,"active":true,"templates":{},"views":{},"singleTypeIndexes":{},"defaultValue":null}}
+{
+  "class": "EMS\\CoreBundle\\Entity\\ContentType",
+  "arguments": [],
+  "properties": {
+    "created": {
+      "date": "2019-04-05 13:39:26.000000",
+      "timezone_type": 3,
+      "timezone": "Europe\/Brussels"
+    },
+    "modified": {
+      "date": "2019-07-29 13:04:42.000000",
+      "timezone_type": 3,
+      "timezone": "Europe\/Brussels"
+    },
+    "name": "template",
+    "pluralName": "Templates",
+    "singularName": "Template",
+    "icon": "fa fa-html5",
+    "description": null,
+    "indexTwig": null,
+    "extra": null,
+    "lockBy": null,
+    "lockUntil": null,
+    "circlesField": "",
+    "deleted": false,
+    "havePipelines": false,
+    "askForOuuid": false,
+    "dirty": false,
+    "color": "orange",
+    "fieldType": {
+      "class": "EMS\\CoreBundle\\Entity\\FieldType",
+      "arguments": [],
+      "properties": {
+        "__initializer__": null,
+        "__cloner__": null,
+        "__isInitialized__": true,
+        "created": {
+          "date": "2019-04-05 13:39:29.000000",
+          "timezone_type": 3,
+          "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+          "date": "2019-04-05 13:39:29.000000",
+          "timezone_type": 3,
+          "timezone": "Europe\/Brussels"
+        },
+        "type": "EMS\\CoreBundle\\Form\\DataField\\ContainerFieldType",
+        "name": "source",
+        "contentType": null,
+        "deleted": false,
+        "description": null,
+        "options": {
+          "displayOptions": {
+            "label": null,
+            "class": null,
+            "lastOfRow": false,
+            "icon": null,
+            "helptext": null
+          },
+          "restrictionOptions": {
+            "minimum_role": null
+          },
+          "extraOptions": {
+            "extra": null,
+            "postProcessing": null
+          }
+        },
+        "orderKey": 0,
+        "parent": null,
+        "children": [
+          {
+            "class": "EMS\\CoreBundle\\Entity\\FieldType",
+            "arguments": [],
+            "properties": {
+              "created": {
+                "date": "2019-04-05 13:39:29.000000",
+                "timezone_type": 3,
+                "timezone": "Europe\/Brussels"
+              },
+              "modified": {
+                "date": "2019-04-05 13:39:29.000000",
+                "timezone_type": 3,
+                "timezone": "Europe\/Brussels"
+              },
+              "type": "EMS\\CoreBundle\\Form\\DataField\\TextStringFieldType",
+              "name": "key",
+              "contentType": null,
+              "deleted": false,
+              "description": null,
+              "options": {
+                "displayOptions": {
+                  "label": "Key",
+                  "class": "col-md-12",
+                  "lastOfRow": false,
+                  "icon": null,
+                  "prefixIcon": null,
+                  "prefixText": null,
+                  "suffixIcon": null,
+                  "suffixText": null,
+                  "helptext": null,
+                  "placeholder": null
+                },
+                "mappingOptions": {
+                  "index": null,
+                  "analyzer": "keyword",
+                  "copy_to": null
+                },
+                "restrictionOptions": {
+                  "mandatory": true,
+                  "mandatory_if": null,
+                  "minimum_role": null
+                },
+                "extraOptions": {
+                  "extra": null,
+                  "postProcessing": null
+                },
+                "migrationOptions": {
+                  "protected": false
+                }
+              },
+              "orderKey": 0,
+              "parent": null,
+              "children": []
+            }
+          },
+          {
+            "class": "EMS\\CoreBundle\\Entity\\FieldType",
+            "arguments": [],
+            "properties": {
+              "created": {
+                "date": "2019-04-05 13:39:29.000000",
+                "timezone_type": 3,
+                "timezone": "Europe\/Brussels"
+              },
+              "modified": {
+                "date": "2019-04-05 13:39:29.000000",
+                "timezone_type": 3,
+                "timezone": "Europe\/Brussels"
+              },
+              "type": "EMS\\CoreBundle\\Form\\DataField\\CodeFieldType",
+              "name": "body",
+              "contentType": null,
+              "deleted": false,
+              "description": null,
+              "options": {
+                "displayOptions": {
+                  "label": "Body",
+                  "class": "col-md-12",
+                  "lastOfRow": false,
+                  "icon": "fa fa-html5",
+                  "maxLines": null,
+                  "height": 500,
+                  "language": "ace\/mode\/twig",
+                  "theme": "ace\/theme\/monokai",
+                  "helptext": null
+                },
+                "mappingOptions": {
+                  "index": null,
+                  "analyzer": null
+                },
+                "restrictionOptions": {
+                  "mandatory": true,
+                  "mandatory_if": null,
+                  "minimum_role": null
+                },
+                "extraOptions": {
+                  "extra": null,
+                  "postProcessing": null
+                },
+                "migrationOptions": {
+                  "protected": false
+                }
+              },
+              "orderKey": 1,
+              "parent": null,
+              "children": []
+            }
+          }
+        ]
+      }
+    },
+    "labelField": "key",
+    "colorField": "",
+    "parentField": null,
+    "userField": null,
+    "dateField": null,
+    "startDateField": null,
+    "endDateField": null,
+    "locationField": null,
+    "refererFieldName": null,
+    "categoryField": "",
+    "ouuidField": null,
+    "imageField": "",
+    "videoField": null,
+    "emailField": "",
+    "assetField": "",
+    "orderField": "key",
+    "sortBy": "",
+    "sortOrder": null,
+    "createRole": "ROLE_ADMIN",
+    "editRole": "ROLE_ADMIN",
+    "viewRole": "ROLE_ADMIN",
+    "publishRole": "ROLE_ADMIN",
+    "trashRole": "ROLE_ADMIN",
+    "orderKey": 9,
+    "rootContentType": false,
+    "editTwigWithWysiwyg": true,
+    "webContent": false,
+    "autoPublish": true,
+    "active": true,
+    "templates": {},
+    "views": {},
+    "singleTypeIndexes": {},
+    "defaultValue": null
+  }
+}
