@@ -14,7 +14,7 @@
 	],
 	"require" : {
 		"php" : "^7.4",
-		"elasticms/core-bundle": "~1.11.0"
+		"elasticms/core-bundle": "^1.14"
 	},
 	"require-dev" : {
 		"mockery/mockery" : "^0.9",
