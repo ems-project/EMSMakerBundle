@@ -67,7 +67,7 @@ class DocumentationCommand extends AbstractCommand
      * @param array<mixed> $config
      * @return array{environment: string}
      */
-    private function resolveDocumentation(array $config)
+    private function resolveDocumentation(array $config): array
     {
         $resolver = new OptionsResolver();
         $resolver->setDefaults([
