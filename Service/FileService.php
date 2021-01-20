@@ -70,7 +70,7 @@ class FileService
         return $counter;
     }
 
-    public function getDocumentations()
+    public function getDocumentations(): void
     {
         $composerLockContent = \file_get_contents($this->projectDir . DIRECTORY_SEPARATOR . 'composer.lock');
         if (false === $composerLockContent) {
