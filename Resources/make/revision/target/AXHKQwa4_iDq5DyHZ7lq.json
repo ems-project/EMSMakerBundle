@@ -1,0 +1,20 @@
+{
+    "_contenttype": "target",
+    "_finalization_datetime": "2020-04-30T11:19:42+0200",
+    "_finalized_by": "theus",
+    "label": "Doc in nl (Documentatie)",
+    "locales": "nl",
+    "menu": "[{\"id\":\"4c1fac2a-8294-47e5-a549-1ae1631dd6dd\",\"contentType\":\"link\",\"label\":\"FAQs\",\"type\":\"item\"}]",
+    "menu_ids": [
+        "AXHKQwa4_iDq5DyHZ7lq",
+        "4c1fac2a-8294-47e5-a549-1ae1631dd6dd"
+    ],
+    "slugs": [
+        "",
+        "faqs"
+    ],
+    "target_group": "doc",
+    "title": "Documentatie",
+    "_sha1": "a830538b9eec02a7a5cadcb4f847b0962111c288",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

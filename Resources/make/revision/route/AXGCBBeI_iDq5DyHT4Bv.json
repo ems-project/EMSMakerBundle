@@ -1,0 +1,11 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:03+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": {\r\n        \"en\": \"search\",\r\n        \"fr\": \"fr\/chercher\",\r\n        \"nl\": \"nl\/zoeken\",\r\n        \"de\": \"de\/suche\"\r\n    }, \r\n    \"defaults\": { \"_target_group\": \"site\", \"l\": 10 },\r\n    \"controller\": \"emsch.controller.search::handle\"\r\n}",
+    "name": "emsch_search_site",
+    "order": 9,
+    "template_static": "template:AXFVJcdj_iDq5DyHQP6U",
+    "_sha1": "1e7c65a2cfb6fbe3e52eedea3c76be65b2e81f59",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

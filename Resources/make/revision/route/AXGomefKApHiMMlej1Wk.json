@@ -1,0 +1,12 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:04+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n  \"path\": {\r\n      \"en\": \"news\/{year}\/{month}\/{day}\/{slug}\",\r\n      \"fr\": \"fr\/actualites\/{year}\/{month}\/{day}\/{slug}\",\r\n      \"nl\": \"nl\/nieuws\/{year}\/{month}\/{day}\/{slug}\",\r\n      \"de\": \"de\/nutzungsrechte\/{year}\/{month}\/{day}\/{slug}\"\r\n  },\r\n  \"defaults\": {\r\n    \"_target_group\": \"site\"\r\n  },\r\n \"requirements\": {\r\n        \"year\": \"\\\\d+\",\r\n        \"month\": \"\\\\d+\",\r\n        \"day\": \"\\\\d+\"\r\n    }\r\n}",
+    "name": "emsch_news_item_site",
+    "order": 14,
+    "query": "{\r\n    \"query\": {\r\n        \"bool\": {\r\n            \"must\": [\r\n                { \"terms\": { \"_contenttype\": [\"news\"] } },\r\n                { \"term\": { \"search_dates\": \"%year%\\\/%month%\\\/%day%\" } },\r\n                { \"term\": { \"target_group\": \"site\" } },\r\n                { \"term\": { \"show_%_locale%\": true } },\r\n                { \"term\": { \"slug_%_locale%\": \"%slug%\" } }\r\n            ]\r\n        }\r\n    },\r\n    \"size\": 1\r\n}",
+    "template_static": "template:AXFgu-b2_iDq5DyHRxAO",
+    "_sha1": "1962fb4f9356bcd20c428b12ee77ab0538aed767",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

@@ -1,0 +1,18 @@
+{
+    "_contenttype": "taxonomy",
+    "_finalization_datetime": "2020-05-01T10:05:27+0200",
+    "_finalized_by": "theus",
+    "color": "#00A650",
+    "label": "elasticms",
+    "target_group": [
+        "site",
+        "doc"
+    ],
+    "title_de": "elasticms",
+    "title_en": "elasticms",
+    "title_fr": "elasticms",
+    "title_nl": "elasticms",
+    "type": "category",
+    "_sha1": "c5f29b7897ce200cfb7f510e0cf12d9d7ef37fe5",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

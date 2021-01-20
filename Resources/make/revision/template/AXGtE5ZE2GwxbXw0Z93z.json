@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-05-27T15:38:35+0200",
+    "_finalized_by": "davmat",
+    "body": "{% extends '@EMSCH\/template\/page\/page.html.twig' %}\r\n{% trans_default_domain trans_default_domain %}\r\n\r\n{% block pageBlocks %}\r\n    {% set blocks = source|locale_attr('blocks_')|default([]) %}\r\n    {% if blocks|length > 0 %}\r\n        <div id=\"action\" class=\"mb-4\">\r\n            {% for blockIndex, pageBlock in blocks %}\r\n                <div class=\"bg-light px-4 py-2\">\r\n                    <h3 class=\"text-center\">{{ 'step'|trans }} {{ (blockIndex + 1) }}: {{ pageBlock|locale_attr('title_') }}<\/h3>\r\n                    {{ pageBlock|locale_attr('body_')|default('')|replace(wyiwygReplaces)|emsch_routing|ems_anti_spam }}\r\n                <\/div>\r\n                {% if loop.last == false %}\r\n                    <div class=\"d-flex justify-content-center\">\r\n                        <div class=\"display-4\"><i class=\"fas fa-caret-down\"><\/i><\/div>\r\n                    <\/div>\r\n                {% endif %}\r\n            {% endfor %}\r\n        <\/div>\r\n    {% endif %}\r\n{% endblock %}",
+    "name": "page\/action.html.twig",
+    "_sha1": "dedba06c64ec2d285e1eb96628c88deba11f9987",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

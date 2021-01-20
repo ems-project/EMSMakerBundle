@@ -1,0 +1,20 @@
+{
+    "_contenttype": "target",
+    "_finalization_datetime": "2020-04-30T12:42:12+0200",
+    "_finalized_by": "theus",
+    "label": "Doc in en (Documentation)",
+    "locales": "en",
+    "menu": "[{\"id\":\"91ae162e-ab04-47c5-a823-f7e7dcc6a7bc\",\"contentType\":\"link\",\"label\":\"FAQs\",\"type\":\"item\"}]",
+    "menu_ids": [
+        "AXHFVxVe_iDq5DyHZmJZ",
+        "91ae162e-ab04-47c5-a823-f7e7dcc6a7bc"
+    ],
+    "slugs": [
+        "",
+        "faqs"
+    ],
+    "target_group": "doc",
+    "title": "Documentation",
+    "_sha1": "b7fc78971a21f5837830dd51723f6a340b8606ba",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

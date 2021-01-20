@@ -1,0 +1,20 @@
+{
+    "_contenttype": "target",
+    "_finalization_datetime": "2020-04-29T21:29:19+0200",
+    "_finalized_by": "theus",
+    "label": "Site in fr (Site web)",
+    "locales": "fr",
+    "menu": "[{\"id\":\"c9ab2579-3716-4222-bcd5-e415a1a4095e\",\"contentType\":\"page\",\"label\":\"Pr\u00e9sentation\",\"type\":\"node\"}]",
+    "menu_ids": [
+        "AXHFZgtq_iDq5DyHZmip",
+        "c9ab2579-3716-4222-bcd5-e415a1a4095e"
+    ],
+    "slugs": [
+        "",
+        "presentation"
+    ],
+    "target_group": "site",
+    "title": "Site web",
+    "_sha1": "61fce8e2751dead0d8a97ee0e0c9b95a0d960f82",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-04-18T10:47:02+0200",
+    "_finalized_by": "theus",
+    "body": "<div>\r\n    <!-- Button trigger modal -->\r\n    <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#dumpModal\" id=\"dump-modal\">\r\n      <i class=\"fas fa-bug\"><\/i> <span class=\"sr-only\">Show dump<\/span>\r\n    <\/button>\r\n    \r\n    <!-- Modal -->\r\n    <div class=\"modal fade\" id=\"dumpModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"dumpModalLabel\" aria-hidden=\"true\">\r\n      <div class=\"modal-dialog modal-xl\" role=\"document\">\r\n        <div class=\"modal-content\">\r\n          <div class=\"modal-header\">\r\n            <h5 class=\"modal-title\" id=\"dumpModalLabel\"><i class=\"fas fa-bug\"><\/i> Dump<\/h5>\r\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n              <span aria-hidden=\"true\">&times;<\/span>\r\n            <\/button>\r\n          <\/div>\r\n          <div class=\"modal-body\">\r\n            {{ dump() }}\r\n          <\/div>\r\n          <div class=\"modal-footer\">\r\n            <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close<\/button>\r\n          <\/div>\r\n        <\/div>\r\n      <\/div>\r\n    <\/div>\r\n<\/div>",
+    "name": "debug\/dump.html.twig",
+    "_sha1": "e297e792b23152ef50cd0c9471f12665845b5511",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

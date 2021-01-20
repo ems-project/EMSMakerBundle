@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-05-02T17:53:55+0200",
+    "_finalized_by": "theus",
+    "body": "{% extends '@EMSCH\/template\/parent\/homepage.html.twig' %}\r\n{% trans_default_domain trans_default_domain %}\r\n\r\n{% block body %}\r\n    <main role=\"main\" id=\"main-content\">\r\n        {{ block('homeHeader') }}\r\n        <div class=\"container\">\r\n            {{ block('news') }}\r\n            {{ block('themes') }}\r\n            {{ block('actions') }}\r\n        <\/div>\r\n    <\/main>\r\n{% endblock %}",
+    "name": "page\/homepage.html.twig",
+    "_sha1": "7de022f7fc00dc2f1f90094661ca560c975d4fab",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

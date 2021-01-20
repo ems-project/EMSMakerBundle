@@ -1,0 +1,27 @@
+{
+    "class": "EMS\\CoreBundle\\Entity\\Filter",
+    "arguments": [],
+    "properties": {
+        "name": "empty_elision",
+        "dirty": true,
+        "label": "empty_elision",
+        "options": {
+            "articles": [
+                ""
+            ],
+            "type": "elision",
+            "articles_case": false
+        },
+        "created": {
+            "date": "2020-03-24 09:41:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+            "date": "2020-03-24 09:41:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "orderKey": 3
+    }
+}

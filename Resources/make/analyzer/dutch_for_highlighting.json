@@ -1,0 +1,34 @@
+{
+    "class": "EMS\\CoreBundle\\Entity\\Analyzer",
+    "arguments": [],
+    "properties": {
+        "name": "dutch_for_highlighting",
+        "dirty": true,
+        "label": "dutch_for_highlighting",
+        "options": {
+            "filter": [
+                "standard",
+                "lowercase",
+                "dutch_stemmer",
+                "dutch_stop",
+                "empty_elision"
+            ],
+            "char_filter": [
+                "html_strip"
+            ],
+            "type": "custom",
+            "tokenizer": "standard"
+        },
+        "created": {
+            "date": "2020-03-24 09:41:04.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+            "date": "2020-03-24 09:41:04.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "orderKey": 2
+    }
+}

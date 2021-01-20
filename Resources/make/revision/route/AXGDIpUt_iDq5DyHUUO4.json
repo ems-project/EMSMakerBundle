@@ -1,0 +1,11 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:04+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": {\r\n        \"en\": \"doc\/search.json\",\r\n        \"fr\": \"fr\/doc\/chercher.json\",\r\n        \"nl\": \"nl\/doc\/zoeken.json\",\r\n        \"de\": \"de\/doc\/suche.json\"\r\n    }, \r\n    \"defaults\": { \r\n        \"_format\": \"json\", \r\n        \"_target_group\": \"doc\", \r\n        \"l\": 10\r\n    },\r\n    \"controller\": \"emsch.controller.search::handle\"\r\n}",
+    "name": "emsch_search_doc_json",
+    "order": 16,
+    "template_static": "template:AXF9DyJ__iDq5DyHToKQ",
+    "_sha1": "18cc4c407920b095cb6601b3a7778bfe9c6eebba",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

@@ -1,0 +1,12 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:04+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": \"\/{_locale}\/missing\/{contentType}\/{ouuid}\",\r\n    \"requirements\":\r\n    {\r\n        \"_locale\": \"en|fr|nl|de\",\r\n        \"contentType\": \"page|news|link\"\r\n    }\r\n}",
+    "name": "emsch_missing_translation",
+    "order": 21,
+    "query": "{\r\n    \"query\": {\r\n        \"bool\": {\r\n            \"must\": [\r\n                {\r\n                    \"term\": {\r\n                        \"_contenttype\": {\r\n                            \"value\": \"%contentType%\"\r\n                        }\r\n                    }\r\n                },\r\n                {\r\n                    \"term\": {\r\n                        \"_id\": {\r\n                            \"value\": \"%ouuid%\"\r\n                        }\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    \"size\": 1\r\n}",
+    "template_static": "template:AXFfKY-9_iDq5DyHRX2Y",
+    "_sha1": "89e5b586a71d50dde0ee07a7e8d90cc47aa5a556",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

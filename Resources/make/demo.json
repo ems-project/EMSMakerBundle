@@ -1,0 +1,147 @@
+{
+  "admin": {
+    "url": "http://admin-test.localhost"
+  },
+  "documentations": {
+    "environment": "documentation",
+    "contenttype": "documentation"
+  },
+  "filters": [
+    "dutch_stemmer",
+    "dutch_stop",
+    "empty_elision",
+    "english_stemmer",
+    "english_stop",
+    "french_elision",
+    "french_stemmer",
+    "french_stop",
+    "german_stemmer",
+    "german_stop"
+  ],
+  "analyzers": [
+    "alpha_order",
+    "html_strip",
+    "dutch_for_highlighting",
+    "english_for_highlighting",
+    "french_for_highlighting",
+    "german_for_highlighting"
+  ],
+  "revisions": [{
+    "folder": "page"
+  },{
+    "folder": "faq"
+  },{
+    "folder": "label"
+  },{
+    "folder": "link"
+  },{
+    "folder": "menu"
+  },{
+    "folder": "news"
+  },{
+    "folder": "publication"
+  },{
+    "folder": "route"
+  },{
+    "folder": "target"
+  },{
+    "folder": "taxonomy"
+  },{
+    "folder": "template"
+  }],
+  "contenttypes": [{
+    "filename": "page"
+  },{
+    "filename": "news"
+  },{
+    "filename": "publication"
+  },{
+    "filename": "faq"
+  },{
+    "filename": "link"
+  },{
+    "filename": "menu"
+  },{
+    "filename": "target"
+  },{
+    "filename": "taxonomy"
+  },{
+    "filename": "route",
+    "environment": "template"
+  },{
+    "filename": "label",
+    "environment": "template"
+  },{
+    "filename": "template",
+    "environment": "template"
+  },{
+    "filename": "documentation",
+    "environment": "documentation"
+  }],
+  "sites": {
+    "elasticms": {
+      "canonicals": {
+        "en": "http://demo.localhost",
+        "fr": "http://demo.localhost/fr",
+        "nl": "http://demo.localhost/nl"
+      }
+    },
+    "documentation": {
+      "canonicals": {
+        "en": "https://demo.localhost/doc"
+      }
+    }
+  },
+  "users": [{
+    "username": "admin",
+    "display_name": "Administrator",
+    "password": "changeme",
+    "email": "admin@example.com",
+    "wysiwyg_profile": "full",
+    "roles": [
+      "ROLE_USER",
+      "ROLE_SUPER_ADMIN"
+    ]
+  },{
+    "username": "webmaster",
+    "password": "changeme",
+    "email": "webmaster@example.com",
+    "roles": [
+      "ROLE_USER",
+      "ROLE_WEBMASTER"
+    ]
+  }],
+  "environments": [{
+    "name": "preview"
+  },{
+    "name": "template",
+    "color": "orange"
+  },{
+    "name": "live",
+    "color": "aqua",
+    "managed": true
+  },{
+    "name": "documentation",
+    "color": "yellow",
+    "managed": false,
+    "mapping": {
+      "path_en": {
+        "type": "keyword"
+      },
+      "keywords": {
+        "type": "keyword"
+      },
+      "title_en": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "body_en": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "version": {
+        "type": "keyword"
+      }
+    }
+  }]
+}

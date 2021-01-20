@@ -1,0 +1,11 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:02+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": \"sitemap.xml\",\r\n    \"defaults\":{\r\n        \"_format\": \"xml\"\r\n    },\r\n    \"requirements\": {\r\n    }\r\n}",
+    "name": "sitemap.xml",
+    "order": 3,
+    "template_static": "template:AXHQMFBj_iDq5DyHaLAx",
+    "_sha1": "ff647a924faaa42138959ff0b430bee7368bb987",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

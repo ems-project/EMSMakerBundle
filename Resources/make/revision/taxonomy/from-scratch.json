@@ -1,0 +1,17 @@
+{
+    "_contenttype": "taxonomy",
+    "_finalization_datetime": "2020-05-01T10:05:13+0200",
+    "_finalized_by": "theus",
+    "color": "#00c0ef",
+    "label": "From scratch",
+    "target_group": [
+        "doc"
+    ],
+    "title_de": "Von Grund auf neu",
+    "title_en": "From scratch",
+    "title_fr": "De z\u00e9ro",
+    "title_nl": "Vanaf nul",
+    "type": "subtype",
+    "_sha1": "880e3a19c0fa6e9dd047c444f889e39bdc87198f",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

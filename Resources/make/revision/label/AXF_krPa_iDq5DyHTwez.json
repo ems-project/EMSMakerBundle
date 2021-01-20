@@ -1,0 +1,12 @@
+{
+    "_contenttype": "label",
+    "_finalization_datetime": "2020-04-15T22:41:55+0200",
+    "_finalized_by": "theus",
+    "key": "date_format",
+    "label_de": "j %F% Y",
+    "label_en": "%F% j, Y",
+    "label_fr": "j %F% Y",
+    "label_nl": "j %F% Y",
+    "_sha1": "e260f3b191e675f72acccf674a8b139417d4c078",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

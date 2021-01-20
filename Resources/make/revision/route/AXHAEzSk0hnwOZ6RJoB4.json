@@ -1,0 +1,12 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:04+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n  \"path\": {\r\n      \"en\": \"doc\/faq\/{slug}\",\r\n      \"fr\": \"fr\/doc\/faq\/{slug}\",\r\n      \"nl\": \"nl\/doc\/faq\/{slug}\",\r\n      \"de\": \"de\/doc\/faq\/{slug}\"\r\n  },\r\n  \"defaults\": {\r\n    \"_target_group\": \"doc\"\r\n  }\r\n}",
+    "name": "emsch_faq_doc",
+    "order": 17,
+    "query": "{\r\n    \"query\": {\r\n        \"bool\": {\r\n            \"must\": [\r\n                { \"terms\": { \"_contenttype\": [\"faq\"] } },\r\n                { \"term\": { \"target_group\": \"doc\" } },\r\n                { \"term\": { \"show_%_locale%\": true } },\r\n                { \"term\": { \"slug_%_locale%\": \"%slug%\" } }\r\n            ]\r\n        }\r\n    },\r\n    \"size\": 1\r\n}",
+    "template_static": "template:AXHAEd2J0hnwOZ6RJn4M",
+    "_sha1": "25c40e96ac9c49d9876fdd2fcdd50b1214334a93",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

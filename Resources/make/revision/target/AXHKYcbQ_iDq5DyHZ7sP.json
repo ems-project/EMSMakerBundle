@@ -1,0 +1,20 @@
+{
+    "_contenttype": "target",
+    "_finalization_datetime": "2020-04-30T12:44:08+0200",
+    "_finalized_by": "theus",
+    "label": "Site in de (Website)",
+    "locales": "de",
+    "menu": "[{\"id\":\"ab6940a2-ecab-4a3e-9691-8b2d310eab09\",\"contentType\":\"page\",\"label\":\"Zuhause\",\"type\":\"node\"}]",
+    "menu_ids": [
+        "AXHKYcbQ_iDq5DyHZ7sP",
+        "ab6940a2-ecab-4a3e-9691-8b2d310eab09"
+    ],
+    "slugs": [
+        "",
+        "zuhause"
+    ],
+    "target_group": "site",
+    "title": "Website",
+    "_sha1": "ed8a0f3395230bd91d4f74aef1677162e38e8c90",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

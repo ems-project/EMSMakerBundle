@@ -1,0 +1,26 @@
+{
+    "class": "EMS\\CoreBundle\\Entity\\Filter",
+    "arguments": [],
+    "properties": {
+        "name": "french_stop",
+        "dirty": true,
+        "label": "french_stop",
+        "options": {
+            "remove_trailing": true,
+            "stopwords": "_french_",
+            "type": "stop",
+            "ignore_case": false
+        },
+        "created": {
+            "date": "2020-03-24 09:41:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+            "date": "2020-03-24 09:41:03.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "orderKey": 8
+    }
+}

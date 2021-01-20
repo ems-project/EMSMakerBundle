@@ -1,0 +1,29 @@
+{
+    "_contenttype": "faq",
+    "_finalization_datetime": "2020-05-02T17:31:09+0200",
+    "_finalized_by": "theus",
+    "body_en": "<h2>TBD<\/h2>",
+    "label": "[site, doc] How-to integrate a YouTube video?",
+    "meta_en": "How-to integrate a YouTube video with CK Editor?",
+    "search_category": [
+        "taxonomy:elasticms"
+    ],
+    "search_dates": [
+        "2020\/05\/02"
+    ],
+    "search_type": "faq",
+    "search_year": "2020",
+    "show_de": false,
+    "show_en": true,
+    "show_fr": false,
+    "show_nl": false,
+    "slug_en": "how-to-integrate-a-youtube-video",
+    "summary_en": "<p>This tutotrial is explaining how to integrate a YouTube video with the WYSIWYG editor (CK Editor)<\/p>",
+    "target_group": [
+        "site",
+        "doc"
+    ],
+    "title_en": "How-to integrate a YouTube video?",
+    "_sha1": "d95c1cc69748a2ee17b785bf8daf18477075985a",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}
