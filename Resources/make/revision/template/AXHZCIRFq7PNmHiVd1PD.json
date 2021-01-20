@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-05-03T07:45:06+0200",
+    "_finalized_by": "theus",
+    "body": "{% spaceless %}\r\n\r\n{% set slugs = ems_asset_path(attribute(source, \"file_#{app.request.locale}\"))|split('\/') %}\r\n{% set token = slugs|slice(slugs|length-3,3) %}\r\n{{ {\r\n    config: token[0],\r\n    hash: token[1],\r\n    filename: token[2],\r\n}|json_encode|raw }}\r\n\r\n{% endspaceless %}",
+    "name": "asset\/publication.json.twig",
+    "_sha1": "7308cf6a16320131341c0f7f2ab4c398bf0db31a",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

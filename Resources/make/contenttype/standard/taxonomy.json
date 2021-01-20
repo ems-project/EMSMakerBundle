@@ -1,0 +1,978 @@
+{
+    "class": "EMS\\CoreBundle\\Entity\\ContentType",
+    "arguments": [],
+    "properties": {
+        "created": {
+            "date": "2020-04-16 10:02:53.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+            "date": "2020-05-11 15:44:15.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "name": "taxonomy",
+        "pluralName": "Taxonomies",
+        "singularName": "Taxonomy",
+        "icon": "fa fa-tags",
+        "description": null,
+        "indexTwig": null,
+        "extra": null,
+        "lockBy": null,
+        "lockUntil": null,
+        "circlesField": "",
+        "businessIdField": "",
+        "deleted": false,
+        "havePipelines": false,
+        "askForOuuid": true,
+        "dirty": false,
+        "color": "green",
+        "fieldType": {
+            "class": "EMS\\CoreBundle\\Entity\\FieldType",
+            "arguments": [],
+            "properties": {
+                "__initializer__": null,
+                "__cloner__": null,
+                "__isInitialized__": true,
+                "created": {
+                    "date": "2020-04-16 10:02:53.000000",
+                    "timezone_type": 3,
+                    "timezone": "Europe\/Brussels"
+                },
+                "modified": {
+                    "date": "2020-04-16 10:04:55.000000",
+                    "timezone_type": 3,
+                    "timezone": "Europe\/Brussels"
+                },
+                "type": "EMS\\CoreBundle\\Form\\DataField\\ContainerFieldType",
+                "name": "source",
+                "contentType": null,
+                "deleted": false,
+                "description": null,
+                "options": {
+                    "displayOptions": {
+                        "label": null,
+                        "class": null,
+                        "lastOfRow": false,
+                        "helptext": null,
+                        "icon": null
+                    },
+                    "restrictionOptions": {
+                        "minimum_role": null
+                    },
+                    "extraOptions": {
+                        "extra": null,
+                        "postProcessing": null
+                    }
+                },
+                "orderKey": 0,
+                "parent": null,
+                "children": [
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-24 06:16:51.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:03:00.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\TextStringFieldType",
+                            "name": "label",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Label",
+                                    "class": "col-md-4",
+                                    "lastOfRow": false,
+                                    "helptext": "This field is used to identify this page in the CMS. This label won't never be visibel on the website.",
+                                    "prefixIcon": null,
+                                    "prefixText": null,
+                                    "suffixIcon": null,
+                                    "suffixText": null,
+                                    "placeholder": null,
+                                    "icon": null
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": null,
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": true,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 0,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-23 22:30:22.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:03:00.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\ChoiceFieldType",
+                            "name": "type",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Type",
+                                    "class": "col-md-4",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "multiple": false,
+                                    "expanded": false,
+                                    "select2": true,
+                                    "choices": "category\r\nsubtype\r\nstatus",
+                                    "labels": "Category\r\nSubtype\r\nStatus",
+                                    "linked_collection": null,
+                                    "collection_label_field": null
+                                },
+                                "mappingOptions": {
+                                    "index": "not_analyzed",
+                                    "analyzer": "keyword",
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": true,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 1,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-05-01 10:03:00.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:15.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\ChoiceFieldType",
+                            "name": "target_group",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Target Group",
+                                    "class": "col-md-4",
+                                    "lastOfRow": true,
+                                    "helptext": null,
+                                    "multiple": true,
+                                    "expanded": false,
+                                    "select2": true,
+                                    "choices": "site\r\ndoc",
+                                    "labels": "Website\r\nDocumentation",
+                                    "linked_collection": null,
+                                    "collection_label_field": null
+                                },
+                                "mappingOptions": {
+                                    "index": "not_analyzed",
+                                    "analyzer": "keyword",
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": true,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 2,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-16 10:04:55.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\TextStringFieldType",
+                            "name": "title_fr",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Label Fr",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "prefixIcon": null,
+                                    "prefixText": null,
+                                    "suffixIcon": null,
+                                    "suffixText": null,
+                                    "placeholder": null,
+                                    "icon": null
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": "french",
+                                    "copy_to": "all_fr"
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": true,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 4,
+                            "parent": null,
+                            "children": [
+                                {
+                                    "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                                    "arguments": [],
+                                    "properties": {
+                                        "created": {
+                                            "date": "2020-04-22 11:00:39.000000",
+                                            "timezone_type": 3,
+                                            "timezone": "Europe\/Brussels"
+                                        },
+                                        "modified": {
+                                            "date": "2020-04-22 11:00:53.000000",
+                                            "timezone_type": 3,
+                                            "timezone": "Europe\/Brussels"
+                                        },
+                                        "type": "EMS\\CoreBundle\\Form\\DataField\\SubfieldType",
+                                        "name": "alpha_order",
+                                        "contentType": null,
+                                        "deleted": false,
+                                        "description": null,
+                                        "options": {
+                                            "displayOptions": [],
+                                            "mappingOptions": {
+                                                "index": null,
+                                                "analyzer": "alpha_order",
+                                                "fielddata": true
+                                            },
+                                            "extraOptions": {
+                                                "extra": null,
+                                                "postProcessing": null
+                                            }
+                                        },
+                                        "orderKey": 0,
+                                        "parent": null,
+                                        "children": []
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-16 10:04:55.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\TextStringFieldType",
+                            "name": "title_nl",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Label Nl",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "prefixIcon": null,
+                                    "prefixText": null,
+                                    "suffixIcon": null,
+                                    "suffixText": null,
+                                    "placeholder": null,
+                                    "icon": null
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": "dutch",
+                                    "copy_to": "all_nl"
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": true,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 5,
+                            "parent": null,
+                            "children": [
+                                {
+                                    "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                                    "arguments": [],
+                                    "properties": {
+                                        "created": {
+                                            "date": "2020-04-22 11:00:53.000000",
+                                            "timezone_type": 3,
+                                            "timezone": "Europe\/Brussels"
+                                        },
+                                        "modified": {
+                                            "date": "2020-04-22 11:01:07.000000",
+                                            "timezone_type": 3,
+                                            "timezone": "Europe\/Brussels"
+                                        },
+                                        "type": "EMS\\CoreBundle\\Form\\DataField\\SubfieldType",
+                                        "name": "alpha_order",
+                                        "contentType": null,
+                                        "deleted": false,
+                                        "description": null,
+                                        "options": {
+                                            "displayOptions": [],
+                                            "mappingOptions": {
+                                                "index": null,
+                                                "analyzer": "alpha_order",
+                                                "fielddata": true
+                                            },
+                                            "extraOptions": {
+                                                "extra": null,
+                                                "postProcessing": null
+                                            }
+                                        },
+                                        "orderKey": 0,
+                                        "parent": null,
+                                        "children": []
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-16 10:04:55.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\TextStringFieldType",
+                            "name": "title_en",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Label En",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "prefixIcon": null,
+                                    "prefixText": null,
+                                    "suffixIcon": null,
+                                    "suffixText": null,
+                                    "placeholder": null,
+                                    "icon": null
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": "english",
+                                    "copy_to": "all_en"
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": true,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 6,
+                            "parent": null,
+                            "children": [
+                                {
+                                    "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                                    "arguments": [],
+                                    "properties": {
+                                        "created": {
+                                            "date": "2020-04-22 11:00:19.000000",
+                                            "timezone_type": 3,
+                                            "timezone": "Europe\/Brussels"
+                                        },
+                                        "modified": {
+                                            "date": "2020-04-22 11:00:39.000000",
+                                            "timezone_type": 3,
+                                            "timezone": "Europe\/Brussels"
+                                        },
+                                        "type": "EMS\\CoreBundle\\Form\\DataField\\SubfieldType",
+                                        "name": "alpha_order",
+                                        "contentType": null,
+                                        "deleted": false,
+                                        "description": null,
+                                        "options": {
+                                            "displayOptions": [],
+                                            "mappingOptions": {
+                                                "index": null,
+                                                "analyzer": "alpha_order",
+                                                "fielddata": true
+                                            },
+                                            "extraOptions": {
+                                                "extra": null,
+                                                "postProcessing": null
+                                            }
+                                        },
+                                        "orderKey": 0,
+                                        "parent": null,
+                                        "children": []
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-16 10:04:55.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\TextStringFieldType",
+                            "name": "title_de",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Label De",
+                                    "class": "col-md-12",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "prefixIcon": null,
+                                    "prefixText": null,
+                                    "suffixIcon": null,
+                                    "suffixText": null,
+                                    "placeholder": null,
+                                    "icon": null
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": "german",
+                                    "copy_to": "all_de"
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": true,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 7,
+                            "parent": null,
+                            "children": [
+                                {
+                                    "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                                    "arguments": [],
+                                    "properties": {
+                                        "created": {
+                                            "date": "2020-04-22 11:01:07.000000",
+                                            "timezone_type": 3,
+                                            "timezone": "Europe\/Brussels"
+                                        },
+                                        "modified": {
+                                            "date": "2020-04-22 11:01:18.000000",
+                                            "timezone_type": 3,
+                                            "timezone": "Europe\/Brussels"
+                                        },
+                                        "type": "EMS\\CoreBundle\\Form\\DataField\\SubfieldType",
+                                        "name": "alpha_order",
+                                        "contentType": null,
+                                        "deleted": false,
+                                        "description": null,
+                                        "options": {
+                                            "displayOptions": [],
+                                            "mappingOptions": {
+                                                "index": null,
+                                                "analyzer": "alpha_order",
+                                                "fielddata": true
+                                            },
+                                            "extraOptions": {
+                                                "extra": null,
+                                                "postProcessing": null
+                                            }
+                                        },
+                                        "orderKey": 0,
+                                        "parent": null,
+                                        "children": []
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-22 11:05:53.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\IntegerFieldType",
+                            "name": "order",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Order",
+                                    "class": "col-md-12 hidden",
+                                    "lastOfRow": false,
+                                    "helptext": null
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": {
+                                    "mandatory": false,
+                                    "mandatory_if": null,
+                                    "minimum_role": null
+                                },
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": [],
+                                "migrationOptions": {
+                                    "protected": false
+                                }
+                            },
+                            "orderKey": 8,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-16 10:08:55.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\CopyToFieldType",
+                            "name": "all_en",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "All En",
+                                    "class": "col-md-12"
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": "english_for_highlighting",
+                                    "store": false
+                                },
+                                "restrictionOptions": [],
+                                "extraOptions": [],
+                                "raw_data": []
+                            },
+                            "orderKey": 9,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-16 10:08:55.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\CopyToFieldType",
+                            "name": "all_fr",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "All En",
+                                    "class": "col-md-12"
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": "french_for_highlighting",
+                                    "store": false
+                                },
+                                "restrictionOptions": [],
+                                "extraOptions": [],
+                                "raw_data": []
+                            },
+                            "orderKey": 10,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-16 10:08:55.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\CopyToFieldType",
+                            "name": "all_nl",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "All En",
+                                    "class": "col-md-12"
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": "dutch_for_highlighting",
+                                    "store": false
+                                },
+                                "restrictionOptions": [],
+                                "extraOptions": [],
+                                "raw_data": []
+                            },
+                            "orderKey": 11,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-16 10:08:55.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\CopyToFieldType",
+                            "name": "all_de",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "All En",
+                                    "class": "col-md-12"
+                                },
+                                "mappingOptions": {
+                                    "index": null,
+                                    "analyzer": "german_for_highlighting",
+                                    "store": false
+                                },
+                                "restrictionOptions": [],
+                                "extraOptions": [],
+                                "raw_data": []
+                            },
+                            "orderKey": 12,
+                            "parent": null,
+                            "children": []
+                        }
+                    },
+                    {
+                        "class": "EMS\\CoreBundle\\Entity\\FieldType",
+                        "arguments": [],
+                        "properties": {
+                            "created": {
+                                "date": "2020-04-24 06:32:50.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "modified": {
+                                "date": "2020-05-01 10:04:42.000000",
+                                "timezone_type": 3,
+                                "timezone": "Europe\/Brussels"
+                            },
+                            "type": "EMS\\CoreBundle\\Form\\DataField\\ComputedFieldType",
+                            "name": "color",
+                            "contentType": null,
+                            "deleted": false,
+                            "description": null,
+                            "options": {
+                                "displayOptions": {
+                                    "label": "Color",
+                                    "class": "hidden",
+                                    "lastOfRow": false,
+                                    "helptext": null,
+                                    "valueTemplate": "{% set colors = {\r\n   category: \"#00A650\",\r\n   subtype: \"#00c0ef\",\r\n   status: \"#FF851B\",\r\n} %}\r\n\r\n{{ attribute(colors, _source.type)|default(\"#337ab7\")|json_encode|raw }}",
+                                    "json": true,
+                                    "displayTemplate": "{{ data }}"
+                                },
+                                "mappingOptions": {
+                                    "mappingOptions": "{\r\n        \"type\": \"keyword\"\r\n    }",
+                                    "copy_to": null
+                                },
+                                "restrictionOptions": [],
+                                "extraOptions": {
+                                    "extra": null,
+                                    "postProcessing": null
+                                },
+                                "raw_data": []
+                            },
+                            "orderKey": 13,
+                            "parent": null,
+                            "children": []
+                        }
+                    }
+                ]
+            }
+        },
+        "labelField": "label",
+        "colorField": "color",
+        "userField": null,
+        "dateField": null,
+        "startDateField": null,
+        "endDateField": null,
+        "locationField": null,
+        "refererFieldName": null,
+        "categoryField": "",
+        "ouuidField": null,
+        "imageField": "",
+        "videoField": null,
+        "emailField": "",
+        "assetField": "",
+        "orderField": null,
+        "sortBy": "",
+        "sortOrder": null,
+        "createRole": "ROLE_AUTHOR",
+        "editRole": "ROLE_AUTHOR",
+        "viewRole": "ROLE_AUTHOR",
+        "publishRole": "ROLE_PUBLISHER",
+        "trashRole": "ROLE_ADMIN",
+        "orderKey": 7,
+        "rootContentType": false,
+        "editTwigWithWysiwyg": true,
+        "webContent": false,
+        "autoPublish": false,
+        "active": true,
+        "templates": [
+            {
+                "class": "EMS\\CoreBundle\\Entity\\Template",
+                "arguments": [],
+                "properties": {
+                    "created": {
+                        "date": "2020-05-11 17:02:33.000000",
+                        "timezone_type": 3,
+                        "timezone": "Europe\/Brussels"
+                    },
+                    "modified": {
+                        "date": "2020-05-11 17:02:33.000000",
+                        "timezone_type": 3,
+                        "timezone": "Europe\/Brussels"
+                    },
+                    "name": "JSON raw",
+                    "icon": "fa fa-file-text-o",
+                    "body": "{% spaceless %}\r\n    <pre class=\"ems-code-editor\" data-language=\"ace\/mode\/json\" data-them=\"ace\/theme\/chrome\">\r\n        {{- source|json_encode(constant('JSON_PRETTY_PRINT')) -}}\r\n    <\/pre>\r\n{% endspaceless %}",
+                    "header": null,
+                    "editWithWysiwyg": false,
+                    "renderOption": "embed",
+                    "orderKey": 0,
+                    "accumulateInOneFile": false,
+                    "preview": false,
+                    "mimeType": null,
+                    "filename": null,
+                    "extension": null,
+                    "active": true,
+                    "role": "ROLE_WEBMASTER",
+                    "roleTo": "not-defined",
+                    "roleCc": "not-defined",
+                    "circlesTo": [],
+                    "responseTemplate": null,
+                    "emailContentType": null,
+                    "allowOrigin": null,
+                    "disposition": null,
+                    "orientation": null,
+                    "size": null,
+                    "public": false
+                }
+            }
+        ],
+        "views": [
+            {
+                "class": "EMS\\CoreBundle\\Entity\\View",
+                "arguments": [],
+                "properties": {
+                    "name": "Sort",
+                    "type": "ems.view.sorter",
+                    "icon": "fa fa-sort",
+                    "options": {
+                        "body": "{\r\n    \"term\": { \"type: \"category\" }  \r\n}",
+                        "size": 20,
+                        "field": "order"
+                    },
+                    "orderKey": 0,
+                    "public": false
+                }
+            },
+            {
+                "class": "EMS\\CoreBundle\\Entity\\View",
+                "arguments": [],
+                "properties": {
+                    "name": "Overview",
+                    "type": "ems.view.report",
+                    "icon": "fa fa-list-ul",
+                    "options": {
+                        "body": "{% spaceless %}\r\n    {% set must = [] %}\r\n    {% set body = {\r\n        \"sort\": [\r\n            {\r\n              \"order\": {\r\n                \"order\": \"asc\"\r\n              }\r\n            }\r\n        ] \r\n    } %}\r\n    \r\n    {% if app.request.query.get('q', false) %}\r\n        {% set must = must|merge({ \r\n            \"query_string\": {\r\n                \"query\": app.request.query.get('q')|default('*'),\r\n                \"default_field\": app.request.query.get('fields')|default('_all')\r\n            } \r\n        }) %}\r\n    {% endif %}\r\n    {% if app.request.query.get('type', false) %}\r\n        {% set must = must|merge([{\r\n            'term': {\"type\": app.request.query.get('type') }    \r\n        }]) %}\r\n    {% endif %}\r\n    \r\n    {% if must %}{% set body = body|merge({'query': { \"bool\": { \"must\": must } } } ) %}{% endif %}\r\n{% endspaceless %}\r\n{{- body|json_encode|raw -}}",
+                        "size": 3000,
+                        "template": "{% set tableLength = 100 %}\r\n{% set environments = ['preview', 'live'] %}\r\n{% set config = 'config'|i18n('en')|json_decode %}\r\n\r\n{% set published = [] %}\r\n{% for env in environments %}\r\n    {% set envHits = {\r\n        \"index\": (\"#{config.instance_id}#{env}\"),\r\n        \"size\": 3000,\r\n        \"_source\": ['_sha1'],\r\n        \"body\": {\"query\": {\"term\": { \"_contenttype\": { \"value\": \"#{contentType.name}\" } } } }\r\n    }|search.hits.hits %}\r\n    {% set envIdSha1 = [] %}\r\n    {% for hit in envHits %}\r\n        {% set envIdSha1 = envIdSha1|merge({ (hit._id): (hit._source._sha1) }) %}\r\n    {% endfor %}\r\n    {% set published = published|merge({ (env): (envIdSha1) }) %}\r\n{% endfor %}\r\n\r\n<form method=\"GET\" class=\"form\">\r\n    <div class=\"well\" style=\"padding: 15px;\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-3\">\r\n                <select name=\"type\" class=\"form-control input-sm\">\r\n                    <option value=\"\">All types<\/option>\r\n                    {% set searchTypes = {\r\n                        \"index\": (\"#{config.instance_id}#{contentType.environment.name}\"),\r\n                        \"body\": { \r\n                            \"size\": 0,  \r\n                            \"query\": { \"term\": {\"_contenttype\": (\"#{contentType.name}\")} },\r\n                            \"aggs\": { \"types\": { \"terms\": { \"field\": \"type\", \"size\": 50 } } } \r\n                        }\r\n                    }|search.aggregations.types.buckets|default([]) %}\r\n                    {% for sT in searchTypes %}\r\n                         <option value=\"{{ sT.key }}\" {% if app.request.query.get('type')|default(false) == sT.key %}selected{% endif %}>{{ sT.key|data.title_en|default(sT.key) }}<\/option>\r\n                    {% endfor %}\r\n                <\/select>\r\n            <\/div>\r\n            <div class=\"col-md-3\">\r\n                <select class=\"form-control input-sm\" name=\"fields\">\r\n                    <option value=\"_all\" {% if app.request.query.get('fields')|default(false) == \"_all\" %}selected{% endif %}>All fields<\/option>\r\n                    {% for label, locale in config.languages %}\r\n                        <option value=\"{{ \"all_#{locale}\" }}\" {% if app.request.query.get('fields')|default(false) == \"all_#{locale}\" %}selected{% endif %}>{{ \"Fields in #{label}\" }}<\/option>\r\n                    {% endfor %}\r\n                <\/select>\r\n            <\/div>\r\n            <div class=\"col-md-3\">\r\n                <input type=\"text\" class=\"form-control input-sm\" placeholder=\"Search text (abc*)\" name=\"q\" value=\"{{ app.request.query.get('q')|default('') }}\">\r\n            <\/div>\r\n            <div class=\"col-md-3\">\r\n                <div>\r\n                    <div class=\"btn-group\">\r\n                        <button type=\"submit\" class=\"btn btn-sm btn-primary\">Search<\/button>\r\n                        <a href=\"{{ path('data.customindexview', { viewId: view.id}) }}\" class=\"btn  btn-sm btn-primary\">Reset<\/a>\r\n                    <\/div>\r\n                    {% if is_granted(contentType.createRole) %}\r\n                        <a href=\"{{ path('data.add', {contentType: contentType.id}) }}\" class=\"btn btn-sm btn-success pull-right\"><i class=\"fa fa-plus\"><\/i>&nbsp;Add <\/a>        \r\n                    {% endif%}\r\n                <\/div>\r\n            <\/div>\r\n       <\/div>\r\n    <\/div>\r\n<\/form>\r\n\r\n<div class=\"table-responsive\">\r\n    <table id=\"overview\" class=\"table table-bordered table-striped\" data-page-length=\"{{ tableLength }}\" >\r\n        <thead>\r\n            <tr>\r\n                {% if is_granted(contentType.editRole) %}<th style=\"width: 20px;\" data-orderable=\"false\"><\/th>{% endif %}\r\n                <th>label<\/th>\r\n                <th class=\"text-center\">languages<\/th>\r\n                <th class=\"text-center\">published<\/th>\r\n                <th class=\"text-center\" style=\"width: 20px;\">info<\/th>\r\n                {% if is_granted('ROLE_COPY_PASTE') or is_granted('ROLE_ADMIN') %}<th style=\"width: 60px;\" data-orderable=\"false\"><\/th>{% endif %}\r\n            <\/tr>\r\n        <\/thead>\r\n        <tbody>\r\n            {% for hit in result.hits.hits %}\r\n                {% set info %}\r\n                   {{ hit._source._finalization_datetime|date('d-m-Y H:i') }}\r\n                   <br \/>\r\n                   {{ hit._source._finalized_by is defined ? hit._source._finalized_by : '' }}\r\n                {% endset %}\r\n                <tr>\r\n                    {% if is_granted(contentType.editRole) %}\r\n                        <td><a class=\"btn btn-xs btn-primary\" href=\"{{ path('revision.new-draft', {'type': contentType.name, 'ouuid': hit._id }) }}\"><i class=\"fa fa-pencil\" \/><\/a><\/td>\r\n                    {% endif %}\r\n                    <td><a href=\"{{ path('ems_content_revisions_view', {'type': contentType.name, 'ouuid': hit._id }) }}\" >{{ hit._source.label }}<\/a><\/td>\r\n                    <td class=\"text-center\" data-order=\"{{ config.languages|join(' ') }}\">\r\n                        {% for lang, locale in config.languages %}\r\n                            <span class=\"label label-primary\" data-toggle=\"tooltip\" data-placement=\"top\" aria-hidden=\"true\" title=\"{{ attribute(hit._source, \"title_#{locale}\") }}\">{{ locale|upper }}<\/span>\r\n                        {% endfor %}\r\n                    <\/td>\r\n                    <td class=\"text-center\" data-order=\"{{ environments|filter(v => hit._id in attribute(published, v)|keys)|join(' ') }}\">\r\n                        <div class=\"btn-group\">\r\n                            {% for env in environments %}\r\n                                {% set isPublished = (hit._id in attribute(published, env)|keys ? true : false) %}\r\n                                {% set isAligned = (hit._source._sha1 == attribute(attribute(published, env), hit._id)|default(false) ? true : false) %}\r\n                                {% set envClass = (isAligned ? 'primary' : (isPublished ? 'default' : 'danger') ) %}\r\n                                \r\n                                <button type=\"button\" class=\"btn btn-xs {{ \"btn-#{envClass}\" }}\" {{ envClass == \"danger\" ? 'disabled' }}>{{ env|capitalize }}<\/button>\r\n                            {% endfor %}\r\n                        <\/div>\r\n                    <\/td>\r\n                    <td class=\"text-center\" data-order=\"{{ hit._source._finalization_datetime }}\">\r\n                        <i class=\"fa fa-info-circle text-primary\" data-toggle=\"tooltip\" data-placement=\"top\" data-html=\"true\"  aria-hidden=\"true\" title=\"{{ info }}\"><\/i>\r\n                    <\/td>\r\n                    {% if is_granted('ROLE_COPY_PASTE') or is_granted('ROLE_ADMIN') %}\r\n                        <td class=\"text-center\">\r\n                            <div class=\"btn-group\">\r\n                                {% if is_granted('ROLE_COPY_PASTE') %}\r\n                                    <a class=\"btn btn-xs btn-default\" href=\"{{ path('revision.copy', {'environment': contentType.environment.name, 'type': contentType.name, 'ouuid': hit._id } ) }}\">\r\n            \t\t\t\t\t\t\t<i class=\"fa fa-copy\"><\/i>\r\n            \t\t\t\t\t\t<\/a>\r\n        \t\t\t\t\t\t{% endif %}\r\n        \t\t\t\t\t\t{% if is_granted('ROLE_ADMIN') %}\r\n            \t\t\t\t\t\t<a class=\"btn btn-xs btn-default\" href=\"{{ path('data.view', {'environmentName': contentType.environment.name, 'type': contentType.name, 'ouuid':  hit._id} ) }}\">\r\n            \t\t\t\t\t\t\t<i class=\"fa fa-file-text\"><\/i>\r\n            \t\t\t\t\t\t<\/a>\r\n        \t\t\t\t\t\t{% endif %}\r\n    \t\t\t\t\t\t<\/div>\r\n                        <\/td>\r\n                    {% endif %}\r\n                <\/tr>\r\n            {% endfor %}\r\n        <\/tbody>\r\n    <\/table>\r\n<\/div>",
+                        "header": "<style type=\"text\/css\">\r\n    table#overview .btn { padding: 2px 6px; }\r\n    table#overview td { vertical-align: middle; }\r\n<\/style>",
+                        "javascript": "<script>\r\n    $('[data-toggle=\"tooltip\"]').tooltip()\r\n    $(\"#overview\").DataTable({\r\n       \"order\": []\r\n    });\r\n<\/script>"
+                    },
+                    "orderKey": 0,
+                    "public": false
+                }
+            }
+        ],
+        "defaultValue": null,
+        "translationField": "",
+        "localeField": null,
+        "searchLinkDisplayRole": "ROLE_ADMIN",
+        "createLinkDisplayRole": "ROLE_AUTHOR",
+        "versionTags": [],
+        "versionDateFromField": null,
+        "versionDateToField": null
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:04+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n  \"path\": {\r\n      \"en\": \"news\",\r\n      \"fr\": \"fr\/actualites\",\r\n      \"nl\": \"nl\/nieuws\",\r\n      \"de\": \"de\/nutzungsrechte\"\r\n  },\r\n  \"defaults\": {\r\n    \"_target_group\": \"site\"\r\n  }\r\n}",
+    "name": "emsch_news_site",
+    "order": 12,
+    "template_static": "template:AXFgvNoO_iDq5DyHRxEA",
+    "_sha1": "c810d1bf151ccb5d15f8204659745830c8361c8b",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

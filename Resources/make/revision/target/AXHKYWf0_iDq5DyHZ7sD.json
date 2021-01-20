@@ -1,0 +1,20 @@
+{
+    "_contenttype": "target",
+    "_finalization_datetime": "2020-04-30T12:43:09+0200",
+    "_finalized_by": "theus",
+    "label": "Site in nl (Website)",
+    "locales": "nl",
+    "menu": "[{\"id\":\"f4fccad2-955d-4c1a-9b85-2143b7834779\",\"contentType\":\"page\",\"label\":\"Introductie\",\"type\":\"node\"}]",
+    "menu_ids": [
+        "AXHKYWf0_iDq5DyHZ7sD",
+        "f4fccad2-955d-4c1a-9b85-2143b7834779"
+    ],
+    "slugs": [
+        "",
+        "introductie"
+    ],
+    "target_group": "site",
+    "title": "Website",
+    "_sha1": "072c6792e8969b3c53f9bef93a3ee17997696446",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

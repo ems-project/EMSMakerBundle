@@ -1,0 +1,11 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:02+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": \"\/robots.txt\",\r\n    \"defaults\": {\r\n        \"_format\": \"txt\"\r\n    }\r\n}",
+    "name": "robots.txt",
+    "order": 1,
+    "template_static": "template:AXFTONwO_iDq5DyHQIdu",
+    "_sha1": "93ff7b88cde5bbf8cddd41639fc280fbffd8c6f2",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

@@ -1,0 +1,11 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:03+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": \"sitemap-{_target_group}-{contentType}-p{page}.xml\",\r\n    \"defaults\":{\r\n        \"_format\": \"xml\",\r\n        \"page\": 0\r\n    },\r\n    \"requirements\": {\r\n        \"_target_group\": \"site|doc\",\r\n        \"contentType\": \"page|news|publication|faq\",\r\n        \"page\": \"\\\\d+\"\r\n    }\r\n}",
+    "name": "sitemap_content_type",
+    "order": 5,
+    "template_static": "template:AXHQMFBj_iDq5DyHaLAx",
+    "_sha1": "4787c80b0ee683e0280b805743b366f08ca17e05",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

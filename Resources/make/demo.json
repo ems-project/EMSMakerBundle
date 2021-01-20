@@ -6,29 +6,89 @@
     "environment": "documentation",
     "contenttype": "documentation"
   },
+  "filters": [
+    "dutch_stemmer",
+    "dutch_stop",
+    "empty_elision",
+    "english_stemmer",
+    "english_stop",
+    "french_elision",
+    "french_stemmer",
+    "french_stop",
+    "german_stemmer",
+    "german_stop"
+  ],
+  "analyzers": [
+    "alpha_order",
+    "html_strip",
+    "dutch_for_highlighting",
+    "english_for_highlighting",
+    "french_for_highlighting",
+    "german_for_highlighting"
+  ],
+  "revisions": [{
+    "folder": "page"
+  },{
+    "folder": "faq"
+  },{
+    "folder": "label"
+  },{
+    "folder": "link"
+  },{
+    "folder": "menu"
+  },{
+    "folder": "news"
+  },{
+    "folder": "publication"
+  },{
+    "folder": "route"
+  },{
+    "folder": "target"
+  },{
+    "folder": "taxonomy"
+  },{
+    "folder": "template"
+  }],
   "contenttypes": [{
-    "filename": "route"
+    "filename": "page"
   },{
-    "filename": "label"
+    "filename": "news"
   },{
-    "filename": "template"
+    "filename": "publication"
+  },{
+    "filename": "faq"
+  },{
+    "filename": "link"
+  },{
+    "filename": "menu"
+  },{
+    "filename": "target"
+  },{
+    "filename": "taxonomy"
+  },{
+    "filename": "route",
+    "environment": "template"
+  },{
+    "filename": "label",
+    "environment": "template"
+  },{
+    "filename": "template",
+    "environment": "template"
   },{
     "filename": "documentation",
     "environment": "documentation"
   }],
   "sites": {
-    "demo": {
+    "elasticms": {
       "canonicals": {
-        "fr": "http://test.localhost/fr",
-        "en": "http://test.localhost",
-        "nl": "http://test.localhost/nl"
+        "en": "http://demo.localhost",
+        "fr": "http://demo.localhost/fr",
+        "nl": "http://demo.localhost/nl"
       }
     },
-    "doc": {
+    "documentation": {
       "canonicals": {
-        "fr": "https://test.localhost/fr/doc",
-        "en": "https://test.localhost/doc",
-        "nl": "https://test.localhost/nl/doc"
+        "en": "https://demo.localhost/doc"
       }
     }
   },
@@ -53,6 +113,9 @@
   }],
   "environments": [{
     "name": "preview"
+  },{
+    "name": "template",
+    "color": "orange"
   },{
     "name": "live",
     "color": "aqua",

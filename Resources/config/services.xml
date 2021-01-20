@@ -15,7 +15,14 @@
         </service>
 
         <!-- commands -->
+        <service id="ems_maker.command.filter" class="EMS\MakerBundle\Command\FilterCommand">
+            <argument type="service" id="ems.repository.filter"/>
+            <argument type="service" id="ems_maker.service.file"/>
+            <tag name="console.command"/>
+        </service>
         <service id="ems_maker.command.analyzer" class="EMS\MakerBundle\Command\AnalyzerCommand">
+            <argument type="service" id="ems.repository.analyzer"/>
+            <argument type="service" id="ems_maker.service.file"/>
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.contenttype" class="EMS\MakerBundle\Command\ContentTypeCommand">
@@ -26,9 +33,12 @@
         </service>
         <service id="ems_maker.command.demo" class="EMS\MakerBundle\Command\DemoCommand">
             <argument type="service" id="ems_maker.command.user"/>
+            <argument type="service" id="ems_maker.command.filter"/>
+            <argument type="service" id="ems_maker.command.analyzer"/>
             <argument type="service" id="ems_maker.command.environment"/>
             <argument type="service" id="ems_maker.command.documentation"/>
             <argument type="service" id="ems_maker.command.contenttype"/>
+            <argument type="service" id="ems_maker.command.revision"/>
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.environment" class="EMS\MakerBundle\Command\EnvironmentCommand">
@@ -38,6 +48,9 @@
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.revision" class="EMS\MakerBundle\Command\RevisionCommand">
+            <argument type="service" id="ems.service.contenttype"/>
+            <argument type="service" id="ems.service.document"/>
+            <argument type="service" id="ems_maker.service.file"/>
             <tag name="console.command"/>
         </service>
         <service id="ems_maker.command.user" class="EMS\MakerBundle\Command\UserCommand">

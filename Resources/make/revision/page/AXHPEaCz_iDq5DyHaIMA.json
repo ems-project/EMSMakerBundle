@@ -1,0 +1,53 @@
+{
+    "_contenttype": "page",
+    "_finalization_datetime": "2020-05-02T16:34:00+0200",
+    "_finalized_by": "theus",
+    "label": "[doc] Documentation",
+    "menu_de": [
+        "AXHKQ3cf_iDq5DyHZ7n2"
+    ],
+    "menu_en": [
+        "AXHFVxVe_iDq5DyHZmJZ"
+    ],
+    "menu_fr": [
+        "AXHKQSIz_iDq5DyHZ7do"
+    ],
+    "menu_nl": [
+        "AXHKQwa4_iDq5DyHZ7lq"
+    ],
+    "meta_de": "Alles, was Sie \u00fcber Elastizit\u00e4ten wissen sollten",
+    "meta_en": "All you should know about elasticms",
+    "meta_fr": "Tout ce qu'il faut savoir \u00e0 propos d'elasticms",
+    "meta_nl": "Alles wat je moet weten over Elasticms",
+    "search_category": [
+        "taxonomy:skeleton",
+        "taxonomy:elasticms"
+    ],
+    "search_dates": [
+        "2020\/05\/01"
+    ],
+    "search_type": "page",
+    "search_year": "2020",
+    "show_de": true,
+    "show_en": true,
+    "show_fr": true,
+    "show_nl": true,
+    "slug_de": "documentation",
+    "slug_en": "documentation",
+    "slug_fr": "documentation",
+    "slug_nl": "documentatie",
+    "summary_de": "<p>Dokumentation &uuml;ber Elastizit&auml;ten, ihre B&uuml;ndel, seine Module, wie man sie konfiguriert, ..<\/p>",
+    "summary_en": "<p>Documentation about elasticms, its bundles, its modules, how to configure it, ..<\/p>",
+    "summary_fr": "<p>Documentation sur Elasticms, ses bundles, ses modules, comment le configurer, ..<\/p>",
+    "summary_nl": "<p>Documentatie over elasticms, de bundels, de modules, hoe deze te configureren, ..<\/p>",
+    "target_group": [
+        "doc"
+    ],
+    "template": "template\/page\/homepage.html.twig",
+    "title_de": "Documentation",
+    "title_en": "Documentation",
+    "title_fr": "Documentation",
+    "title_nl": "Documentatie",
+    "_sha1": "e4d47dc6f3776767c773a365805511dba78613cc",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

@@ -1,0 +1,12 @@
+{
+    "_contenttype": "label",
+    "_finalization_datetime": "2020-04-08T10:57:15+0200",
+    "_finalized_by": "davmat",
+    "key": "search_result.paging_info",
+    "label_de": "Resultate von %from% bis %to% von %total%",
+    "label_en": "Resultats %from% to %to% on %total%",
+    "label_fr": "R\u00e9sultats de %from% \u00e0 %to% sur %total%",
+    "label_nl": "Resultaten van %from% tot %to% op %total%",
+    "_sha1": "8a0683c527ccba7eff5bf0a81614b1b0935899cd",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

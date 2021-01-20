@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-04-22T17:57:09+0200",
+    "_finalized_by": "davmat",
+    "body": "{% spaceless %}\r\n    {% set pictureAlt = picture|locale_attr('picture_alt_')|default('') %}\r\n    <img src=\"{% include('@EMSCH\/template\/include\/image-path.txt.twig') %}\" alt=\"{{ pictureAlt }}\" class=\"{{ class|default('') }}\">\r\n{% endspaceless %}",
+    "name": "include\/picture.html.twig",
+    "_sha1": "a00d6b5be3ec57b91649cf03e8bf7c1e50b290d7",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

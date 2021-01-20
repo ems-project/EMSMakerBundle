@@ -1,0 +1,12 @@
+{
+    "_contenttype": "label",
+    "_finalization_datetime": "2020-04-17T08:51:07+0200",
+    "_finalized_by": "davmat",
+    "key": "published_date",
+    "label_de": "Ver\u00f6ffentlicht am %date%",
+    "label_en": "Published on %date%",
+    "label_fr": "Publi\u00e9 le %date%",
+    "label_nl": "Gepubliceerd op %date%",
+    "_sha1": "bd616b491912389f598818459effeabd00a384b6",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

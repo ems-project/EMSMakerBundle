@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-04-28T11:15:28+0200",
+    "_finalized_by": "theus",
+    "body": "{% extends '@EMSCH\/template\/page\/page.html.twig' %}\r\n{% trans_default_domain trans_default_domain %}",
+    "name": "page\/faq.html.twig",
+    "_sha1": "c49a35a78eeb8a9748d087db98a9939bce03ab4d",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

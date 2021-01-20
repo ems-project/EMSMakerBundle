@@ -1,0 +1,10 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:03+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": \"apple-touch-icon.png\",\r\n    \"controller\": \"Symfony\\\\Bundle\\\\FrameworkBundle\\\\Controller\\\\RedirectController::urlRedirectAction\",\r\n    \"defaults\": {\r\n        \"path\": \"\/bundles\/emsch_assets\/img\/apple-touch-icon.png\",\r\n        \"permanent\": \"true\",\r\n        \"keepQueryParams\": \"true\"\r\n    }\r\n}",
+    "name": "apple-touch-icon.png",
+    "order": 6,
+    "_sha1": "730508c0e49d6a07e133dad87a717fb5193fb96c",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

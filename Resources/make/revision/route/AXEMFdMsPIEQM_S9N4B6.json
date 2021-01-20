@@ -1,0 +1,12 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:05+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": {\r\n        \"en\": \"\/{slug}\",\r\n        \"fr\": \"\/fr\/{slug}\",\r\n        \"nl\": \"\/nl\/{slug}\",\r\n        \"de\": \"\/de\/{slug}\"\r\n    },\r\n    \"requirements\":\r\n    {\r\n        \"slug\": \"^(?!(fr|nl|de|_wdt|_profiler|demo|doc|file)(\\\/.*$)?).+\"\r\n    }\r\n}",
+    "name": "emsch_page",
+    "order": 22,
+    "query": "{\r\n    \"query\": {\r\n        \"bool\": {\r\n            \"must\": [\r\n                { \"term\":  { \"_contenttype\": \"page\" } },\r\n                { \"term\" : { \"slug_%_locale%\" : \"%slug%\" } }\r\n            ]\r\n        }\r\n    },\r\n    \"size\": 1\r\n}",
+    "template_source": "[template]",
+    "_sha1": "9ada2b9ec92a870186008c423b22b88901ec6d64",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

@@ -1,0 +1,28 @@
+{
+    "_contenttype": "faq",
+    "_finalization_datetime": "2020-04-29T11:47:59+0200",
+    "_finalized_by": "theus",
+    "body_en": "<h2>Delete documents<\/h2>\r\n\r\n<p>You can run the following cleaning commands:<\/p>\r\n\r\n<div>\r\n<ul>\r\n\t<li>ems:content-type:delete page&nbsp;<\/li>\r\n\t<li>ems:content-type:delete new&nbsp;<\/li>\r\n\t<li>ems:content-type:delete publication&nbsp;<\/li>\r\n\t<li>ems:content-type:delete faq&nbsp;<\/li>\r\n\t<li>ems:content-type:delete link&nbsp;<\/li>\r\n\t<li>ems:content-type:delete menu&nbsp;<\/li>\r\n\t<li>ems:content-type:delete target<\/li>\r\n\t<li>ems:content-type:delete taxonomy<\/li>\r\n<\/ul>\r\n<\/div>",
+    "label": "How-to clean a demo website",
+    "meta_en": "Clean the database in order to initiate a new website",
+    "search_category": [
+        "taxonomy:elasticms"
+    ],
+    "search_dates": [
+        "2020\/04\/29"
+    ],
+    "search_type": "faq",
+    "search_year": "2020",
+    "show_de": false,
+    "show_en": true,
+    "show_fr": false,
+    "show_nl": false,
+    "slug_en": "how-to-clean-a-demo-website",
+    "summary_en": "<p>In order to develop a new web site you should first clean clean the default structure and adjust&nbsp;some configurations.<\/p>",
+    "target_group": [
+        "doc"
+    ],
+    "title_en": "How-to clean a demo website",
+    "_sha1": "3c089a85073613266c56e1161e112b82a7df00bd",
+    "_published_datetime": "2021-01-17T21:33:40+0100"
+}

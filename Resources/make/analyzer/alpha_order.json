@@ -1,0 +1,29 @@
+{
+    "class": "EMS\\CoreBundle\\Entity\\Analyzer",
+    "arguments": [],
+    "properties": {
+        "name": "alpha_order",
+        "dirty": true,
+        "label": "alpha_order",
+        "options": {
+            "filter": [
+                "asciifolding",
+                "lowercase"
+            ],
+            "char_filter": [],
+            "type": "custom",
+            "tokenizer": "keyword"
+        },
+        "created": {
+            "date": "2020-03-24 09:41:04.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "modified": {
+            "date": "2020-03-24 09:41:04.000000",
+            "timezone_type": 3,
+            "timezone": "Europe\/Brussels"
+        },
+        "orderKey": 1
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-04-27T13:52:54+0200",
+    "_finalized_by": "davmat",
+    "body": "{%- if attribute(source, \"show_#{locale}\")|default(false) -%}\r\n    {{ attribute(source, \"url_#{locale}\")|raw }}\r\n{%- else -%}\r\n    {{ path('emsch_missing_translation', { '_locale': locale, 'contentType': source._contenttype, 'ouuid': id }) }}\r\n{%- endif -%}",
+    "name": "link.ems_link.twig",
+    "_sha1": "be4adf7d7c78542558e294a1fa1f2037740fe509",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

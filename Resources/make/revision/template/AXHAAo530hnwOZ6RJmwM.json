@@ -1,0 +1,9 @@
+{
+    "_contenttype": "template",
+    "_finalization_datetime": "2020-04-28T11:10:36+0200",
+    "_finalized_by": "theus",
+    "body": "{% set targetGroup = app.request.get('_target_group')|default('citizen') %}\r\n{%-  if attribute(source, \"show_#{locale}\")|default(false) and attribute(source, \"file_#{locale}\")|default([])|length > 0 -%}\r\n    {{ ems_asset_path(attribute(source, \"file_#{locale}\")) }}\r\n{%- else -%}\r\n    {{ path('emsch_missing_translation', { 'contentType': source._contenttype, 'ouuid': id }) }}\r\n{%- endif -%}",
+    "name": "publication.ems_link.twig",
+    "_sha1": "219f9df2b46fd03572b8c99e69675afc7448e630",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}

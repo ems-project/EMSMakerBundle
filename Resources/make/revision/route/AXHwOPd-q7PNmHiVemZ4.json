@@ -1,0 +1,12 @@
+{
+    "_contenttype": "route",
+    "_finalization_datetime": "2020-05-12T17:47:05+0200",
+    "_finalized_by": "davmat",
+    "config": "{\r\n    \"path\": \"demo\",\r\n    \"defaults\": {\r\n        \"_target_group\": \"site\",\r\n        \"_locale\": \"en\"\r\n    }\r\n}",
+    "name": "emsch_language_selection",
+    "order": 25,
+    "query": "{\r\n  \"query\": {\r\n    \"bool\": {\r\n      \"should\": [\r\n        {\r\n          \"bool\": {\r\n            \"must\": [\r\n              {\r\n                \"term\": {\r\n                  \"_contenttype\": {\r\n                    \"value\": \"target\"\r\n                  }\r\n                }\r\n              },\r\n              {\r\n                \"term\": {\r\n                  \"target_group\": {\r\n                    \"value\": \"site\"\r\n                  }\r\n                }\r\n              },\r\n              {\r\n                \"term\": {\r\n                  \"locales\": {\r\n                    \"value\": \"%_locale%\"\r\n                  }\r\n                }\r\n              },\r\n              {\r\n                \"term\": {\r\n                  \"slugs\": {\r\n                    \"value\": \"\"\r\n                  }\r\n                }\r\n              }\r\n            ]\r\n          }\r\n        },\r\n        {\r\n          \"bool\": {\r\n            \"must_not\": [\r\n              {\r\n                \"exists\": {\r\n                  \"field\": \"menu_%_locale%\"\r\n                }\r\n              }\r\n            ],\r\n            \"must\": [\r\n              {\r\n                \"term\": {\r\n                  \"_contenttype\": {\r\n                    \"value\": \"page\"\r\n                  }\r\n                }\r\n              },\r\n              {\r\n                \"term\": {\r\n                  \"target_group\": {\r\n                    \"value\": \"site\"\r\n                  }\r\n                }\r\n              },\r\n              {\r\n                \"term\": {\r\n                  \"slug_%_locale%\": {\r\n                    \"value\": \"\"\r\n                  }\r\n                }\r\n              }\r\n            ]\r\n          }\r\n        }\r\n      ],\r\n      \"minimum_should_match\": 1\r\n    }\r\n  }\r\n}",
+    "template_static": "template:AXFtEmX__iDq5DyHS_P2",
+    "_sha1": "aab9023bc3b6f071edeef1e4358ae9ad69aae575",
+    "_published_datetime": "2021-01-17T21:33:55+0100"
+}
