@@ -80,7 +80,7 @@ class UserCommand extends AbstractCommand
         $this->io->progressFinish();
     }
 
-    private function resolveUser(array $user)
+    private function resolveUser(array $user): array
     {
         $resolver = new OptionsResolver();
         $resolver->setRequired([
