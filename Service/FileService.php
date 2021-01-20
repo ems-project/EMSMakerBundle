@@ -78,8 +78,10 @@ class FileService
 
         return $counter;
     }
-
-    public function getDocumentations(): void
+    /**
+     * @return iterable|array{path_en: string, keywords: string[], title_en: string, body_en: string, version: string}
+     */
+    public function getDocumentations(): iterable
     {
         $composerLockContent = \file_get_contents($this->projectDir . DIRECTORY_SEPARATOR . 'composer.lock');
         if (false === $composerLockContent) {
