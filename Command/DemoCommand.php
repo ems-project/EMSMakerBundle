@@ -29,7 +29,7 @@ class DemoCommand extends AbstractCommand
     }
 
 
-    protected function configure(string $defaultConfig = null)
+    protected function configure(string $defaultConfig = null): void
     {
         if (null === $defaultConfig) {
             $defaultConfig = FileService::JSON_FILES . 'demo.json';
