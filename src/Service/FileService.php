@@ -28,7 +28,7 @@ class FileService
 
     public function getFileNames(string $type): array
     {
-        if (!in_array($type, self::TYPES)) {
+        if (!\in_array($type, self::TYPES)) {
             return [];
         }
 
@@ -90,7 +90,7 @@ class FileService
             $composerLockContent = '{}';
         }
         $composerLockJson = \json_decode($composerLockContent, true);
-        if (!is_array($composerLockJson)) {
+        if (!\is_array($composerLockJson)) {
             $composerLockJson = [];
         }
         $packages = [];
