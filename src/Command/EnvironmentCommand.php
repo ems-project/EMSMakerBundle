@@ -75,7 +75,7 @@ class EnvironmentCommand extends AbstractCommand
             $contentType->setName($resolved[self::TYPE]);
             $mapping = $this->mapping->generateMapping($contentType);
             if (null !== $resolved[self::MAPPING]) {
-                $mapping['properties'] = array_merge($resolved[self::MAPPING], $mapping['properties']);
+                $mapping['properties'] = \array_merge($resolved[self::MAPPING], $mapping['properties']);
             }
             $this->mapping->updateMapping($indexName, $mapping, $resolved[self::TYPE]);
             $this->aliasService->atomicSwitch($entity, $indexName);

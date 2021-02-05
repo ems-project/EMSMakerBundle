@@ -50,12 +50,12 @@ class ContentTypeCommand extends Command
     protected function configure()
     {
         parent::configure();
-        $fileNames = implode(', ', $this->fileService->getFileNames(FileService::TYPE_CONTENTTYPE));
+        $fileNames = \implode(', ', $this->fileService->getFileNames(FileService::TYPE_CONTENTTYPE));
         $this
             ->addArgument(
                 self::ARGUMENT_CONTENTTYPES,
                 InputArgument::IS_ARRAY,
-                sprintf('Optional array of contenttypes to create. Allowed values: [%s]', $fileNames)
+                \sprintf('Optional array of contenttypes to create. Allowed values: [%s]', $fileNames)
             )
             ->addOption(
                 self::OPTION_ENV,
@@ -68,7 +68,7 @@ class ContentTypeCommand extends Command
                 self::OPTION_ALL,
                 null,
                 InputOption::VALUE_NONE,
-                sprintf('Make all contenttypes: [%s]', $fileNames)
+                \sprintf('Make all contenttypes: [%s]', $fileNames)
             );
         $this->addOption(
             self::OPTION_FORCE,
@@ -124,7 +124,7 @@ class ContentTypeCommand extends Command
         /** @var array $types */
         $types = $input->getArgument(self::ARGUMENT_CONTENTTYPES);
 
-        if (!$input->getOption(self::OPTION_ALL) && 0 == count($types)) {
+        if (!$input->getOption(self::OPTION_ALL) && 0 == \count($types)) {
             $this->chooseTypes($input, $output);
         }
 
@@ -140,17 +140,17 @@ class ContentTypeCommand extends Command
         $helper = $this->getHelper('question');
         $question = new ChoiceQuestion(
             'Select the contenttypes you want to import',
-            array_merge([self::OPTION_ALL], $this->fileService->getFileNames(FileService::TYPE_CONTENTTYPE))
+            \array_merge([self::OPTION_ALL], $this->fileService->getFileNames(FileService::TYPE_CONTENTTYPE))
         );
         $question->setMultiselect(true);
 
         $types = $helper->ask($input, $output, $question);
-        if (in_array(self::OPTION_ALL, $types)) {
+        if (\in_array(self::OPTION_ALL, $types)) {
             $input->setOption(self::OPTION_ALL, true);
-            $this->io->note(sprintf('Continuing with option --%s', self::OPTION_ALL));
+            $this->io->note(\sprintf('Continuing with option --%s', self::OPTION_ALL));
         } else {
             $input->setArgument(self::ARGUMENT_CONTENTTYPES, $types);
-            $this->io->note(['Continuing with contenttypes:', implode(', ', $types)]);
+            $this->io->note(['Continuing with contenttypes:', \implode(', ', $types)]);
         }
     }
 
@@ -158,7 +158,7 @@ class ContentTypeCommand extends Command
     {
         $types = $this->fileService->getFileNames(FileService::TYPE_CONTENTTYPE);
         $input->setArgument(self::ARGUMENT_CONTENTTYPES, $types);
-        $this->io->note(['Continuing with contenttypes:', implode(', ', $types)]);
+        $this->io->note(['Continuing with contenttypes:', \implode(', ', $types)]);
     }
 
     private function checkEnvironment(InputInterface $input): void
@@ -178,7 +178,7 @@ class ContentTypeCommand extends Command
         }
 
         $this->environment = $environment;
-        $this->io->note(sprintf('Continuing with environment %s', $env));
+        $this->io->note(\sprintf('Continuing with environment %s', $env));
     }
 
     private function updateContentType(string $filename, Environment $environment, ?string $name, bool $deleteExistingActions, bool $deleteExistingViews): void
@@ -193,16 +193,16 @@ class ContentTypeCommand extends Command
             $previousContentType = $this->contentTypeService->getByName($contentType->getName());
             if (false === $previousContentType) {
                 $contentType = $this->contentTypeService->importContentType($contentType);
-                $this->io->success(sprintf('Contenttype %s has been created', $contentType->getName()));
+                $this->io->success(\sprintf('Contenttype %s has been created', $contentType->getName()));
 
                 return;
             } elseif (!$this->forceUpdate($contentType->getName())) {
-                $this->io->note(sprintf('Contenttype %s has been ignored', $contentType->getName()));
+                $this->io->note(\sprintf('Contenttype %s has been ignored', $contentType->getName()));
 
                 return;
             }
             $contentType = $this->contentTypeService->updateFromJson($previousContentType, $json, $deleteExistingActions, $deleteExistingViews);
-            $this->io->success(sprintf('Contenttype %s has been updated', $contentType->getName()));
+            $this->io->success(\sprintf('Contenttype %s has been updated', $contentType->getName()));
 
             $environment = $contentType->getEnvironment();
             if (null === $environment) {
