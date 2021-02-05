@@ -1,0 +1,167 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Property EMS\\\\MakerBundle\\\\Command\\\\AbstractCommand\\:\\:\\$config type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Command/AbstractCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\AbstractCommand\\:\\:configure\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Command/AbstractCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\AbstractCommand\\:\\:forceUpdate\\(\\) has parameter \\$identifier with no typehint specified\\.$#"
+			count: 1
+			path: src/Command/AbstractCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Repository\\\\AnalyzerRepository\\:\\:update\\(\\)\\.$#"
+			count: 1
+			path: src/Command/AnalyzerCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\ContentTypeCommand\\:\\:configure\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^PHPDoc tag @var for variable \\$types has no value type specified in iterable type array\\.$#"
+			count: 2
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\ContentTypeCommand\\:\\:execute\\(\\) should return int but return statement is missing\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\ContentTypeCommand\\:\\:initialize\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\ContentTypeCommand\\:\\:interact\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Result of method EMS\\\\CoreBundle\\\\Service\\\\ContentTypeService\\:\\:updateFromJson\\(\\) \\(void\\) is used\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Cannot call method getName\\(\\) on void\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Cannot call method getEnvironment\\(\\) on void\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Parameter \\#1 \\$contentType of method EMS\\\\CoreBundle\\\\Service\\\\ContentTypeService\\:\\:updateMapping\\(\\) expects EMS\\\\CoreBundle\\\\Entity\\\\ContentType, void given\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Cannot call method setActive\\(\\) on void\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Cannot call method setDirty\\(\\) on void\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Service\\\\ContentTypeService\\:\\:update\\(\\)\\.$#"
+			count: 1
+			path: src/Command/ContentTypeCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\DocumentationCommand\\:\\:indexDocumentations\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Command/DocumentationCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Service\\\\IndexService\\:\\:indexDocument\\(\\)\\.$#"
+			count: 1
+			path: src/Command/DocumentationCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\EnvironmentCommand\\:\\:makeEnvironments\\(\\) has parameter \\$environments with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Command/EnvironmentCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Service\\\\EnvironmentService\\:\\:updateEnvironment\\(\\)\\.$#"
+			count: 1
+			path: src/Command/EnvironmentCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Entity\\\\Environment\\:\\:getNewIndexName\\(\\)\\.$#"
+			count: 1
+			path: src/Command/EnvironmentCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Service\\\\Mapping\\:\\:createIndex\\(\\)\\.$#"
+			count: 1
+			path: src/Command/EnvironmentCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Service\\\\Mapping\\:\\:updateMapping\\(\\)\\.$#"
+			count: 1
+			path: src/Command/EnvironmentCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Service\\\\AliasService\\:\\:atomicSwitch\\(\\)\\.$#"
+			count: 1
+			path: src/Command/EnvironmentCommand.php
+
+		-
+			message: "#^Call to an undefined method EMS\\\\CoreBundle\\\\Repository\\\\FilterRepository\\:\\:update\\(\\)\\.$#"
+			count: 1
+			path: src/Command/FilterCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\UserCommand\\:\\:makeUsers\\(\\) has parameter \\$users with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Command/UserCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\UserCommand\\:\\:resolveUser\\(\\) has parameter \\$user with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Command/UserCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Command\\\\UserCommand\\:\\:resolveUser\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Command/UserCommand.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\DependencyInjection\\\\EMSMakerExtension\\:\\:load\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/DependencyInjection/EMSMakerExtension.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\DependencyInjection\\\\EMSMakerExtension\\:\\:load\\(\\) has parameter \\$configs with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/DependencyInjection/EMSMakerExtension.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\EMSMakerBundle\\:\\:build\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/EMSMakerBundle.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Service\\\\FileService\\:\\:getFileNames\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Service/FileService.php
+
+		-
+			message: "#^Method EMS\\\\MakerBundle\\\\Service\\\\FileService\\:\\:getDocumentations\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: src/Service/FileService.php
+

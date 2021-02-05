@@ -59,7 +59,7 @@ abstract class AbstractCommand extends Command
     {
         $this->io = new SymfonyStyle($input, $output);
 
-        $this->force = $input->getOption(self::OPTION_FORCE) === true;
+        $this->force = true === $input->getOption(self::OPTION_FORCE);
 
         $configFile = $input->getArgument(self::ARGUMENT_CONFIG_FILE);
         if (!\is_string($configFile)) {
@@ -67,7 +67,7 @@ abstract class AbstractCommand extends Command
         }
 
         $configContent = \file_get_contents($configFile);
-        if ($configContent === false) {
+        if (false === $configContent) {
             throw new \RuntimeException('Config file not found');
         }
 
@@ -81,6 +81,7 @@ abstract class AbstractCommand extends Command
 
     /**
      * @param array<mixed> $config
+     *
      * @return array{admin: array, sites: array, users: array, environments: array, documentations: array|null}
      */
     private function resolveConfig(array $config): array
@@ -88,7 +89,7 @@ abstract class AbstractCommand extends Command
         $resolver = new OptionsResolver();
         $resolver->setRequired([
             self::ADMIN,
-            self::SITES
+            self::SITES,
         ])->setDefaults([
             self::USERS => [],
             self::ENVIRONMENTS => [],
@@ -105,7 +106,7 @@ abstract class AbstractCommand extends Command
         $resolver->setAllowedTypes(self::FILTERS, ['array']);
         $resolver->setAllowedTypes(self::ENVIRONMENTS, ['array']);
         $resolver->setAllowedTypes(self::CONTENTTYPES, ['array']);
-        $resolver->setAllowedTypes(self::DOCUMENTATIONS, ['array','null']);
+        $resolver->setAllowedTypes(self::DOCUMENTATIONS, ['array', 'null']);
 
         /** @var array{admin: array, sites: array, users: array, environments: array, documentations: array|null} $resolved */
         $resolved = $resolver->resolve($config);
@@ -123,6 +124,6 @@ abstract class AbstractCommand extends Command
             false
         );
 
-        return $this->io->askQuestion($question) === true;
+        return true === $this->io->askQuestion($question);
     }
 }

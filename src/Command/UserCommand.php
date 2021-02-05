@@ -19,7 +19,7 @@ class UserCommand extends AbstractCommand
     private const EMAIL = 'email';
     private const ROLES = 'roles';
     private const WYSIWYG_PROFILE = 'wysiwyg_profile';
-    /** @var string  */
+    /** @var string */
     protected static $defaultName = 'ems:maker:user';
     private UserService $userService;
     private WysiwygProfileService $wysiwygProfileService;
@@ -40,7 +40,7 @@ class UserCommand extends AbstractCommand
 
     public function makeUsers(array $users): void
     {
-        if (\count($users) === 0) {
+        if (0 === \count($users)) {
             $this->io->note('No user to import');
 
             return;
@@ -52,14 +52,13 @@ class UserCommand extends AbstractCommand
             break;
         }
 
-
         $this->io->title('Make users');
         $this->io->progressStart(\count($users));
         foreach ($users as $user) {
             $resolved = $this->resolveUser($user);
             $user = $this->userService->getUser($resolved[self::USERNAME], false);
 
-            if ($user === null) {
+            if (null === $user) {
                 $user = new User();
             } elseif (!$this->forceUpdate('user', $resolved[self::USERNAME])) {
                 $this->io->note(\sprintf('User %s ignored', $resolved[self::USERNAME]));
