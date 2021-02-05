@@ -40,7 +40,7 @@ class RevisionCommand extends AbstractCommand
      */
     public function makeRevisions(array $revisions): void
     {
-        if (\count($revisions) === 0) {
+        if (0 === \count($revisions)) {
             return;
         }
         $this->io->title('Make revisions');
@@ -54,13 +54,13 @@ class RevisionCommand extends AbstractCommand
                 continue;
             }
             $finder = $this->fileService->getFilesInFolder($resolved[self::FOLDER], FileService::TYPE_REVISION);
-            if ($finder->count() === 0) {
+            if (0 === $finder->count()) {
                 continue;
             }
             $this->io->title(\sprintf('Make %s revisions', $contentTypeName));
             $this->io->progressStart($finder->count());
             $importerContext = $this->documentService->initDocumentImporterContext($contentType, 'REVISION_MAKER', false, true, true, 100, true, true);
-            /** @var SplFileInfo $file **/
+            /** @var SplFileInfo $file * */
             foreach ($finder as $file) {
                 $content = \json_decode($file->getContents(), true);
                 $this->documentService->importDocument($importerContext, $file->getBasename('.json'), $content);
@@ -70,9 +70,9 @@ class RevisionCommand extends AbstractCommand
         }
     }
 
-
     /**
      * @param array<mixed> $config
+     *
      * @return array{folder: string}
      */
     private function resolveRevision(array $config): array

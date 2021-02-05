@@ -34,7 +34,7 @@ class AnalyzerCommand extends AbstractCommand
      */
     public function makeAnalyzers(array $analyzers): void
     {
-        if (\count($analyzers) === 0) {
+        if (0 === \count($analyzers)) {
             return;
         }
         $this->io->title('Make analyzers');

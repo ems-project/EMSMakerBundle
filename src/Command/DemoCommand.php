@@ -37,11 +37,10 @@ class DemoCommand extends AbstractCommand
         $this->revisionCommand = $revisionCommand;
     }
 
-
     protected function configure(string $defaultConfig = null): void
     {
         if (null === $defaultConfig) {
-            $defaultConfig = FileService::JSON_FILES . 'demo.json';
+            $defaultConfig = FileService::JSON_FILES.'demo.json';
         }
         parent::configure($defaultConfig);
     }

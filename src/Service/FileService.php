@@ -1,4 +1,5 @@
 <?php
+
 namespace EMS\MakerBundle\Service;
 
 use EMS\CoreBundle\Form\Field\SelectPickerType;
@@ -8,8 +9,7 @@ use Symfony\Component\Finder\SplFileInfo;
 
 class FileService
 {
-    
-    const JSON_FILES = __DIR__ . '/../Resources/make/';
+    const JSON_FILES = __DIR__.'/../Resources/make/';
     const TYPE_ANALYZER = 'analyzer';
     const TYPE_FILTER = 'filter';
     const TYPE_CONTENTTYPE = 'contenttype';
@@ -33,33 +33,34 @@ class FileService
         }
 
         $finder = new Finder();
-        $finder = $finder->files()->name('*.json')->in(self::JSON_FILES . $type);
+        $finder = $finder->files()->name('*.json')->in(self::JSON_FILES.$type);
 
         $names = [];
-        /** @var SplFileInfo $file **/
+        /** @var SplFileInfo $file * */
         foreach ($finder as $file) {
             $names[] = $file->getBasename('.json');
         }
+
         return $names;
     }
-    
+
     public function getFileContentsByFileName(string $name, string $type): string
     {
-        $path = self::JSON_FILES . $type;
+        $path = self::JSON_FILES.$type;
         $finder = new Finder();
-        $finder = $finder->files()->name($name . '.json')->in($path);
+        $finder = $finder->files()->name($name.'.json')->in($path);
 
         foreach ($finder as $file) {
-            /** @var SplFileInfo $file **/
+            /* @var SplFileInfo $file **/
             return $file->getContents();
         }
 
-        throw new FileNotFoundException(null, 0, null, $path . '/' . $name . '.json');
+        throw new FileNotFoundException(null, 0, null, $path.'/'.$name.'.json');
     }
 
     public function getFilesInFolder(string $name, string $type): Finder
     {
-        $path = \implode(DIRECTORY_SEPARATOR, [self::JSON_FILES . $type, $name]);
+        $path = \implode(DIRECTORY_SEPARATOR, [self::JSON_FILES.$type, $name]);
         $finder = new Finder();
 
         return $finder->files()->in($path)->name('*.json');
@@ -78,12 +79,13 @@ class FileService
 
         return $counter;
     }
+
     /**
      * @return iterable|array{path_en: string, keywords: string[], title_en: string, body_en: string, version: string}
      */
     public function getDocumentations(): iterable
     {
-        $composerLockContent = \file_get_contents($this->projectDir . DIRECTORY_SEPARATOR . 'composer.lock');
+        $composerLockContent = \file_get_contents($this->projectDir.DIRECTORY_SEPARATOR.'composer.lock');
         if (false === $composerLockContent) {
             $composerLockContent = '{}';
         }
@@ -94,7 +96,7 @@ class FileService
         $packages = [];
         foreach ($composerLockJson['packages'] ?? [] as $package) {
             $split = \explode('/', $package['name'] ?? 'do-not-care');
-            if (\count($split) !== 2 || \reset($split) !== 'elasticms') {
+            if (2 !== \count($split) || 'elasticms' !== \reset($split)) {
                 continue;
             }
             $packages[\end($split)] = $package['version'];
@@ -106,7 +108,7 @@ class FileService
                 continue;
             }
             $bundleName = $bundle->getFilename();
-            $composer = \file_get_contents($bundlePath . DIRECTORY_SEPARATOR . 'composer.json');
+            $composer = \file_get_contents($bundlePath.DIRECTORY_SEPARATOR.'composer.json');
             if (false === $composer) {
                 continue;
             }
@@ -116,11 +118,11 @@ class FileService
             }
             $bundlesKeywords = $json['keywords'] ?? ['Bundle\'s keywords not found'];
 
-            /** @var SplFileInfo $file **/
+            /** @var SplFileInfo $file * */
             foreach ($this->getMarkdowns($bundlePath) as $file) {
                 $name = SelectPickerType::humanize($file->getBasename('.md'));
                 yield [
-                    'path_en' => $bundleName . \substr($file->getPath(), \strlen($bundlePath)) . DIRECTORY_SEPARATOR . $file->getBasename('.md'),
+                    'path_en' => $bundleName.\substr($file->getPath(), \strlen($bundlePath)).DIRECTORY_SEPARATOR.$file->getBasename('.md'),
                     'keywords' => \array_merge($bundlesKeywords, [$file->getBasename('.md'), $bundleName]),
                     'title_en' => $name,
                     'body_en' => $file->getContents(),
@@ -133,7 +135,8 @@ class FileService
     private function getBundles(): Finder
     {
         $bundles = new Finder();
-        return  $bundles->in($this->bundlesDir)->directories();
+
+        return $bundles->in($this->bundlesDir)->directories();
     }
 
     private function getMarkdowns(string $bundlePath): Finder

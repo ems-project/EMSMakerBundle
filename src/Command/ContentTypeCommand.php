@@ -3,8 +3,8 @@
 namespace EMS\MakerBundle\Command;
 
 use EMS\CoreBundle\Entity\Environment;
-use EMS\CoreBundle\Service\EnvironmentService;
 use EMS\CoreBundle\Service\ContentTypeService;
+use EMS\CoreBundle\Service\EnvironmentService;
 use EMS\MakerBundle\Service\FileService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -105,11 +105,10 @@ class ContentTypeCommand extends Command
         }
     }
 
-
     protected function initialize(InputInterface $input, OutputInterface $output)
     {
         $this->io = new SymfonyStyle($input, $output);
-        $this->force = $input->getOption(self::OPTION_FORCE) === true;
+        $this->force = true === $input->getOption(self::OPTION_FORCE);
         if ($input->hasOption(self::OPTION_ENV)) {
             $this->defaultEnvironmentName = \strval($input->getOption(self::OPTION_ENV));
         } else {
@@ -125,7 +124,7 @@ class ContentTypeCommand extends Command
         /** @var array $types */
         $types = $input->getArgument(self::ARGUMENT_CONTENTTYPES);
 
-        if (!$input->getOption(self::OPTION_ALL) && count($types) == 0) {
+        if (!$input->getOption(self::OPTION_ALL) && 0 == count($types)) {
             $this->chooseTypes($input, $output);
         }
 
@@ -169,11 +168,12 @@ class ContentTypeCommand extends Command
         /** @var Environment|false $environment */
         $environment = $this->environmentService->getByName($env);
 
-        if ($environment === false) {
-            $this->io->caution('Environment ' . $env . ' does not exist');
+        if (false === $environment) {
+            $this->io->caution('Environment '.$env.' does not exist');
             $env = $this->io->choice('Select an existing environment as default', $this->environmentService->getEnvironmentNames());
             $input->setOption(self::OPTION_ENV, $env);
             $this->checkEnvironment($input);
+
             return;
         }
 
@@ -194,9 +194,11 @@ class ContentTypeCommand extends Command
             if (false === $previousContentType) {
                 $contentType = $this->contentTypeService->importContentType($contentType);
                 $this->io->success(sprintf('Contenttype %s has been created', $contentType->getName()));
+
                 return;
             } elseif (!$this->forceUpdate($contentType->getName())) {
                 $this->io->note(sprintf('Contenttype %s has been ignored', $contentType->getName()));
+
                 return;
             }
             $contentType = $this->contentTypeService->updateFromJson($previousContentType, $json, $deleteExistingActions, $deleteExistingViews);
@@ -228,11 +230,12 @@ class ContentTypeCommand extends Command
             false
         );
 
-        return $this->io->askQuestion($question) === true;
+        return true === $this->io->askQuestion($question);
     }
 
     /**
      * @param array<mixed> $contentType
+     *
      * @return array{name: string|null, environment: string, filename: string, delete_actions: bool, delete_views: bool}
      */
     private function resolveContentType(array $contentType): array
