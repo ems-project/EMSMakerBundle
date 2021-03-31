@@ -27,7 +27,6 @@ class DocumentationCommand extends AbstractCommand
         parent::__construct();
     }
 
-
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->indexDocumentations($this->config[AbstractCommand::DOCUMENTATIONS]);
@@ -65,6 +64,7 @@ class DocumentationCommand extends AbstractCommand
 
     /**
      * @param array<mixed> $config
+     *
      * @return array{environment: string}
      */
     private function resolveDocumentation(array $config): array

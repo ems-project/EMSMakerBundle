@@ -32,7 +32,6 @@ class EnvironmentCommand extends AbstractCommand
         $this->aliasService = $aliasService;
     }
 
-
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->makeEnvironments($this->config[AbstractCommand::ENVIRONMENTS]);
@@ -42,7 +41,7 @@ class EnvironmentCommand extends AbstractCommand
 
     public function makeEnvironments(array $environments): void
     {
-        if (\count($environments) === 0) {
+        if (0 === \count($environments)) {
             $this->io->note('No environment to import');
 
             return;
@@ -54,7 +53,7 @@ class EnvironmentCommand extends AbstractCommand
             $resolved = $this->resolveEnvironment($environment);
 
             $entity = $this->environmentService->getByName($resolved[self::NAME]);
-            if ($entity === false) {
+            if (false === $entity) {
                 $entity = new Environment();
             } elseif (!$this->forceUpdate('environment', $resolved[self::NAME])) {
                 $this->io->note(\sprintf('Environment %s ignored', $resolved[self::NAME]));
@@ -76,7 +75,7 @@ class EnvironmentCommand extends AbstractCommand
             $contentType->setName($resolved[self::TYPE]);
             $mapping = $this->mapping->generateMapping($contentType);
             if (null !== $resolved[self::MAPPING]) {
-                $mapping['properties'] = array_merge($resolved[self::MAPPING], $mapping['properties']);
+                $mapping['properties'] = \array_merge($resolved[self::MAPPING], $mapping['properties']);
             }
             $this->mapping->updateMapping($indexName, $mapping, $resolved[self::TYPE]);
             $this->aliasService->atomicSwitch($entity, $indexName);
@@ -88,6 +87,7 @@ class EnvironmentCommand extends AbstractCommand
 
     /**
      * @param array<mixed> $environment
+     *
      * @return array{name: string, type: string, color: string, managed: bool, alias: null|string, mapping: array|null}
      */
     private function resolveEnvironment(array $environment): array

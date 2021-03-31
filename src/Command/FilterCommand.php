@@ -34,7 +34,7 @@ class FilterCommand extends AbstractCommand
      */
     public function makeFilters(array $filters): void
     {
-        if (\count($filters) === 0) {
+        if (0 === \count($filters)) {
             return;
         }
         $this->io->title('Make filters');

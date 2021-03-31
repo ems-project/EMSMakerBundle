@@ -1,5 +1,11 @@
+includes:
+        - phpstan-baseline.neon
+
 parameters:
+    paths:
+        - %currentWorkingDirectory%/src
     excludes_analyse:
         - %currentWorkingDirectory%/vendor/*
-        - %currentWorkingDirectory%/DependencyInjection/Configuration.php
-    level: 7
+        - %currentWorkingDirectory%/src/DependencyInjection/Configuration.php
+    level: 8
+    inferPrivatePropertyTypeFromConstructor: true
